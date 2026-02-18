@@ -329,7 +329,7 @@ pautopia/
 │   ├── VigaCalc.png / VigaCalc.apk
 │   ├── Conceptuando_la_historia.png / .apk
 │   └── *.pdf
-├── data/                        # No incluida en el repositorio
+├── data/                        # Data con todos los .json
 ├── server.js
 ├── package.json
 ├── tsconfig.json
