@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "titulo": "Biografía de Antonio Buero Vallejo",
+    "grupo": "Contexto",
+    "enlace": "https://www.biografiasyvidas.com/biografia/b/buero_vallejo.htm",
+    "descripcion": "Vida y obra del dramaturgo",
+    "lecturaId": "4"
+  },
+  {
+    "id": "2",
+    "titulo": "La Fundación - Texto completo",
+    "grupo": "Documentos",
+    "enlace": "https://www.youtube.com/watch?v=example7",
+    "descripcion": "Texto completo de la obra de Antonio Buero Vallejo",
+    "lecturaId": "4",
+    "archivo": "pdfcoffee.com-la-fundacion-by-antonio-buero-vallejo.pdf"
+  },
+  {
+    "id": "3",
+    "titulo": "Análisis de La Fundación",
+    "grupo": "Vídeo",
+    "enlace": "https://www.youtube.com/watch?v=example8",
+    "descripcion": "Técnicas dramáticas y recursos escénicos",
+    "lecturaId": "4"
+  },
+  {
+    "id": "4",
+    "titulo": "Los personajes de La Fundación",
+    "grupo": "Documentos",
+    "enlace": "https://example.com/personajes-fundacion.pdf",
+    "descripcion": "Análisis psicológico de los personajes",
+    "lecturaId": "4"
+  }
+]

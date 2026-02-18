@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "titulo": "Biografía de Antonio Machado",
+    "grupo": "Contexto",
+    "enlace": "https://www.biografiasyvidas.com/biografia/m/machado_antonio.htm",
+    "descripcion": "Vida y obra del poeta",
+    "lecturaId": "1"
+  },
+  {
+    "id": "2",
+    "titulo": "Campos de Castilla - Texto completo",
+    "grupo": "Documentos",
+    "enlace": "https://www.youtube.com/watch?v=example1",
+    "descripcion": "Texto completo de la obra de Antonio Machado",
+    "lecturaId": "1",
+    "archivo": "Antonio Machado   Campos de Castilla.pdf"
+  },
+  {
+    "id": "3",
+    "titulo": "El simbolismo en Machado",
+    "grupo": "Vídeo",
+    "enlace": "https://www.youtube.com/watch?v=example2",
+    "descripcion": "Video explicativo sobre los símbolos en Campos de Castilla",
+    "lecturaId": "1"
+  },
+  {
+    "id": "4",
+    "titulo": "Castilla y la Generación del 98",
+    "grupo": "Documentos",
+    "enlace": "https://example.com/generacion-98.pdf",
+    "descripcion": "Contexto histórico y literario de la obra",
+    "lecturaId": "1"
+  }
+]

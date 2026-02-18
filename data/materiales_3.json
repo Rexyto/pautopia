@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "titulo": "Biografía de Carmen Martín Gaite",
+    "grupo": "Contexto",
+    "enlace": "https://www.biografiasyvidas.com/biografia/m/martin_gaite.htm",
+    "descripcion": "Vida y obra de la autora",
+    "lecturaId": "3"
+  },
+  {
+    "id": "2",
+    "titulo": "Entre visillos - Texto completo",
+    "grupo": "Documentos",
+    "enlace": "https://www.youtube.com/watch?v=example5",
+    "descripcion": "Texto completo de la obra de Carmen Martín Gaite",
+    "lecturaId": "3",
+    "archivo": "Martin Gaite Carmen. Entre visillos .pdf"
+  },
+  {
+    "id": "3",
+    "titulo": "Análisis de personajes en Entre visillos",
+    "grupo": "Vídeo",
+    "enlace": "https://www.youtube.com/watch?v=example6",
+    "descripcion": "Estudio de los personajes principales y secundarios",
+    "lecturaId": "3"
+  },
+  {
+    "id": "4",
+    "titulo": "La España de los años 50",
+    "grupo": "Documentos",
+    "enlace": "https://example.com/espana-50s.pdf",
+    "descripcion": "El papel de la mujer en la sociedad española",
+    "lecturaId": "3"
+  }
+]

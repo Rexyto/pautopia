@@ -1,0 +1,589 @@
+{
+  "conceptos": [
+    {
+      "categoria": "Política",
+      "nombre": "Abdicación",
+      "definicion": "Renuncia de un monarca a la corona."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Abolicionismo",
+      "definicion": "Movimiento social del siglo XIX favorable a la eliminación de la esclavitud. La abolición total de la esclavitud en España no llegó hasta la ley promulgada el 13 de febrero de 1880 por Alfonso XII, Real Decreto 7 octubre de 1886."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Absolutismo",
+      "definicion": "Régimen donde el rey poseía todos los atributos de la soberanía: elaboraba las leyes, administraba la justicia, recaudaba impuestos (mediante funcionarios) y mantenía un ejército permanente, sin ninguna limitación de poderes."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Afrancesados",
+      "definicion": "Referido a los españoles que en la guerra de la Independencia apoyaron a Napoleón y José I Bonaparte. Formaron un colectivo de aristócratas, intelectuales e ilustrados que apoyaban la modernización del país, a través del liberalismo. Javier de Burgos y Fernández de Moratín fueron los más destacados."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Africanistas",
+      "definicion": "Militares que lucharon o hicieron méritos en las campañas españolas del norte de África a lo largo de las primeras décadas del siglo XX, lograron rápidos ascensos en la jerarquía militar a pesar de que en muchos casos no habían sido militares de academia, sin preparación específica para ostentar dichos cargos. Su carácter activo se trasladó a la política, criticando la labor del gobierno como; Franco, Emilio Mola o Queipo de Llano."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Anarquismo",
+      "definicion": "Movimiento político y social en contra de las formas de autoridad, busca abolir las instituciones que mantienen una coerción y jerarquía innecesarias, que generalmente incluyen al Estado y al capitalismo. Ideología favorable a fórmulas cooperativas de organización socioeconómica."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Anticlericalismo",
+      "definicion": "Animosidad contra todo lo que se relaciona con el clero. Movimiento contrario al clericalismo, es decir, a la influencia de las instituciones religiosas en los asuntos políticos o en la sociedad."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Antimilitarismo",
+      "definicion": "Tendencia contraria al militarismo, es decir, contraria al predominio de lo militar en la política y el gobierno de una nación."
+    },
+    {
+      "categoria": "Histórico",
+      "nombre": "Antiguo Régimen",
+      "definicion": "Organización del poder y la sociedad en el período precedente a la Revolución Francesa (1789), que abarca fundamentalmente toda la época moderna e ilustrada. Sistema político fundamentado en la monarquía absoluta o el absolutismo."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Aristocracia",
+      "definicion": "Forma de gobierno ejercida por una clase privilegiada. Clase social integrada por la nobleza o linaje real (reyes, príncipes, duques, condes, barones), o que acceden por servicios militares (marqueses, etc.). Poseían tierras y poder militar."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Asiento de negros",
+      "definicion": "Contratos que externalizaban la introducción de esclavos en la América española. Esclavos que podían ser introducidos anualmente a cambio de una cantidad de dinero. Licencia real que gestionaba el comercio de esclavos africanos."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Asociación (derecho de)",
+      "definicion": "Derecho que comprende la libertad de toda persona a fundar y pertenecer a una asociación, así como a no asociarse o dejar de formar parte de una de ellas."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Autarquía",
+      "definicion": "Política económica proteccionista que pretende la supresión de las importaciones y lograr el autoabastecimiento del país."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Bipartidismo",
+      "definicion": "Sistema político con predominio de dos partidos que compiten por el poder."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Brigadas Internacionales",
+      "definicion": "Unidades militares compuestas por voluntarios de diferentes países que acudieron a España para luchar en el bando republicano."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Burguesía",
+      "definicion": "Clase media y alta acomodada de la sociedad, que posee cierto capital cultural y financiero. Es la clase social dominante en el sistema capitalista. Esta élite o minoría dirigente basaba su primacía en la propiedad y en la riqueza, y su modelo de orden social, económico y político se impuso en el siglo XIX. A diferencia de la nobleza, la burguesía creía que el poder y el prestigio social no se sustentaban en la posesión de tierras, sino en la cantidad de dinero o poder que pudiesen acumular."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Caciquismo",
+      "definicion": "Práctica electoral fraudulenta que garantizaba la victoria del partido del turno en las elecciones. El cacique controlaba directa o indirectamente su ayuntamiento y su comarca mediante redes clientelares. El caciquismo nació al mismo tiempo que se aprobó el sufragio universal masculino, su mayor influencia fue durante la Restauración, ya que estaban integrados en el sistema turnista."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Cantonalismo",
+      "definicion": "Movimiento surgido durante la Primera República española, aspiraba a dividir el Estado en cantones independientes. Fue un fenómeno de la pequeña burguesía, que además tuvo una gran influencia sobre el naciente movimiento obrero y constituyó un precedente para el anarquismo en España."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Carlismo",
+      "definicion": "Movimiento político español de carácter tradicionalista y legitimista, derivado del realismo fernandino que surgió durante la primera mitad del siglo XIX en oposición al liberalismo, al parlamentarismo y al secularismo. Luchaban bajo el lema de 'Dios, Patria, Fueros y Rey', encarnaban una oposición reaccionaria al liberalismo y defendían la monarquía tradicional, los derechos de la Iglesia y los fueros."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Capitalismo",
+      "definicion": "Sistema económico y social que se basa en los principios de la propiedad privada de los medios de producción, mediante el capital como herramienta de producción por encima del trabajo, donde la propiedad está en manos privadas y se establece una relación entre los propietarios de los medios de producción, y los trabajadores/as que venden su labor a cambio de un sueldo o salario."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Carta otorgada",
+      "definicion": "Ley suprema que recoge una serie de derechos políticos, otorgados por el rey. Los derechos que se recogen son sin concesión que viene de 'arriba', no de la Soberanía Nacional."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Censitario (sufragio)",
+      "definicion": "Sufragio en el cual el derecho al voto está condicionado por la riqueza o el sexo del votante."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Centralismo",
+      "definicion": "Sistema de gobierno donde la concentración del poder político y las competencias administrativas está en los órganos centrales del Estado, proceso que desvincula el poder de las unidades más pequeñas a favor de una estructura institucional central y común. Este modelo comenzó a ser cuestionado en el Sexenio Democrático desde posiciones federalistas y cantonalistas."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Clase (social)",
+      "definicion": "Grupo de individuos que comparten condiciones socioeconómicas similares."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Colectivización",
+      "definicion": "Gestión común de los recursos en el ámbito agrario e industria."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Comunismo",
+      "definicion": "Movimiento y sistema político, desarrollados desde el siglo XIX, basados en la lucha de clases y en la supresión de la propiedad privada de los medios de producción. Su objetivo es la eliminación del capitalismo, la sociedad de clases y aboga por la plena igualdad social de todas las personas de la sociedad. El Partido Comunista de España (PCE) se fundó en noviembre de 1921."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Concordato",
+      "definicion": "Tratado entre el Estado español y la Santa Sede. Hasta el momento se han firmado dos. En 1851, cuando el Papa reconoció a Isabel II como reina y aceptó la pérdida de bienes eclesiásticos ya desamortizados. España se comprometía al sostenimiento de la Iglesia y a entregarle el control de la enseñanza. En 1953 se firmó un nuevo concordato que suponía la legitimación exterior de la Dictadura de Franco y reforzaba el peso social de la Iglesia católica en España."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Constitución",
+      "definicion": "Texto codificado de carácter jurídico-político, surgido de un poder constituyente, que tiene el propósito de constituir una separación de poderes. La primera en España fue aprobada el 19 de marzo de 1812 en Cádiz."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Consumos (impuestos)",
+      "definicion": "Impuesto general, ordinario e indirecto que gravaba una veintena de productos básicos, de 'comer, beber y arder'. A cada población se le asignaba una cantidad anual que debía remitir a la hacienda pública. Se calculaba atendiendo al número de habitantes de cada localidad, vigente entre 1845 (Reforma tributaria de Mon-Santillán) y comienzos del siglo XX (Ley de supresión de 1911)."
+    },
+    {
+      "categoria": "Religioso",
+      "nombre": "Concilios de Toledo",
+      "definicion": "Los concilios de Toledo fueron asambleas o reuniones de carácter religioso y político celebradas entre los siglos VI y VII en el Reino visigodo. En ellos participaban obispos y nobles, y se tomaban decisiones sobre la doctrina cristiana y la organización del reino. Fueron clave en la unión entre Iglesia y monarquía visigoda."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Corporativismo",
+      "definicion": "Forma de gobierno y administración en la que la representación se canaliza a través de entidades de carácter corporativo."
+    },
+    {
+      "categoria": "Político",
+      "nombre": "Corrupción",
+      "definicion": "Abuso del poder público orientado a la obtención de beneficios personales indebidos."
+    },
+    {
+      "categoria": "Religioso",
+      "nombre": "Conversos",
+      "definicion": "Un converso era un judío o un descendiente de judíos que, a partir del siglo XIV en España, se convirtió al cristianismo, a menudo de forma forzada debido a la persecución y a la violencia contra la comunidad judía."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Decreto de Nueva Planta",
+      "definicion": "Leyes orgánicas dadas por Felipe V tras la Guerra de Sucesión (1700-1714) por las que se abolen los derechos políticos (fueros) de los territorios de la Corona de Aragón, fundamentalmente. Con estos decretos se crea un sistema político-administrativo centralista."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Democracia",
+      "definicion": "Sistema político en el cual la soberanía reside en el pueblo, que la ejerce directamente o por medio de representantes. Considerada como una forma de gobierno justa (república federal/unitaria o monarquía parlamentaria/constitucional). La participación de la ciudadanía es el factor que materializa los cambios. Actualmente España es un Estado democrático, de derecho y de bienestar, con una economía de mercado, cuya forma política es una monarquía parlamentaria."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Desamortización",
+      "definicion": "Proceso de incautación y venta en subasta pública de bienes pertenecientes a la Iglesia o los Ayuntamientos."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Desarrollismo",
+      "definicion": "Periodo de crecimiento económico acelerado en España entre 1959 y 1975, impulsado por los Planes de Desarrollo y la apertura al capital extranjero. Transformó la sociedad española, mejorando el nivel de vida, aunque sin reformas políticas significativas."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Deuda Pública",
+      "definicion": "Conjunto de deudas que mantiene el Estado frente a los particulares que pueden ser nacionales (bancos, empresas o particulares) o de otro país. Constituye una forma de obtener recursos financieros por el Estado o cualquier poder público, materializado normalmente mediante emisiones de títulos de valores o bonos."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Dictadura",
+      "definicion": "Régimen político antidemocrático que, por la fuerza o violencia, concentra todo el poder en una persona (militar) o en un grupo u organización (partido único) y reprime los derechos humanos y las libertades individuales. Durante el siglo XX, España sufrió dos dictaduras que duraron casi medio siglo: Miguel Primo de Rivera (1923-1931) y Franco (1939-1975)."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Directorio Militar",
+      "definicion": "Primera etapa de la Dictadura de Primo de Rivera durante el reinado de Alfonso XIII tras el triunfo del Golpe de Estado en España, entre 1923 y 1925. Organización temporal de un gobierno, normalmente tras un golpe de Estado, donde todos sus miembros son militares."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Encasillamiento",
+      "definicion": "Práctica política de abuso de poder, enmarcada dentro del caciquismo, que se generalizó a lo largo de la Restauración Borbónica. Tuvo como objetivo asegurar el turnismo o reparto de poder por turnos entre los partidos dinásticos de liberales y conservadores. Según este sistema, cuando llegaba el momento de pasar el poder de un partido a otro, el Gobierno dimitía, de modo que había que organizar nuevas elecciones."
+    },
+    {
+      "categoria": "Colonial",
+      "nombre": "Encomienda",
+      "definicion": "Sistema de explotación y gobierno en las colonias americanas. El Estado entregaba grandes latifundios a los conquistadores y colonos. Junto a la tierra se les entregaba un determinado número de indios para que fueran instruidos en la fe católica y civilizados. A cambio los indios debían trabajar las tierras del encomendero. Se produjeron enormes abusos."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Esclavismo",
+      "definicion": "Sistema social y económico fundado en la esclavitud como elemento de producción."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Estatuto de Autonomía",
+      "definicion": "Norma básica de una comunidad autónoma o ciudad autónoma de España. Está reconocido por la Constitución de 1978 en los artículos 146 y 147."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Exilio",
+      "definicion": "Separación, voluntaria o forzosa, del propio país, por razones políticas."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Éxodo rural",
+      "definicion": "Emigración de familias y gente joven (adolescentes y adultos) del campo a la ciudad. Este proceso es muy antiguo y se aceleró con la Revolución Industrial y, sobre todo, a partir de la segunda mitad del siglo XX. Las familias rurales con destino al medio urbano fueron las grandes protagonistas del movimiento migratorio en España de 1950 a 1975."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Fascismo",
+      "definicion": "Movimiento político y social de carácter totalitario, dictatorial y antidemocrático que se desarrolló en Italia en la primera mitad del siglo XX, caracterizado por el corporativismo y la exaltación nacionalista. En Alemania se llamó Nazismo. En España, la Falange fue un partido de ideología fascista fundado en octubre de 1933 por Alfonso García Valdecasas, Julio Ruiz de Alda y José Antonio Primo de Rivera."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Federalismo",
+      "definicion": "Proceso iniciado en la década de 1830. Se partió de la idea de los 'antiguos reinos' medievales para definir los Estados que formarían la República federal española. Su gran teórico fue el político republicano catalán Francesc Pi i Margall. El primer y único intento de instaurar un Estado federal en España se produjo durante la Primera República Española."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Feminismo",
+      "definicion": "Movimiento sociopolítico que busca la igualdad de derechos y oportunidades entre hombres y mujeres."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Fuerismo (o foralismo)",
+      "definicion": "Postura política que defiende la restauración de los antiguos fueros (normas o códigos históricos dados a un territorio determinado)."
+    },
+    {
+      "categoria": "Jurídico",
+      "nombre": "Fuero",
+      "definicion": "El fuero era un conjunto de leyes o privilegios concedidos por el rey a una ciudad, territorio o grupo social en la Edad Media. Regulaba aspectos jurídicos, fiscales y militares, y garantizaba cierta autonomía. Los fueros fueron fundamentales en la organización política de los reinos cristianos peninsulares."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Gobierno paritario",
+      "definicion": "Gobierno en el cual hombres y mujeres están representados de manera equitativa (mismo número de miembros de cada sexo)."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Guerrilla (antifrancesa)",
+      "definicion": "Acciones armadas llevadas a cabo en la península Ibérica durante las guerras napoleónicas por tropas no regulares contra el Grande Armée de Napoleón. En 1812 se cifran más de 38.520 guerrilleros, divididos en 22 bandas en España. Los más famosos fueron: el cura Merino, 'El Empecinado' y Agustina de Aragón."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Huelga",
+      "definicion": "Interrupción colectiva de la actividad laboral convocada por los trabajadores o por un sindicato. Su objetivo es protestar para exigir mejoras. La primera huelga general en España tuvo lugar en Cataluña en julio de 1855, siendo una de las primeras que se llevaron a cabo en Europa."
+    },
+    {
+      "categoria": "Religioso",
+      "nombre": "Inquisición",
+      "definicion": "Institución de carácter religioso, creada por los Reyes Católicos en 1478 con jurisdicción en todos sus reinos, con el fin de velar por la pureza de la religión católica y perseguir a los falsos conversos. El primer tribunal de la Inquisición empezó a funcionar en Sevilla en 1480. Perduró hasta el siglo XIX."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Internacionalismo",
+      "definicion": "Doctrina socialista que propugna la asociación internacional de los obreros."
+    },
+    {
+      "categoria": "Cultural",
+      "nombre": "Islamización",
+      "definicion": "Proceso mediante el cual una población adopta la religión, la cultura y las costumbres del Islam. En la Península Ibérica, este fenómeno se produjo tras la conquista musulmana del siglo VIII en Al-Ándalus, donde muchos hispanovisigodos se convirtieron al Islam y adoptaron elementos culturales árabes y bereberes."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Juntas",
+      "definicion": "Junta Central Suprema y Gubernativa del Reino, formada en septiembre de 1808 en Aranjuez, fue un órgano que ejerció los poderes ejecutivo y legislativo español durante la ocupación napoleónica de España. Se componía de representantes de las juntas que se habían formado en las provincias españolas."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Kale Borroka",
+      "definicion": "Es un término en euskera que significa 'lucha callejera'. Se refiere a la violencia callejera perpetrada principalmente en el País Vasco y Navarra por jóvenes militantes o simpatizantes de la izquierda abertzale durante los años 1990 y 2000. Incluían ataques a propiedades y disturbios urbanos."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Latifundio",
+      "definicion": "Forma de propiedad agraria que concentra grandes extensiones de tierra en un grupo reducido de propietarios."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Liberalismo",
+      "definicion": "Ideología política y económica que abogaba por cambios significativos en el orden político y social establecido. Ideas como la expansión de los derechos y libertades individuales, la igualdad ante la ley y la participación más amplia en el proceso político, primaron en la sociedad. En el siglo XIX el liberalismo clásico pone el énfasis principal en garantizar la libertad del individuo al limitar el poder del Estado."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Librecambismo",
+      "definicion": "Sistema económico que defiende la libertad de mercado y la no imposición de aranceles a los productos que no han sido producidos por el propio país, es considerado como el primer capitalismo y plantea la libertad absoluta de negocio y comercio frente a las rigideces de la economía del Antiguo Régimen."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Legión Cóndor",
+      "definicion": "Fue el nombre dado a la fuerza de intervención mayoritariamente aérea que el III Reich envió en ayuda de las fuerzas de Franco para luchar en la Guerra Civil española."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Ludismo",
+      "definicion": "Movimiento revolucionario de los obreros textiles ingleses entre 1811 y 1816, caracterizado por oponerse a la mecanización y destruir las máquinas como forma de resistencia y negociación obrera en el nuevo marco laboral que se está creando en la Revolución Industrial. En España, las primeras manifestaciones de ludismo fueron los sucesos de Alcoy de 1821."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Maquis (guerrilla antifranquista)",
+      "definicion": "Grupos guerrilleros que se oponían al franquismo."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Mercado negro",
+      "definicion": "Mercado ilegal de compra y venta de artículos de diversa índole que también se desarrolla en la economía actual. Se denominó estraperlo durante la posguerra española."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Mesta",
+      "definicion": "Asociación de ganaderos del reino de Castilla fundada por Alfonso X en 1273 a la que se le reconocía el derecho de paso de los ganados a través de las cañadas reales. Regulaba el uso de pastos, cañadas y abrevaderos, y gozaba de privilegios reales. Tuvo gran influencia económica y política hasta su desaparición en el siglo XIX."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Miliciano/a",
+      "definicion": "Miembro de las milicias populares en la guerra civil española. Muchos eran obreros y campesinos que muchas veces empuñaban las armas por primera vez. Las milicianas fueron mujeres republicanas que lucharon en la Guerra Civil Española."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Militarismo",
+      "definicion": "Doctrina por la cual las fuerzas armadas ejercen una influencia dominante en una nación, su gobierno y su política. El militarismo español se expresó a través del pretorianismo o predominio de los militares en la vida política, teniendo más 500 ejemplos en nuestra Historia."
+    },
+    {
+      "categoria": "Educativo",
+      "nombre": "Misiones Pedagógicas",
+      "definicion": "Iniciativa del Gobierno de la Segunda República española destinada a la alfabetización y a la mejora del nivel educativo y cultural de los sectores más atrasados de la población española, fundamentalmente, campesinado, obreros, niños y niñas habitantes de zonas rurales de difícil acceso. Creadas en mayo de 1931 hasta 1939."
+    },
+    {
+      "categoria": "Colonial",
+      "nombre": "Mita",
+      "definicion": "Sistema de trabajo obligatorio originario del Imperio Inca y que los españoles adoptaron tras la conquista. Las comunidades indígenas de las zonas mineras tenían que enviar una serie de trabajadores para el laboreo obligatorio en las minas y otras 'industrias'. La mita era por un periodo determinado, en el caso de la mita minera era un año."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Moción de censura",
+      "definicion": "Procedimiento parlamentario que permite al Congreso de los Diputados retirar la confianza al presidente del Gobierno y forzar su dimisión, lo que implica el cese del Gobierno en pleno."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Monarquía autoritaria",
+      "definicion": "La monarquía autoritaria fue un modelo político que se desarrolló en Europa a finales de la Edad Media y principios de la Edad Moderna, especialmente en los siglos XV y XVI. El rey fortaleció su poder frente a la nobleza, las Cortes y otros grupos sociales, aunque sin llegar al absolutismo. Un ejemplo fue la monarquía autoritaria de los Reyes Católicos."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Monarquía compuesta",
+      "definicion": "Modelo político en el que un mismo monarca gobierna varios territorios que conservan sus propias leyes, instituciones y costumbres. Fue característico de la Monarquía Hispánica que nació en 1479 con la unión dinástica de la Corona de Castilla y de la de Aragón por el matrimonio de Isabel de Castilla y Fernando de Aragón."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Monarquía Parlamentaria",
+      "definicion": "Forma política del Estado en la que el rey es el jefe del Estado, pero sus actos son refrendados por el presidente del Gobierno y, en su caso, por los ministros competentes. Surgió de manera gradual y se fue gestando en Reino Unido para limitar al monarca absoluto. El reinado de Amadeo I fue el primer intento en España de poner en práctica la monarquía popular o democrática entre 1871-1873."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Motín",
+      "definicion": "Revuelta o rebelión multitudinaria contra un orden establecido. Se diferencia de otros conceptos por sus características más limitadas o localizadas."
+    },
+    {
+      "categoria": "Religioso",
+      "nombre": "Moriscos",
+      "definicion": "Nombre que reciben los cristianos conversos de origen musulmán tras la pragmática de conversión forzosa decretada por los Reyes Católicos en 1502. Mantuvieron las costumbres, lengua y apariencia externa propias de los musulmanes. Los moriscos protagonizaron revueltas contra Felipe II en las Alpujarras. Fueron expulsados definitivamente en 1609 por Felipe III."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Mutualismo",
+      "definicion": "Movimiento social y económico que recoge aquellas tendencias asociativas de los seres humanos para conseguir satisfacer sus necesidades individuales a través de la cooperación voluntaria y la ayuda mutua, en un sistema basado en la solidaridad."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Nacionalismo",
+      "definicion": "Ideología política que afirma la existencia de una nación, que se identifica con un Estado mediante el centralismo del territorio español y el mantenimiento de una identidad nacional basada en características compartidas como la cultura, el idioma, la etnia o la religión. En España, con la vuelta al liberalismo moderado o conservador en la Restauración canovista, surgirán los nacionalismos, especialmente, el catalán."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Nacionalcatolicismo",
+      "definicion": "Base ideológica del franquismo durante la dictadura con la que Franco gobernó España entre 1939 y 1975. Término creado por el falangismo católico, que vinculaba la religión católica con el régimen político dictatorial de Franco. Fue la unión estrecha entre la política franquista y la religión católica en el nuevo Estado totalitario."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Oligarquía",
+      "definicion": "Forma de gobierno en la cual el poder político es ejercido por un grupo minoritario. En España oligarcas y caciques fueron la clase directora o gobernante, distribuida o encasillada en partidos durante el S. XIX. Durante el franquismo, nobles, obispos, banqueros, grandes terratenientes, ricos empresarios y políticos afines al régimen franquista, gobernaron y se beneficiaron o amasaron fortunas de forma ilícita gracias a la opresión."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Parlamentarismo",
+      "definicion": "Sistema político en que el poder legislativo está confiado al Parlamento, ante el cual es responsable el Gobierno."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Patriarcado",
+      "definicion": "Sistema social en el que los hombres tienen el poder y predominan en roles de liderazgo, autoridad y control económico. Dominio institucionalizado que mantiene la subordinación e invisibilización de las mujeres. El franquismo prohibía a las mujeres trabajar sin consentimiento masculino, tener pasaporte, abrir una cuenta o disponer de ingresos."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Partido progresista",
+      "definicion": "El Partido Progresista fue un partido político liberal español del siglo XIX, representante del ala más avanzada del liberalismo, que promovió un régimen constitucional estable y una revolución liberal culminada. Entre sus logros se encuentra la Constitución de 1837. Nació en 1835 y se disolvió en 1874."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Pistolerismo",
+      "definicion": "Práctica que tuvo lugar en España durante el reinado de Alfonso XIII, particularmente entre 1917 y 1923. Procedimiento de lucha política y social caracterizado por el empleo de la violencia mediante la contratación de pistoleros para asesinar o coaccionar a empresarios, obreros, políticos, sindicalistas y miembros de las fuerzas de seguridad."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Propiedad amortizada o vinculada",
+      "definicion": "Proceso mediante el cual determinados bienes pasan a estar en 'manos muertas' o fuera del tráfico mercantil, por quedar vinculadas a un linaje (mayorazgo) o a una institución (iglesia, monasterio u otras corporaciones eclesiásticas, hospital, concejo, o cualquier otra corporación civil, ayuntamiento, etc.)."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Pronunciamiento",
+      "definicion": "Levantamiento de una o varias unidades militares a cuyo frente se situaba un militar de prestigio, que se 'pronunciaba' en contra de una situación política determinada y hacía un llamamiento al resto de unidades militares para que se le sumaran o no se le opusieran. El denominador común de estas acciones, además de su espíritu liberal, fue que todas fracasaron durante el reinado de Fernando VII."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Proletariado",
+      "definicion": "Clase social constituida por proletarios, trabajadores de la industria. Durante el S.XIX estaban concentrados en las ciudades, donde se ubicaban las industrias, diferenciándose de los trabajadores agrarios. Padecían duras condiciones de trabajo (larga jornada laboral, falta de higiene) e inseguridad (paro, inexistencia de seguro médico, de desempleo o jubilación). Al carecer de propiedades, se veían obligados a vender su fuerza de trabajo a cambio de un salario."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Proteccionismo",
+      "definicion": "Política económica que dificulta la entrada en un país de productos extranjeros que compiten con los nacionales. El Estado interviene en el comercio para escudar a los productores nacionales de la competencia extranjera. Los aranceles, las cuotas de importación, las normas sobre productos y los subsidios son algunas de las principales herramientas políticas. Durante la dictadura franquista, la autarquía fue la forma más extrema de proteccionismo económico."
+    },
+    {
+      "categoria": "Militar",
+      "nombre": "Quintas",
+      "definicion": "Sistema de reclutamiento forzoso de jóvenes para el Ejército español que estuvo vigente desde la primera mitad del siglo XVIII hasta 1912, en que fue sustituido por el servicio militar obligatorio. Tuvo el rechazo de las clases populares, que eran quienes más lo sufrían, ya que las clases medias y altas contaban con dos métodos para evitar que sus hijos no fueran reclutados: la redención en metálico (pagar al Estado dinero) o la sustitución (pagar a otra persona para que fuera en su lugar)."
+    },
+    {
+      "categoria": "Económico",
+      "nombre": "Racionamiento",
+      "definicion": "Asignación gubernamental de recursos limitados y bienes de consumo, figura económica aplicada durante guerras, hambrunas o emergencias. En España entre 1939 y 1952 se usaron cartillas de racionamiento (tarjetas con cupones), vigente hasta abril de 1952, que se puso fin al racionamiento, aunque no fue hasta 1960 cuando hubo una mejora en los sectores más pobres de la sociedad española."
+    },
+    {
+      "categoria": "Histórico",
+      "nombre": "Reconquista",
+      "definicion": "Recuperación militar de las tierras de la Península Ibérica ocupadas en los primeros años del s. VIII por los musulmanes. El período de la Reconquista dura casi ocho siglos desde la formación de los núcleos de resistencia en las montañas cantábricas y pirenaicas hasta la expulsión definitiva de los musulmanes con la conquista de Granada en 1492."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Referéndum",
+      "definicion": "Procedimiento por el que se someten al voto popular decisiones políticas de especial trascendencia."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Reforma (política)",
+      "definicion": "Ley que puso fin al régimen franquista y restableció la democracia y el Estado de derecho en España. Promulgada el 4 de enero de 1977 tras ser aprobada en referéndum (en el que el pueblo votó masivamente a favor de la reforma), había sido tramitada como la última de las 'leyes fundamentales' del franquismo, pero supuso, en realidad, la derogación tácita de la mayor parte de las anteriores. Fue, por tanto, la ley de autodisolución del régimen de Franco, el documento clave de la Transición."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Regencia",
+      "definicion": "Gobierno de un Estado durante minoría de edad, ausencia o incapacidad de su legítimo príncipe o princesa. La Regencia se ejerce por mandato constitucional y siempre en nombre del Rey/Reina."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Regeneracionismo",
+      "definicion": "Corriente ideológica que entre los siglos XIX y XX, reflexiona sobre la nación española e intenta poner remedio a la 'decadencia de España' especialmente tras el enorme impacto del 'Desastre del 98'. El autor más importante de este movimiento o líder, fue Joaquín Costa (1846-1911), economista aragonés, jurista e historiador del Derecho."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Regionalismo",
+      "definicion": "Ideología y movimiento político que defiende la identidad regional sin renunciar al carácter nacional, reclama el derecho a la autonomía y al autogobierno de sus territorios, representado por regiones periféricas (más autonomía y menos centralismo castellano). Surgen durante la Restauración."
+    },
+    {
+      "categoria": "Histórico",
+      "nombre": "Repoblación",
+      "definicion": "Proceso vinculado a la reconquista de tierras consistente en introducir masas de campesinos en áreas de vacío demográfico, con el fin de controlarlas y conseguir hacerlas productivas o para atraer pobladores hasta las nuevas tierras conquistadas. Se realizó mediante concesión de tierras despobladas (presura) al norte del Duero, concesión de fueros o cartas pueblas a villas y su territorio entre el Duero y el Tajo y sistema de repartimiento al Sur del Tajo."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Republicanismo",
+      "definicion": "Proceso extendido durante los siglos XIX, XX y XXI, materializado en movimientos políticos con el objetivo de establecer una República. Hay distintas corrientes según la organización territorial que se quería dar a ese Estado republicano: una organización unitaria/centralista o federalista. España ha tenido un sistema político republicano solo dos veces: la Primera República (1873-1874) y la Segunda República (1931-1939)."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Restauración",
+      "definicion": "Etapa política de la Historia de España desarrollada bajo la monarquía borbónica, que se extendió entre 1874 (pronunciamiento del general Martínez Campos que puso fin a la Primera República Española) y el 14 de abril de 1931 (Segunda República Española). Se basaba en la existencia de dos grandes partidos, el partido liberal y el conservador, que tenían en común la defensa del liberalismo político, la monarquía borbónica (Alfonso XII) y la Constitución de 1876."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Revolución",
+      "definicion": "Cambio profundo, generalmente violento, en las estructuras políticas y socioeconómicas de una comunidad. La Revolución Francesa, la Revolución Industrial, la independencia de Estados Unidos o la independencia de Latinoamérica, fueron importantes luchas para el nuevo ordenamiento del mundo, puesto que supuso el fin del Antiguo Régimen y la nueva clase social vencedora fue la burguesía."
+    },
+    {
+      "categoria": "Cultural",
+      "nombre": "Romanización",
+      "definicion": "Proceso mediante el cual los pueblos prerromanos adquieren los rasgos que caracterizan a la civilización romana. La romanización implica la adopción del modo de vida romano en todos sus aspectos: el latín, la organización territorial centrada en la ciudad y las provincias, las creencias religiosas, Tríada capitolina y culto al emperador."
+    },
+    {
+      "categoria": "Cultural",
+      "nombre": "Sefarad",
+      "definicion": "Nombre hebreo para la Península Ibérica. Los sefardíes son los descendientes de estos judíos que, tras su expulsión de España en 1492 y de Portugal en 1497, formaron comunidades en diversas partes del mundo, conservando su rica herencia cultural."
+    },
+    {
+      "categoria": "Histórico",
+      "nombre": "Señorío",
+      "definicion": "El señorío era una forma de organización territorial en la Edad Media en la que un noble, la Iglesia o una institución ejercían poder sobre tierras y personas. Podía incluir derechos jurisdiccionales, fiscales y económicos. Los campesinos vivían bajo la autoridad del señor, que controlaba la justicia y cobraba tributos. Los señoríos desaparecen con las reformas liberales del siglo XIX."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Separatismo",
+      "definicion": "Ideología política que propugna la separación de un territorio respecto del Estado al que pertenece, para alcanzar su independencia o integrarse en otro país. El separatismo político persigue la soberanía e independencia de un territorio o comunidad (normalmente, formada por personas con una conciencia nacional) de otro mayor. El nacionalismo vasco y catalán reivindican el separatismo frente a España y Francia."
+    },
+    {
+      "categoria": "Social",
+      "nombre": "Sindicato",
+      "definicion": "Organización permanente de trabajadores asalariados para la representación y defensa de sus intereses económicos y sociales. Negocia con el empleador los reclamos y/o exigencias de los trabajadores, para alcanzar un contrato colectivo de trabajo. Vela por las condiciones mínimas de los trabajadores en materia laboral, sanitaria y social. En España, cuando se produjeron los primeros conflictos entre obreros y patronos, se fundó en 1840 el primer sindicato, la Asociación de Tejedores de Barcelona."
+    },
+    {
+      "categoria": "Cultural",
+      "nombre": "Sinsombrero",
+      "definicion": "Pensadoras y artistas españolas pertenecientes a la generación del 27, nacidas entre 1898 y 1914. El nombre se debe al gesto de quitarse el sombrero en público que protagonizaron entre otras, Maruja Mallo y Margarita Manso en la Puerta del Sol."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Soberanía compartida",
+      "definicion": "Estado en el que el poder es compartido entre el rey y las cortes, característica del régimen político en el que la soberanía, como poder político fundamental, recae tanto sobre el monarca como sobre el pueblo a través de sus representantes en las Cortes. Por ejemplo, el Estatuto Real de 1834 en España."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Soberanía nacional",
+      "definicion": "Se habla de soberanía nacional cuando la autoridad suprema de un Estado reside en la nación, entendiendo nación como el conjunto de sus ciudadanos con derecho a voto. Este poder se ejerce a través de los representantes en las Cortes, a quienes los ciudadanos delegan la capacidad de gobernar y legislar en su nombre. En este modelo, el rey se convierte en un mero representante."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Socialismo",
+      "definicion": "Ideología política basada en el principio de que una sociedad debe existir de tal manera que el colectivo popular tenga el control de los medios de producción y, por lo tanto, del poder político. Propone la propiedad social o estatal tenga el cometido de satisfacer las necesidades de los trabajadores y de la población. En España comenzó tras la fundación del Partido Socialista Obrero Español (mayo de 1879) por trabajadores e intelectuales, liderados por Pablo Iglesias."
+    },
+    {
+      "categoria": "Cultural",
+      "nombre": "Sociedades Económicas de Amigos del País",
+      "definicion": "Las Sociedades Económicas de Amigos del País (SEAP) surgieron en España a partir de la segunda mitad del siglo XVIII, en el marco de las ideas de la Ilustración. Surgidas en los círculos culturales como organismos no estatales, tenían como fin promover el desarrollo de España, estudiando la situación económica de cada una de las provincias y buscando soluciones. Las sociedades se encargaban de impulsar la agricultura, el comercio y la industria."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Sufragio universal",
+      "definicion": "La única limitación que existe para ejercer el voto es la edad mínima. Todo integrante de la sociedad, sea hombre o mujer, rico o desfavorecido, analfabeto o instruido, tiene derecho a elegir sus representantes y a ser escogido como tal, si así lo solicita."
+    },
+    {
+      "categoria": "Histórico",
+      "nombre": "Taifas",
+      "definicion": "Reinos independientes que surgieron en Al-Ándalus tras la desintegración del Califato de Córdoba a partir del año 1031. Estos pequeños estados estaban gobernados por distintas élites (árabes, bereberes o eslavos) y se caracterizaron por su rivalidad y debilidad política y militar, lo que facilitó el avance de los reinos cristianos. A pesar de ello, vivieron un notable esplendor cultural y artístico."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Terrorismo",
+      "definicion": "Uso sistemático de la violencia para conseguir fines políticos, religiosos o ideológicos."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Tecnócratas",
+      "definicion": "Profesional especializado en alguna materia económica o administrativa que, en el desempeño de un cargo público aplica medidas eficaces que persiguen el bienestar social al margen de consideraciones ideológicas."
+    },
+    {
+      "categoria": "Política",
+      "nombre": "Transición (hacia la democracia)",
+      "definicion": "Periodo en el España pasó del régimen dictatorial de Franco a regirse por una Constitución que restauraba la democracia, aprobada en 1978. Fase de transformación política iniciada en 1975 con la muerte de Franco, comienza con la primera etapa del reinado de Juan Carlos I y finaliza en 1982 con la victoria del PSOE en las Elecciones generales, donde la mayoría de la población quería una normalización política y social dentro de una Europa democrática."
+    },
+    {
+      "categoria": "Colonial",
+      "nombre": "Virreinato",
+      "definicion": "Cada una de las grandes unidades territoriales en que dividió la América hispana tras su conquista. Al frente del gobierno estaba un virrey nombrado por el monarca. En el siglo XVI se constituyeron dos virreinatos: Nueva España (México y Centroamérica) y Virreinato del Perú (Perú y toda Sudamérica). Con las reformas borbónicas en el siglo XVIII, surgieron el Virreinato de Nueva Granada (Colombia y Venezuela) y el Virreinato del Río de la Plata (Argentina, Uruguay y Paraguay)."
+    }
+]
+}

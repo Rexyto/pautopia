@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "texto": "¿Cuáles son los principales temas de Bodas de sangre?",
+    "respuesta": "Los temas principales incluyen: el destino y la fatalidad (la muerte inevitable de los protagonistas), el amor y la pasión que desafía las normas sociales, el honor familiar y la venganza, el conflicto entre libertad individual y presión social, la muerte como presencia constante, y el enfrentamiento entre razón e instinto. La obra explora cómo estas fuerzas determinan la vida de los personajes.",
+    "lecturaId": "2"
+  },
+  {
+    "id": "2",
+    "texto": "¿Cómo se representa la figura de la mujer en Bodas de sangre?",
+    "respuesta": "La mujer en la obra está atrapada entre sus deseos personales y las imposiciones sociales. La Novia representa el conflicto entre la pasión verdadera (Leonardo) y el deber social (el Novio). La Madre simboliza el peso de la tradición, el honor y la venganza. La Mujer de Leonardo muestra la resignación ante un matrimonio sin amor. Lorca presenta mujeres fuertes pero condicionadas por una sociedad patriarcal.",
+    "lecturaId": "2"
+  },
+  {
+    "id": "3",
+    "texto": "¿Qué símbolos principales utiliza Lorca en la obra?",
+    "respuesta": "Los símbolos más importantes son: la luna (muerte, destino fatal), el cuchillo/navaja (violencia, masculinidad, muerte), la sangre (pasión, violencia, herencia familiar), el caballo (instinto, pasión desenfrenada), los colores (blanco=pureza/muerte, rojo=pasión/sangre), y los elementos naturales (bosque=peligro, río=barrera infranqueable). Estos símbolos crean una atmósfera poética y trágica.",
+    "lecturaId": "2"
+  },
+  {
+    "id": "4",
+    "texto": "¿Por qué se considera una tragedia esta obra?",
+    "respuesta": "Bodas de sangre es una tragedia porque presenta el enfrentamiento inevitable entre las pasiones humanas y las fuerzas del destino. Los personajes están condenados desde el principio: el amor imposible entre la Novia y Leonardo, la venganza de sangre heredada, y las normas sociales inflexibles conducen inexorablemente a la muerte. Como en las tragedias clásicas, los protagonistas no pueden escapar de su destino fatal.",
+    "lecturaId": "2"
+  }
+]

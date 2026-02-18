@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "texto": "¿Qué simbolismo encontramos en Campos de Castilla?",
+    "respuesta": "El paisaje castellano funciona como símbolo del alma española y de la decadencia nacional. Los campos áridos, las tierras yermas y los pueblos abandonados representan tanto el estado físico de España como su situación espiritual y social. Machado utiliza elementos naturales como caminos, fuentes, álamos y atardeceres para expresar estados emocionales y reflexiones existenciales.",
+    "lecturaId": "1"
+  },
+  {
+    "id": "2",
+    "texto": "¿Cuáles son los temas principales de Campos de Castilla?",
+    "respuesta": "Los temas principales incluyen: el paisaje castellano como reflejo del alma, la crítica regeneracionista de España, el dolor personal por la muerte de Leonor, el paso del tiempo y la fugacidad de la vida, la memoria y el recuerdo, y la búsqueda de la esencia de lo español. También aparecen temas existenciales como la soledad, la muerte y el sentido de la vida.",
+    "lecturaId": "1"
+  },
+  {
+    "id": "3",
+    "texto": "¿Cómo presenta Machado a Castilla como visión crítica de España?",
+    "respuesta": "Machado presenta Castilla como símbolo de España y realiza una crítica regeneracionista inspirada en la Generación del 98. Denuncia la España rural atrasada, ignorante y sumida en la pobreza, crítica a una sociedad anclada en el pasado imperial pero incapaz de modernizarse. A través del paisaje árido y los pueblos míseros, refleja la decadencia nacional tras el Desastre del 98.",
+    "lecturaId": "1"
+  },
+  {
+    "id": "4",
+    "texto": "¿Qué importancia tiene el poema 'A un olmo seco' en la obra?",
+    "respuesta": "Este poema, dedicado a su esposa Leonor enferma de tuberculosis, combina la descripción del paisaje con la expresión del dolor personal. El olmo viejo que renace con nuevas hojas simboliza la esperanza ante la muerte inminente. Es uno de los poemas más emotivos donde se fusiona perfectamente el símbolo natural con el sentimiento íntimo del poeta.",
+    "lecturaId": "1"
+  }
+]

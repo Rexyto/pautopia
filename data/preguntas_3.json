@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "texto": "¿Quiénes son los personajes principales de Entre visillos?",
+    "respuesta": "Los personajes principales incluyen a Natalia, una adolescente observadora que escribe un diario y anhela libertad; Pablo Klein, profesor alemán que representa una visión más liberal y moderna; Julia, hermana de Natalia que se debate entre el matrimonio y sus deseos; Gertru, amiga de las hermanas; Mercedes, que vive atrapada en una relación; y otros personajes que representan diferentes posturas ante la sociedad provinciana de la posguerra.",
+    "lecturaId": "3"
+  },
+  {
+    "id": "2",
+    "texto": "¿Qué papel juega el personaje de Natalia en la novela?",
+    "respuesta": "Natalia es la narradora principal a través de su diario. Representa la mirada crítica e inocente de una adolescente que observa el mundo adulto y lo cuestiona. Es el personaje más consciente de las limitaciones impuestas a las mujeres y el que más anhela libertad. Su perspectiva permite a la autora criticar la sociedad de forma sutil pero efectiva.",
+    "lecturaId": "3"
+  },
+  {
+    "id": "3",
+    "texto": "¿Cuáles son los temas presentes en Entre visillos?",
+    "respuesta": "Los temas principales son: la condición de la mujer en la España de posguerra, la educación femenina limitada y condicionante, el tedio y la monotonía de la vida provinciana, la falta de libertad y las normas sociales restrictivas, el matrimonio como única salida para las mujeres, la incomunicación y soledad, el contraste entre tradición y modernidad, y la búsqueda de identidad personal frente a las expectativas sociales.",
+    "lecturaId": "3"
+  },
+  {
+    "id": "4",
+    "texto": "¿Qué simboliza el título 'Entre visillos'?",
+    "respuesta": "El título simboliza la posición de observación oculta desde la que las mujeres miran la vida sin poder participar plenamente en ella. Los visillos representan la barrera que separa el espacio privado (el hogar) del público (la calle), reflejando cómo las mujeres estaban confinadas al ámbito doméstico y solo podían observar el mundo exterior desde la distancia. También representa la vigilancia social y el control sobre la vida de las mujeres.",
+    "lecturaId": "3"
+  }
+]

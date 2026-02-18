@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "titulo": "Biografía de Federico García Lorca",
+    "grupo": "Contexto",
+    "enlace": "https://www.biografiasyvidas.com/biografia/g/garcia_lorca.htm",
+    "descripcion": "Vida y obra del dramaturgo",
+    "lecturaId": "2"
+  },
+  {
+    "id": "2",
+    "titulo": "Bodas de sangre - Texto completo",
+    "grupo": "Documentos",
+    "enlace": "https://www.youtube.com/watch?v=example3",
+    "descripcion": "Texto completo de la obra de García Lorca",
+    "lecturaId": "2",
+    "archivo": "Garcia-Lorca-Bodas-Sangre.pdf"
+  },
+  {
+    "id": "3",
+    "titulo": "El simbolismo en Bodas de sangre",
+    "grupo": "Vídeo",
+    "enlace": "https://www.youtube.com/watch?v=example4",
+    "descripcion": "Video sobre los símbolos: la luna, el cuchillo, la sangre",
+    "lecturaId": "2"
+  },
+  {
+    "id": "4",
+    "titulo": "La mujer en la obra de Lorca",
+    "grupo": "Documentos",
+    "enlace": "https://example.com/mujer-lorca.pdf",
+    "descripcion": "Análisis de los personajes femeninos",
+    "lecturaId": "2"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "titulo": "Campos de Castilla",
+    "autor": "Antonio Machado",
+    "evaluacion": "Primera evaluación",
+    "temas": [
+      "El simbolismo en la obra Campos de Castilla",
+      "Análisis de los temas principales",
+      "Castilla como visión crítica de España"
+    ],
+    "descripcion": "Obra esencial de Antonio Machado que combina paisaje, simbolismo y reflexión social para retratar el alma de Castilla y la España de su tiempo."
+  },
+  {
+    "id": "2",
+    "titulo": "Bodas de sangre",
+    "autor": "Federico García Lorca",
+    "evaluacion": "Segunda evaluación",
+    "temas": [
+      "Análisis de los principales temas de la obra (destino y fatalidad, amor y pasión, honor y sociedad, la muerte…)",
+      "La figura de la mujer en la obra",
+      "El uso de los símbolos en la obra"
+    ],
+    "descripcion": "Obra dramática de Federico García Lorca."
+  },
+  {
+    "id": "3",
+    "titulo": "Entre visillos",
+    "autor": "Carmen Martín Gaite",
+    "evaluacion": "Segunda evaluación",
+    "temas": [
+      "Análisis de los personajes que aparecen en la novela",
+      "Temas presentes en la obra"
+    ],
+    "descripcion": "Novela de Carmen Martín Gaite."
+  },
+  {
+    "id": "4",
+    "titulo": "La Fundación",
+    "autor": "Antonio Buero Vallejo",
+    "evaluacion": "Tercera evaluación",
+    "temas": [
+      "Técnicas y recursos dramáticos",
+      "Análisis de los personajes",
+      "Temas principales de la obra"
+    ],
+    "descripcion": "Obra teatral de Antonio Buero Vallejo."
+  }
+]

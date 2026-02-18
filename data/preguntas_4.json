@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "texto": "¿Qué técnicas y recursos dramáticos utiliza Buero Vallejo en La Fundación?",
+    "respuesta": "Buero Vallejo utiliza el 'efecto de inmersión' para que el espectador vea la realidad distorsionada a través de los ojos de Tomás. La escenografía cambia gradualmente de un lujoso hotel a una celda de prisión, reflejando la progresiva toma de conciencia del protagonista. También emplea el simbolismo (la fundación inexistente, los ratones, los libros censurados), el contraste entre apariencia y realidad, y el teatro dentro del teatro. La obra rompe la cuarta pared al implicar al público en el engaño.",
+    "lecturaId": "4"
+  },
+  {
+    "id": "2",
+    "texto": "¿Quiénes son los personajes principales de La Fundación y qué representan?",
+    "respuesta": "Tomás es el protagonista que vive en una realidad inventada para sobrevivir psicológicamente. Asel representa la lucidez y la resistencia, siendo quien más intenta hacer recapacitar a Tomás. Tulio es el oportunista que delata a sus compañeros para salvarse. Lino y Max son otros presos con diferentes actitudes ante su situación. El Encargado representa el poder represor. Cada personaje simboliza una postura ante la realidad opresiva: la evasión, la resistencia, la colaboración o la resignación.",
+    "lecturaId": "4"
+  },
+  {
+    "id": "3",
+    "texto": "¿Cuáles son los temas principales de La Fundación?",
+    "respuesta": "Los temas principales son: la libertad y la represión política (contexto de la dictadura franquista), la verdad frente a la mentira y el autoengaño, la locura como mecanismo de defensa, la traición y la lealtad entre compañeros, la resistencia ante la opresión, la dignidad humana en situaciones extremas, la esperanza y la desesperanza, y la responsabilidad individual frente a la injusticia. La obra es una reflexión sobre cómo enfrentarse a realidades insoportables.",
+    "lecturaId": "4"
+  },
+  {
+    "id": "4",
+    "texto": "¿Qué simboliza 'La Fundación' en la obra?",
+    "respuesta": "La Fundación es el espacio imaginario que Tomás crea para evadirse de la realidad de estar preso y condenado a muerte. Simboliza el autoengaño como mecanismo de supervivencia psicológica ante una realidad insoportable. También representa las ilusiones y mentiras que las dictaduras venden a la población para ocultar la represión. La progresiva desaparición de la Fundación hasta revelar la celda representa el doloroso proceso de aceptar la verdad.",
+    "lecturaId": "4"
+  }
+]
