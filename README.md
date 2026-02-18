@@ -16,7 +16,7 @@
 
 ---
 
-Plataforma web educativa diseñada para ayudar a estudiantes de 2º de Bachillerato en su preparación para la Prueba de Acceso a la Universidad (PAU) en España.
+Plataforma web educativa diseñada para ayudar a estudiantes de 2º de Bachillerato en su preparación para la Prueba de Acceso a la Universidad (PAU) en España (2026).
 
 ## Descripción
 

@@ -45,7 +45,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 2.0</span>
+        <span>Versión 2.1</span>
       </div>
 
       {showUpdateModal && (
@@ -60,77 +60,36 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 2.0</p>
+              <p className="update-modal-version">Versión 2.1</p>
             </div>
             <div className="update-modal-content">
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>¡Comienza la 2ª Evaluación!</h3>
-      <p>• ¡Ánimo, ya queda menos!</p>
-    </div>
-  </div>
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Física II - Nuevos apuntes</h3>
+                  <p>• Vibraciones y Ondas</p>
+                </div>
+              </div>
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Historia de España - Nuevos temas</h3>
-      <p>• Tema 7: Cambios Sociales del Siglo XIX</p>
-      <p>• Tema 8: Sistema Político de la Restauración</p>
-      <p>• Tema 9: Crisis del 98 y Liquidación del Imperio</p>
-      <p>• Tema 10: Regeneracionismo y Crisis</p>
-      <p>• Tema 11: Hacia una Sociedad de Masas</p>
-      <p>• Tema 13: La Segunda República (Democracia y Alternancia)</p>
-    </div>
-  </div>
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Tecnología e Ingeniería II - Nuevos apuntes</h3>
+                  <p>• Simbología Neumática e Hidráulica</p>
+                  <p>• Circuitos Neumáticos Básicos</p>
+                </div>
+              </div>
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Literatura - Temas del Siglo XX</h3>
-      <p>• Tema 6: Las Vanguardias (tendencias y características)</p>
-      <p>• Tema 7: Generación del 27 (autores y obras principales)</p>
-    </div>
-  </div>
-
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Sistema de sugerencias</h3>
-      <p>Agregado un nuevo sistema de sugerencias para que podais dejar vuestras ideas y podramos agregarlas a Pautopía</p>
-    </div>
-  </div>
-
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Ranking Actualizado</h3>
-      <p>• Los nuevos puntos fueron agregados</p>
-    </div>
-  </div>
-
-</div>
+            </div>
             <button className="update-modal-close" onClick={() => setShowUpdateModal(false)}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 6L6 18M6 6l12 12" />
