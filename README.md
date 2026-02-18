@@ -16,7 +16,15 @@
 
 ---
 
-Plataforma web educativa diseñada para ayudar a estudiantes de 2º de Bachillerato en su preparación para la Prueba de Acceso a la Universidad (PAU) en España (2026).
+Plataforma web educativa diseñada para ayudar a estudiantes de 2º de Bachillerato en su preparación para la Prueba de Acceso a la Universidad (PAU) en España.
+
+##  Web
+
+> **¿Eres estudiante o quieres visitar la página? Accede directamente aquí:**
+>
+> ###  [pautopia.duckdns.org](https://pautopia.duckdns.org)
+
+---
 
 ## Descripción
 
@@ -329,7 +337,7 @@ pautopia/
 │   ├── VigaCalc.png / VigaCalc.apk
 │   ├── Conceptuando_la_historia.png / .apk
 │   └── *.pdf
-├── data/                        # Data con todos los .json
+├── data/                        # No incluida en el repositorio
 ├── server.js
 ├── package.json
 ├── tsconfig.json
@@ -419,4 +427,6 @@ Este proyecto es privado y de uso educativo. Todos los derechos reservados.
 
 <div align="center">
   Desarrollado por <strong>Rexy</strong> para ayudar a la gente a la hora de enfrentarse a la PAU
+  <br><br>
+  <a href="https://pautopia.duckdns.org"> pautopia.duckdns.org</a>
 </div>
