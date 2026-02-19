@@ -337,7 +337,21 @@ pautopia/
 │   ├── VigaCalc.png / VigaCalc.apk
 │   ├── Conceptuando_la_historia.png / .apk
 │   └── *.pdf
-├── data/                        # No incluida en el repositorio
+├── data/
+│   ├── lecturas.json
+│   ├── conceptos.json
+│   ├── ranking.json
+│   ├── visitas.json
+│   ├── apps-versions.json
+│   ├── preguntas_1.json
+│   ├── preguntas_2.json
+│   ├── preguntas_3.json
+│   ├── preguntas_4.json
+│   ├── materiales_1.json
+│   ├── materiales_2.json
+│   ├── materiales_3.json
+│   ├── materiales_4.json
+│   └── sugerencias.json        # Se crea automáticamente                    
 ├── server.js
 ├── package.json
 ├── tsconfig.json

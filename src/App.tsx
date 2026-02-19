@@ -21,6 +21,7 @@ import Quimica from './pages/apuntes/Quimica';
 import ExaminateIndex from './pages/examinate/ExaminateIndex';
 import HistoriaExaminate from './pages/examinate/Historia';
 import Conceptos from './pages/examinate/Conceptos';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
           <Route path="/apps/vigacalc" element={<VigaCalc />} />
           <Route path="/apps/conceptuando-historia" element={<ConceptuandoHistoria />} />
           <Route path="/ranking" element={<Ranking />} />
+
+          {/* Ruta 404*/}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </BrowserRouter>

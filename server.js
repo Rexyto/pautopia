@@ -16,7 +16,6 @@ const DATA_DIR = join(__dirname, 'data');
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(join(__dirname, 'dist')));
 
 // CORS middleware - IMPORTANTE: debe ir ANTES de las rutas
 app.use((req, res, next) => {
@@ -31,6 +30,12 @@ app.use((req, res, next) => {
   
   next();
 });
+
+// Servir archivos estáticos desde /public (robots.txt, sitemap.xml estático, etc.)
+app.use(express.static(join(__dirname, 'public')));
+
+// Servir el build de React desde /dist
+app.use(express.static(join(__dirname, 'dist')));
 
 await fs.mkdir(DATA_DIR, { recursive: true });
 
@@ -101,6 +106,62 @@ setInterval(() => {
 app.get('/health', (req, res) => {
   res.json({ status: 'OK' });
 });
+
+// =====================================================
+// SITEMAP DINÁMICO
+// (Si ya tienes un /public/sitemap.xml estático, este
+//  endpoint lo sobreescribe con datos frescos en cada req)
+// =====================================================
+
+app.get('/sitemap.xml', async (req, res) => {
+  const BASE_URL = 'https://pautopia.duckdns.org';
+  const today = new Date().toISOString().split('T')[0];
+
+  const staticRoutes = [
+    { path: '/',                   priority: '1.0', changefreq: 'weekly'  },
+    { path: '/lecturas',           priority: '0.9', changefreq: 'weekly'  },
+    { path: '/apuntes',            priority: '0.9', changefreq: 'weekly'  },
+    { path: '/apuntes/biologia',   priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/tecnologia', priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/mates',      priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/filosofia',  priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/lengua',     priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/ingles',     priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/historia',   priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/fisica',     priority: '0.8', changefreq: 'monthly' },
+    { path: '/apuntes/quimica',    priority: '0.8', changefreq: 'monthly' },
+    { path: '/examinate',          priority: '0.8', changefreq: 'monthly' },
+    { path: '/examinate/historia', priority: '0.7', changefreq: 'monthly' },
+    { path: '/examinate/conceptos',priority: '0.7', changefreq: 'monthly' },
+    { path: '/apps',               priority: '0.7', changefreq: 'monthly' },
+    { path: '/apps/vigacalc',      priority: '0.6', changefreq: 'monthly' },
+    { path: '/apps/conceptuando',  priority: '0.6', changefreq: 'monthly' },
+    { path: '/frases',             priority: '0.6', changefreq: 'monthly' },
+    { path: '/ranking',            priority: '0.6', changefreq: 'weekly'  },
+    { path: '/creditos',           priority: '0.4', changefreq: 'yearly'  },
+  ];
+
+  const buildUrl = ({ path, priority, changefreq }) => `
+  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+
+  const staticUrls = staticRoutes.map(buildUrl).join('');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}
+</urlset>`;
+
+  res.header('Content-Type', 'application/xml');
+  res.send(xml);
+});
+
+// =====================================================
+// FIN SITEMAP
+// =====================================================
 
 // Visit counter endpoint
 app.post('/api/visitas', async (req, res) => {
@@ -243,12 +304,11 @@ app.get('/api/ranking', async (req, res) => {
 function sanitizeText(text) {
   if (!text || typeof text !== 'string') return '';
   
-  // Eliminar caracteres de control y especiales peligrosos
   return text
     .replace(/[\x00-\x1F\x7F-\x9F]/g, '') // Caracteres de control
-    .replace(/[<>]/g, '') // Evitar HTML injection
-    .replace(/`{3,}/g, '``') // Evitar romper formato de Discord
-    .replace(/[@#:]/g, '') // Evitar menciones y emojis raros en Discord
+    .replace(/[<>]/g, '')                   // Evitar HTML injection
+    .replace(/`{3,}/g, '``')               // Evitar romper formato de Discord
+    .replace(/[@#:]/g, '')                  // Evitar menciones y emojis raros en Discord
     .trim();
 }
 
@@ -260,7 +320,6 @@ function validateNombre(nombre) {
   
   const sanitized = sanitizeText(nombre);
   
-  // Límite: 25 caracteres (sin contar espacios)
   const sinEspacios = sanitized.replace(/\s/g, '');
   if (sinEspacios.length > 25) {
     return { valid: false, error: 'El nombre no puede tener más de 25 caracteres (sin contar espacios)' };
@@ -270,7 +329,6 @@ function validateNombre(nombre) {
     return { valid: false, error: 'El nombre debe tener al menos 2 caracteres' };
   }
   
-  // Solo letras, números, espacios y algunos caracteres básicos
   if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s\-_.]+$/.test(sanitized)) {
     return { valid: false, error: 'El nombre contiene caracteres no permitidos' };
   }
@@ -297,7 +355,7 @@ function validateSugerencia(sugerencia) {
   return { valid: true, value: sanitized };
 }
 
-// Escapar texto para Discord (evitar que rompan el formato)
+// Escapar texto para Discord
 function escapeDiscord(text) {
   return text
     .replace(/\\/g, '\\\\')
@@ -308,48 +366,39 @@ function escapeDiscord(text) {
     .replace(/>/g, '\\>');
 }
 
-// =====================================================
-// ENDPOINT DE SUGERENCIAS CON DISCORD WEBHOOK
-// =====================================================
 
-// Sugerencias endpoint con Discord webhook
+
+
 app.post('/api/sugerencias', async (req, res) => {
   try {
     const { nombre, sugerencia } = req.body;
 
-    // Validar nombre
     const nombreValidation = validateNombre(nombre);
     if (!nombreValidation.valid) {
       return res.status(400).json({ error: nombreValidation.error });
     }
     const nombreLimpio = nombreValidation.value;
 
-    // Validar sugerencia
     const sugerenciaValidation = validateSugerencia(sugerencia);
     if (!sugerenciaValidation.valid) {
       return res.status(400).json({ error: sugerenciaValidation.error });
     }
     const sugerenciaLimpia = sugerenciaValidation.value;
 
-    // Obtener IP del usuario
     let ip = req.headers['x-forwarded-for'] || 
              req.headers['x-real-ip'] || 
              req.connection.remoteAddress || 
              req.socket.remoteAddress ||
              'IP desconocida';
 
-    // Limpiar y formatear IP
     ip = ip.toString().replace('::ffff:', '');
     
-    // Guardar IP original para rate limiting
     const ipParaRateLimit = ip;
     
-    // Si es localhost, mostrarlo claramente
     if (ip === '::1' || ip === '127.0.0.1' || ip === 'localhost') {
       ip = 'Localhost (prueba local)';
     }
 
-    // Verificar rate limit (solo si no es localhost en desarrollo)
     if (ipParaRateLimit !== '::1' && ipParaRateLimit !== '127.0.0.1') {
       const rateLimitCheck = checkRateLimit(ipParaRateLimit);
       if (!rateLimitCheck.allowed) {
@@ -357,7 +406,6 @@ app.post('/api/sugerencias', async (req, res) => {
       }
     }
 
-    // URL del webhook de Discord desde variables de entorno
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
     if (!webhookUrl) {
@@ -365,13 +413,12 @@ app.post('/api/sugerencias', async (req, res) => {
       return res.status(500).json({ error: 'Configuración del servidor incompleta' });
     }
 
-    // Crear el embed para Discord
     const discordPayload = {
       content: '@everyone',
       embeds: [
         {
           title: 'Nueva Sugerencia en PAUtopía',
-          color: 6723891, // Color morado #667eea en decimal
+          color: 6723891,
           fields: [
             {
               name: 'Usuario',
@@ -396,7 +443,6 @@ app.post('/api/sugerencias', async (req, res) => {
       ]
     };
 
-    // Enviar webhook a Discord
     const discordResponse = await fetch(webhookUrl, {
       method: 'POST',
       headers: {
@@ -411,17 +457,14 @@ app.post('/api/sugerencias', async (req, res) => {
       throw new Error(`Discord API error: ${discordResponse.status}`);
     }
 
-    // Crear archivo de sugerencias si no existe
     const sugerenciasPath = getDataPath('sugerencias.json');
     try {
       await fs.access(sugerenciasPath);
     } catch {
-      // El archivo no existe, crearlo
       await writeJSON('sugerencias.json', []);
       console.log('Archivo sugerencias.json creado');
     }
 
-    // Guardar también en archivo JSON local (opcional, como backup)
     const sugerencias = await readJSON('sugerencias.json', []);
     sugerencias.push({
       id: Date.now().toString(),
@@ -434,7 +477,6 @@ app.post('/api/sugerencias', async (req, res) => {
 
     console.log(`✅ Nueva sugerencia de ${nombreLimpio} guardada`);
 
-    // Responder al cliente
     res.status(200).json({ 
       success: true,
       message: 'Sugerencia enviada correctamente' 
@@ -448,6 +490,8 @@ app.post('/api/sugerencias', async (req, res) => {
     });
   }
 });
+
+
 
 app.get('*', (req, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));
