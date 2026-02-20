@@ -45,6 +45,67 @@ Creado por **Rexy** en colaboración con **La Tiza de Rosa**.
 - **Sistema de Sugerencias**: Integrado con webhook de Discord para recibir feedback de usuarios
 - **Contador de Visitas**: Registro de estudiantes que han utilizado la plataforma
 
+---
+
+##  Para estudiantes que se enfrentarán a la PAU en el futuro
+
+Este proyecto nació para ayudar a estudiantes de 2º de Bachillerato, y la idea es que **siga vivo y creciendo** más allá de su creador original.
+
+Si estás preparando tu PAU y quieres contribuir, ya sea añadiendo apuntes de tu comunidad, nuevas lecturas, preguntas, recursos, o mejoras técnicas — **eres más que bienvenido/a a hacerlo**. Este repositorio es tuyo también.
+
+El objetivo es simple: que cada generación deje el proyecto un poco mejor de como lo encontró, para que los que vengan detrás lo tengan más fácil.
+
+---
+
+##  Licencia y Uso del Código
+
+Este proyecto es **de uso libre** bajo las siguientes condiciones:
+
+-  Puedes **ver, clonar y modificar** el código libremente para uso personal o educativo.
+-  Puedes **usar partes del proyecto** como referencia o aprendizaje sin restricciones.
+-  Si quieres **publicar una versión modificada o derivada** de este proyecto, te pedimos que en lugar de hacerlo por separado, **abras un Pull Request en este repositorio**. Así el proyecto original se beneficia de tus mejoras, y tú recibes crédito oficial por tu contribución.
+-  No está permitido **redistribuir este proyecto como propio** sin reconocer su origen.
+
+> En resumen: úsalo, apréndelo, mejóralo, pero si lo publicas, hazlo aquí y te damos los créditos que mereces.
+
+---
+
+##  Contribuir
+
+¿Quieres mejorar PAUtopia? Ya seas desarrollador, estudiante con apuntes útiles o simplemente alguien con buenas ideas, hay sitio para ti.
+
+### ¿Cómo contribuir?
+
+1. Haz **fork** del repositorio
+2. Crea una rama para tu aportación (`git checkout -b feature/MiAportacion`)
+3. Haz **commit** de tus cambios (`git commit -m 'Añadir [descripción de tu aportación]'`)
+4. Haz **push** a tu rama (`git push origin feature/MiAportacion`)
+5. Abre un **Pull Request** describiendo qué has añadido o mejorado
+
+### ¿Qué tipo de contribuciones se aceptan?
+
+-  Nuevos apuntes o recursos por asignatura
+-  Lecturas obligatorias de otras comunidades autónomas
+-  Preguntas de comprensión para las lecturas existentes
+-  Corrección de errores o bugs
+-  Mejoras de funcionalidad o diseño
+-  Adaptaciones para otras comunidades autónomas
+
+Todos los contribuidores serán reconocidos en la sección de créditos del proyecto.
+
+---
+
+##  Créditos y Contribuidores
+
+| Rol | Persona |
+|-----|---------|
+| Creador y desarrollador principal | **Rexy** |
+| Colaboración en contenidos | **La Tiza de Rosa** |
+
+*¿Has contribuido al proyecto? Tu nombre estará aquí.*
+
+---
+
 ## Requisitos Previos
 
 - Node.js (versión 14 o superior)
@@ -425,22 +486,10 @@ NODE_ENV=development
 - Sin base de datos relacional
 - Rate limiting en memoria (se reinicia al reiniciar el servidor)
 
-## Contribuir
-
-1. Hacer fork del repositorio
-2. Crear una rama para tu feature (`git checkout -b feature/NuevaCaracteristica`)
-3. Commit de tus cambios (`git commit -m 'Añadir nueva característica'`)
-4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abrir un Pull Request
-
-## Licencia
-
-Este proyecto es privado y de uso educativo. Todos los derechos reservados.
-
 ---
 
 <div align="center">
   Desarrollado por <strong>Rexy</strong> para ayudar a la gente a la hora de enfrentarse a la PAU
   <br><br>
-  <a href="https://pautopia.duckdns.org"> pautopia.duckdns.org</a>
+  <a href="https://pautopia.duckdns.org">pautopia.duckdns.org</a>
 </div>
