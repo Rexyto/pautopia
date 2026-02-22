@@ -6,6 +6,7 @@ import Creditos from './pages/Creditos';
 import Frases from './pages/Frases';
 import Apps from './pages/Apps';
 import VigaCalc from './pages/VigaCalc';
+import WaveCalc from './pages/WaveCalc';
 import ConceptuandoHistoria from './pages/ConceptuandoHistoria';
 import Ranking from './pages/Ranking';
 import ApuntesIndex from './pages/apuntes/ApuntesIndex';
@@ -47,6 +48,7 @@ function App() {
           <Route path="/creditos" element={<Creditos />} />
           <Route path="/apps" element={<Apps />} />
           <Route path="/apps/vigacalc" element={<VigaCalc />} />
+          <Route path="/apps/wavecalc" element={<WaveCalc />} />
           <Route path="/apps/conceptuando-historia" element={<ConceptuandoHistoria />} />
           <Route path="/ranking" element={<Ranking />} />
 

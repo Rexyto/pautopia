@@ -45,7 +45,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 2.1</span>
+        <span>Versión 2.2</span>
       </div>
 
       {showUpdateModal && (
@@ -60,7 +60,7 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 2.1</p>
+              <p className="update-modal-version">Versión 2.2</p>
             </div>
             <div className="update-modal-content">
 
@@ -71,8 +71,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>Física II - Nuevos apuntes</h3>
-                  <p>• Vibraciones y Ondas</p>
+                  <h3>Filosofía - Nuevos apuntes</h3>
+                  <p>• La Escolástica (Tomás de Aquino y pensadores medievales)</p>
+                  <p>• El Racionalismo (Descartes, Spinoza y Leibniz)</p>
                 </div>
               </div>
 
@@ -83,11 +84,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>Tecnología e Ingeniería II - Nuevos apuntes</h3>
-                  <p>• Simbología Neumática e Hidráulica</p>
-                  <p>• Circuitos Neumáticos Básicos</p>
+                  <h3>Apps - Nueva herramienta</h3>
+                  <p>• WaveCalc: calculadora completa de ondas y física de vibraciones</p>
                 </div>
               </div>
+
 
             </div>
             <button className="update-modal-close" onClick={() => setShowUpdateModal(false)}>

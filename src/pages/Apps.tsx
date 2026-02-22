@@ -16,6 +16,12 @@ const apps: App[] = [
     route: '/apps/vigacalc'
   },
   {
+    id: 'wavecalc',
+    name: 'WaveCalc',
+    icon: '/WaveCalc.png',
+    route: '/apps/wavecalc'
+  },
+  {
     id: 'conceptuando-historia',
     name: 'Conceptuando la historia',
     icon: '/Conceptuando_la_historia.png',
