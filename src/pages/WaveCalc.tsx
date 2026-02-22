@@ -2,9 +2,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Layout from '../components/Layout';
 import '../styles/wavecalc.css';
 
-// ═══════════════════════════════════════════
-// TIPOS
-// ═══════════════════════════════════════════
 type TabId = "calc" | "interf" | "intensity" | "mas" | "phase";
 type WaveFunc = "sin" | "cos";
 type Direction = "+" | "-";
@@ -27,9 +24,7 @@ interface ParamsState {
   T: string; Tunit: string;
   omega: string; omegaunit: string;
   lam: string; lamunit: string;
-  k: string;
-  n: string;
-  phi: string;
+  k: string; n: string; phi: string;
   func: WaveFunc; dir: Direction; varName: string;
 }
 interface IntensityState {
@@ -46,47 +41,27 @@ interface PhaseState {
   dr: string; drunit: string; delta: string;
 }
 
-// ═══════════════════════════════════════════
-// CONSTANTES
-// ═══════════════════════════════════════════
 const PI = Math.PI;
 const C_LIGHT = 3e8;
 
-// ═══════════════════════════════════════════
-// CONVERSORES DE UNIDADES
-// ═══════════════════════════════════════════
-// Cada conversor: valor en la unidad dada → valor en SI
 const unitConverters: Record<string, Record<string, number>> = {
-  // Velocidad → m/s
-  vunit: { "m/s": 1, "km/s": 1e3, "km/h": 1/3.6, "cm/s": 0.01, "mph": 0.44704 },
-  // Frecuencia → Hz
-  funit: { "Hz": 1, "kHz": 1e3, "MHz": 1e6, "GHz": 1e9, "THz": 1e12, "rad/s": 1/(2*PI) },
-  // Período → s
-  Tunit: { "s": 1, "ms": 1e-3, "μs": 1e-6, "ns": 1e-9, "min": 60, "h": 3600 },
-  // Pulsación → rad/s
-  omegaunit: { "rad/s": 1, "rad/min": 1/60, "rad/h": 1/3600, "rpm": 2*PI/60 },
-  // Longitud de onda → m
-  lamunit: { "m": 1, "cm": 0.01, "mm": 1e-3, "μm": 1e-6, "nm": 1e-9, "pm": 1e-12, "km": 1e3 },
-  // Amplitud → base unit (no convert, just reference)
-  Aunit: { "m": 1, "cm": 0.01, "mm": 1e-3, "V/m": 1, "Pa": 1, "mPa": 1e-3, "kPa": 1e3 },
-  // Distancia → m
+  vunit:    { "m/s": 1, "km/s": 1e3, "km/h": 1/3.6, "cm/s": 0.01, "mph": 0.44704 },
+  funit:    { "Hz": 1, "kHz": 1e3, "MHz": 1e6, "GHz": 1e9, "THz": 1e12, "rad/s": 1/(2*PI) },
+  Tunit:    { "s": 1, "ms": 1e-3, "μs": 1e-6, "ns": 1e-9, "min": 60, "h": 3600 },
+  omegaunit:{ "rad/s": 1, "rad/min": 1/60, "rad/h": 1/3600, "rpm": 2*PI/60 },
+  lamunit:  { "m": 1, "cm": 0.01, "mm": 1e-3, "μm": 1e-6, "nm": 1e-9, "pm": 1e-12, "km": 1e3 },
+  Aunit:    { "m": 1, "cm": 0.01, "mm": 1e-3, "V/m": 1, "Pa": 1, "mPa": 1e-3, "kPa": 1e3 },
   distunit: { "m": 1, "cm": 0.01, "mm": 1e-3, "km": 1e3, "μm": 1e-6, "nm": 1e-9 },
-  // Masa → kg
-  munit: { "kg": 1, "g": 1e-3, "mg": 1e-6 },
-  // Ángulo
-  deltaunit: { "rad": 1, "°": PI/180, "grados": PI/180 },
+  munit:    { "kg": 1, "g": 1e-3, "mg": 1e-6 },
+  deltaunit:{ "rad": 1, "°": PI/180, "grados": PI/180 },
 };
 
 function toSI(val: number, unitKey: string, unit: string): number {
   const map = unitConverters[unitKey];
   if (!map) return val;
-  const factor = map[unit] ?? 1;
-  return val * factor;
+  return val * (map[unit] ?? 1);
 }
 
-// ═══════════════════════════════════════════
-// UTILIDADES
-// ═══════════════════════════════════════════
 function evalExpr(s: string): number {
   if (!s || !s.trim()) return NaN;
   try {
@@ -137,14 +112,10 @@ function fmtPi(v: number, d = 3): string {
   return fmtV(v, d);
 }
 
-// ═══════════════════════════════════════════
-// PARSEO DE ECUACIONES
-// ═══════════════════════════════════════════
 function parseEq(raw: string): ParsedWave | null {
   if (!raw || !raw.trim()) return null;
   const varM = raw.match(/^(\w+)\s*=/);
   const varName = varM ? varM[1] : "E";
-
   let s = raw
     .replace(/^[^=]+=\s*/, "")
     .replace(/π/g, "*PI_").replace(/\bpi\b/gi, "*PI_")
@@ -153,11 +124,9 @@ function parseEq(raw: string): ParsedWave | null {
     .replace(/×/g, "*").replace(/·/g, "*")
     .replace(/–/g, "-").replace(/−/g, "-")
     .trim();
-
   const re = /([\d.e+\-*/]+)\s*\*?\s*(sin|cos)\s*\(\s*(.+?)\s*\)/i;
   const m = s.match(re);
   if (!m) return null;
-
   function safeEval(expr: string): number {
     try {
       const c = expr.replace(/[^0-9+\-*/.e]/gi, "");
@@ -165,12 +134,10 @@ function parseEq(raw: string): ParsedWave | null {
       return Function('"use strict";return (' + c + ")")() as number;
     } catch { return NaN; }
   }
-
   const A = safeEval(m[1]);
   const func = m[2].toLowerCase() as WaveFunc;
   const inner = m[3].replace(/\s/g, "");
   if (isNaN(A) || A === 0) return null;
-
   const tokens: { sign: number; body: string }[] = [];
   let cur = "", curSign = 1;
   for (let i = 0; i < inner.length; i++) {
@@ -181,10 +148,8 @@ function parseEq(raw: string): ParsedWave | null {
     } else cur += ch;
   }
   if (cur) tokens.push({ sign: curSign, body: cur });
-
   let kVal: number | null = null, wVal: number | null = null;
   let signK = 1, signW = 1, phi = 0;
-
   tokens.forEach(({ sign, body }) => {
     if (body.includes("x")) {
       const kExpr = body.replace(/\*?x\*?/g, "").replace(/x/g, "") || "1";
@@ -196,7 +161,6 @@ function parseEq(raw: string): ParsedWave | null {
       phi += sign * safeEval(body);
     }
   });
-
   if (!kVal || !wVal || isNaN(kVal) || isNaN(wVal)) return null;
   return { A, func, k: Math.abs(kVal), omega: Math.abs(wVal), signK, signW, phi, varName };
 }
@@ -224,9 +188,6 @@ function computeWave(p: ParsedWave): WaveProps {
   return { A, func, k, omega, lam, T, f, v, n, inVac, dirSign, dir, phi, varName, signK, signW, dDt_coeff, dDt_func, dDx_coeff, dDx_func, I_em };
 }
 
-// ═══════════════════════════════════════════
-// RESOLVEDOR INTELIGENTE
-// ═══════════════════════════════════════════
 interface Resolved {
   A: number; v: number; f: number; T: number;
   omega: number; lam: number; k: number; n: number;
@@ -290,15 +251,11 @@ function renderParamsResolved(r: Resolved, s: ParamsState): string {
     </div>`;
 }
 
-// ═══════════════════════════════════════════
-// RENDERIZADOR DE RESULTADOS DE ONDA
-// ═══════════════════════════════════════════
 function renderWaveResults(w: WaveProps): string {
   const sgKs = w.signK > 0 ? "" : "-";
   const phiStr = w.phi !== 0 ? ` ${w.phi > 0 ? "+" : "-"} ${fmtPi(Math.abs(w.phi))} rad` : "";
   const kS = fmtV(w.k), wS = fmtV(w.omega);
   const eqLine = `${w.varName} = <span class="hi">${w.A}</span> · ${w.func}(<span class="hic">${sgKs}${kS}</span>·x <span style="color:var(--dim)">${w.signW > 0 ? "+" : "−"}</span> <span class="hip">${wS}</span>·t${phiStr})`;
-
   const props = [
     { l: "Amplitud A", v: fmtVH(w.A), a: "máximo desplazamiento", s: "A", c: "" },
     { l: "Long. onda λ", v: fmtVH(w.lam) + " <small>m</small>", a: `${fmtV(w.lam * 1e9, 3)} nm · ${fmtV(w.lam * 100, 3)} cm`, s: "λ", c: "g" },
@@ -309,11 +266,9 @@ function renderWaveResults(w: WaveProps): string {
     { l: "Pulsación ω", v: fmtVH(w.omega) + " <small>rad/s</small>", a: `= 2πf · ${fmtV(w.omega * 60, 3)} rad/min`, s: "ω", c: "p" },
     { l: "Índ. refrac n", v: w.inVac ? "1.000" : w.n.toFixed(5), a: w.inVac ? "propagación en el vacío" : `medio material · v=${fmtVH(w.v)} m/s`, s: "n", c: w.inVac ? "g" : "r" },
   ];
-
   const dKsgn = w.signK > 0 ? "" : "-";
   const dwStr = fmtV(w.dDt_coeff);
   const dkStr = `${dKsgn}${fmtV(w.dDx_coeff)}`;
-
   const deriveds = [
     { t: `D${w.varName}/Dt — Derivada temporal`, e: `D${w.varName}/Dt = <span class="hi">${dwStr}</span> · <span class="hig">${w.dDt_func}</span>(<span class="hic">${dKsgn}${fmtV(w.k)}</span>x ${w.signW > 0 ? "+" : "−"} <span class="hip">${fmtV(w.omega)}</span>t${phiStr})` },
     { t: `D${w.varName}/Dx — Derivada espacial`, e: `D${w.varName}/Dx = <span class="hi">${dkStr}</span> · <span class="hig">${w.dDx_func}</span>(<span class="hic">${dKsgn}${fmtV(w.k)}</span>x ${w.signW > 0 ? "+" : "−"} <span class="hip">${fmtV(w.omega)}</span>t${phiStr})` },
@@ -324,10 +279,8 @@ function renderWaveResults(w: WaveProps): string {
     { t: `Intensidad${w.I_em !== null ? " (EM vacío)" : " (EM medio)"}`, e: w.I_em !== null ? `I = ½ε₀c·E₀² = <span class="hig">${fmtVH(w.I_em)} W/m²</span><br>I ∝ A² → si A×2 → I×4` : `I = ½ε₀v·E₀²/n &nbsp;(n=${w.n.toFixed(4)})<br>I ∝ A² → si A×2 → I×4` },
     { t: "Ecuación de ondas (D'Alembert)", e: `∂²${w.varName}/∂x² = (1/v²)·∂²${w.varName}/∂t²<br>v = <span class="hic">${fmtVH(w.v)} m/s</span> &nbsp; 1/v² = ${fmtVH(1/(w.v*w.v), 3)} s²/m²` },
   ];
-
   const dotCol = w.inVac ? "var(--green)" : "var(--orange)";
   const freqZone = w.f > 7e14 ? "Ultravioleta" : w.f > 4e14 ? `Luz visible (${fmtV(w.lam * 1e9, 3)} nm)` : w.f > 1e11 ? "Infrarrojo/microondas" : w.f > 1e6 ? "Radiofrecuencia" : "Baja frecuencia / mecánica";
-
   return `
     <div class="res-sep">▸ ECUACIÓN DE LA ONDA</div>
     <div class="eq-box"><div class="eq-text">${eqLine}</div></div>
@@ -348,9 +301,6 @@ function renderWaveResults(w: WaveProps): string {
     </div>`;
 }
 
-// ═══════════════════════════════════════════
-// CSS
-// ═══════════════════════════════════════════
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700&family=Syne:wght@700;800;900&display=swap');
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -391,60 +341,35 @@ body{background:var(--bg);color:var(--white);font-family:'JetBrains Mono',monosp
 .inp-with-unit{display:flex;flex-direction:column;gap:.28rem;}
 .inp-with-unit input{width:100%;}
 .unit-pills{display:flex;flex-wrap:wrap;gap:.25rem;}
-.unit-pill{
-  font-size:.58rem;font-family:'JetBrains Mono',monospace;
-  padding:.18rem .55rem;border:1px solid var(--b);
-  color:var(--dim);cursor:pointer;transition:all .15s;
-  background:transparent;border-radius:0;
-  letter-spacing:.05em;
-}
+.unit-pill{font-size:.58rem;font-family:'JetBrains Mono',monospace;padding:.18rem .55rem;border:1px solid var(--b);color:var(--dim);cursor:pointer;transition:all .15s;background:transparent;border-radius:0;letter-spacing:.05em;}
 .unit-pill:hover{color:var(--white);border-color:rgba(255,255,255,0.2);}
-.unit-pill.active{
-  color:var(--cyan);border-color:var(--cyan);
-  background:rgba(0,229,255,.08);
-}
-.inp-group input,.inp-group select{
-  background:var(--panel2);border:1px solid var(--b);color:var(--white);
-  font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.55rem .8rem;
-  outline:none;transition:border-color .2s;width:100%;}
+.unit-pill.active{color:var(--cyan);border-color:var(--cyan);background:rgba(0,229,255,.08);}
+.inp-group input,.inp-group select{background:var(--panel2);border:1px solid var(--b);color:var(--white);font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.55rem .8rem;outline:none;transition:border-color .2s;width:100%;}
 .inp-group input:focus,.inp-group select:focus{border-color:var(--cyan);}
 .iunit{font-size:.58rem;color:var(--dim);}
 .inp-full{grid-column:1/-1;}
 .inp-eq input{font-size:.88rem;}
 .radio-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem;}
-.rbtn{padding:.3rem .7rem;font-size:.63rem;border:1px solid var(--b);
-  cursor:pointer;color:var(--dim);transition:all .15s;font-family:'JetBrains Mono',monospace;background:none;}
+.rbtn{padding:.3rem .7rem;font-size:.63rem;border:1px solid var(--b);cursor:pointer;color:var(--dim);transition:all .15s;font-family:'JetBrains Mono',monospace;background:none;}
 .rbtn:hover{color:var(--white);}
 .rbtn.sel{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.07);}
-.hint{font-size:.62rem;color:var(--dim);line-height:1.65;margin-bottom:.8rem;padding:.6rem .8rem;
-  background:var(--b2);border-left:2px solid rgba(0,229,255,.2);}
+.hint{font-size:.62rem;color:var(--dim);line-height:1.65;margin-bottom:.8rem;padding:.6rem .8rem;background:var(--b2);border-left:2px solid rgba(0,229,255,.2);}
 .hint code{color:var(--gold);background:rgba(255,208,96,.09);padding:.05rem .3rem;}
-.btn-calc{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;
-  padding:.6rem 2rem;border:none;cursor:pointer;letter-spacing:.12em;
-  background:var(--cyan);color:#000;transition:all .2s;}
+.btn-calc{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;padding:.6rem 2rem;border:none;cursor:pointer;letter-spacing:.12em;background:var(--cyan);color:#000;transition:all .2s;}
 .btn-calc:hover{background:#fff;box-shadow:0 0 20px var(--cyan);}
-.btn-sm2{font-family:'JetBrains Mono',monospace;font-size:.62rem;
-  padding:.3rem .7rem;border:1px solid var(--b);background:transparent;
-  color:var(--dim);cursor:pointer;transition:all .15s;}
+.btn-sm2{font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.3rem .7rem;border:1px solid var(--b);background:transparent;color:var(--dim);cursor:pointer;transition:all .15s;}
 .btn-sm2:hover,.btn-sm2.on{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.06);}
-.err{font-size:.7rem;color:var(--red);padding:.5rem .8rem;background:rgba(255,51,102,.07);
-  border-left:3px solid var(--red);margin-top:.5rem;white-space:pre-line;}
+.err{font-size:.7rem;color:var(--red);padding:.5rem .8rem;background:rgba(255,51,102,.07);border-left:3px solid var(--red);margin-top:.5rem;white-space:pre-line;}
 .calc-toggle{display:flex;gap:0;margin-bottom:1.4rem;border:1px solid var(--b);width:fit-content;}
-.calc-toggle-btn{padding:.5rem 1.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;
-  letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border:none;
-  background:transparent;color:var(--dim);transition:all .18s;}
+.calc-toggle-btn{padding:.5rem 1.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border:none;background:transparent;color:var(--dim);transition:all .18s;}
 .calc-toggle-btn.active{background:var(--cyan);color:#000;font-weight:700;}
 .calc-toggle-btn:not(.active):hover{color:var(--white);background:rgba(255,255,255,.04);}
 .mode-divider{width:1px;background:var(--b);}
 .results-wrap{max-width:960px;margin:0 auto;padding:0 1.4rem 2rem;}
-.res-sep{font-family:'Syne',sans-serif;font-weight:800;font-size:.6rem;letter-spacing:.35em;
-  text-transform:uppercase;color:var(--cyan);padding:1rem 0 .6rem;
-  border-top:1px solid var(--b);margin-top:.5rem;}
+.res-sep{font-family:'Syne',sans-serif;font-weight:800;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--cyan);padding:1rem 0 .6rem;border-top:1px solid var(--b);margin-top:.5rem;}
 .res-sep:first-child{border-top:none;padding-top:0;}
-.eq-box{background:var(--panel2);border:1px solid rgba(0,229,255,.15);
-  padding:1.1rem 1.4rem;margin-bottom:.8rem;position:relative;overflow:hidden;}
-.eq-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--cyan),var(--purple));}
+.eq-box{background:var(--panel2);border:1px solid rgba(0,229,255,.15);padding:1.1rem 1.4rem;margin-bottom:.8rem;position:relative;overflow:hidden;}
+.eq-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--purple));}
 .eq-text{font-size:clamp(.8rem,2vw,1.05rem);line-height:1.8;}
 .props-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--b);margin-bottom:1px;}
 .pc{background:var(--panel);padding:.85rem 1rem;position:relative;}
@@ -458,31 +383,25 @@ body{background:var(--bg);color:var(--white);font-family:'JetBrains Mono',monosp
 .dc{background:var(--panel2);padding:.85rem 1.1rem;}
 .dct{font-size:.55rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;margin-bottom:.45rem;}
 .dce{font-size:.75rem;line-height:1.75;}
-.status-bar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;padding:.7rem 1rem;
-  background:var(--panel);border:1px solid var(--b);font-size:.7rem;margin-bottom:.8rem;}
+.status-bar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;padding:.7rem 1rem;background:var(--panel);border:1px solid var(--b);font-size:.7rem;margin-bottom:.8rem;}
 .sdot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
 .canvas-wrap{border-top:1px solid var(--b);}
-.cbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
-  padding:.6rem 1.4rem;background:var(--panel);border-bottom:1px solid var(--b);
-  max-width:960px;margin:0 auto;}
+.cbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding:.6rem 1.4rem;background:var(--panel);border-bottom:1px solid var(--b);max-width:960px;margin:0 auto;}
 .ctitle{font-family:'Syne',sans-serif;font-weight:800;font-size:.62rem;letter-spacing:.2em;color:var(--cyan);}
 .cctrl{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
 input[type=range]{accent-color:var(--cyan);width:80px;}
 .couter{max-width:960px;margin:0 auto;}
 canvas{display:block;width:100%;height:auto;background:var(--panel);}
-.live-row{display:flex;gap:1.2rem;flex-wrap:wrap;padding:.45rem 1.4rem;
-  background:rgba(0,229,255,.025);border-top:1px solid var(--b);
-  max-width:960px;margin:0 auto;font-size:.65rem;}
+.live-row{display:flex;gap:1.2rem;flex-wrap:wrap;padding:.45rem 1.4rem;background:rgba(0,229,255,.025);border-top:1px solid var(--b);max-width:960px;margin:0 auto;font-size:.65rem;}
 .lv{display:flex;flex-direction:column;gap:.1rem;}
 .lvl{font-size:.55rem;letter-spacing:.12em;color:var(--dim);}
 .lvv{font-family:'Syne',sans-serif;font-weight:700;font-size:.82rem;}
 .hi{color:var(--gold);}.hic{color:var(--cyan);}.hip{color:var(--purple);}
 .hig{color:var(--green);}.hio{color:var(--orange);}.hir{color:var(--red);}
+.canvas-legend{display:flex;gap:1.2rem;flex-wrap:wrap;padding:.35rem 1.4rem;background:var(--panel);border-top:1px solid var(--b);max-width:960px;margin:0 auto;font-size:.6rem;}
+.cl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:2px;}
 `;
 
-// ═══════════════════════════════════════════
-// COMPONENTES AUXILIARES
-// ═══════════════════════════════════════════
 function RadioGroup({ options, value, onChange }: { options: {v:string;l:string}[]; value: string; onChange:(v:string)=>void }) {
   return (
     <div className="radio-row">
@@ -493,7 +412,6 @@ function RadioGroup({ options, value, onChange }: { options: {v:string;l:string}
   );
 }
 
-// Input con pills de unidad debajo
 function InputUnit({ value, onChange, unit, onUnitChange, units, placeholder }: {
   value: string; onChange:(v:string)=>void;
   unit: string; onUnitChange:(v:string)=>void;
@@ -504,11 +422,7 @@ function InputUnit({ value, onChange, unit, onUnitChange, units, placeholder }: 
       <input value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder||""} />
       <div className="unit-pills">
         {units.map(u=>(
-          <button
-            key={u}
-            className={`unit-pill${unit===u?" active":""}`}
-            onClick={()=>onUnitChange(u)}
-          >{u}</button>
+          <button key={u} className={`unit-pill${unit===u?" active":""}`} onClick={()=>onUnitChange(u)}>{u}</button>
         ))}
       </div>
     </div>
@@ -516,11 +430,12 @@ function InputUnit({ value, onChange, unit, onUnitChange, units, placeholder }: 
 }
 
 // ═══════════════════════════════════════════
-// CANVAS ANIMATION
+// CANVAS — ahora acepta wave2 opcional
 // ═══════════════════════════════════════════
 function drawCanvas(
   ctx: CanvasRenderingContext2D, w: WaveProps, t: number, WW: number, WH: number,
-  setLiveData: (d:{nT:number;e0:number;e1:number;e2:number})=>void
+  setLiveData: (d:{nT:number;e0:number;e1:number;e2:number})=>void,
+  wave2?: WaveProps | null
 ) {
   const WCY = WH / 2;
   ctx.clearRect(0, 0, WW, WH);
@@ -528,7 +443,12 @@ function drawCanvas(
   bg.addColorStop(0,"rgba(0,229,255,0.025)"); bg.addColorStop(1,"transparent");
   ctx.fillStyle=bg; ctx.fillRect(0,0,WW,WH);
 
-  const L = w.lam, xs = WW/(3.5*L), ys = (WH*0.38)/w.A, ox = 50;
+  const L = w.lam;
+  const xs = WW/(3.5*L);
+  // Escala vertical usando la amplitud máxima de ambas ondas
+  const maxA = Math.max(w.A, wave2?.A ?? 0);
+  const ys = (WH*0.38)/maxA;
+  const ox = 50;
 
   ctx.strokeStyle="rgba(255,255,255,0.08)"; ctx.lineWidth=1;
   ctx.beginPath(); ctx.moveTo(ox,WCY); ctx.lineTo(WW,WCY); ctx.stroke();
@@ -539,26 +459,47 @@ function drawCanvas(
     if(n>0){ctx.fillStyle="rgba(255,255,255,0.18)";ctx.font="10px JetBrains Mono";ctx.textAlign="center";ctx.fillText(n+"λ",sx,WH-4);}
   }
   ctx.setLineDash([]);
-  ctx.fillStyle="rgba(0,229,255,0.5)";ctx.font="11px JetBrains Mono";ctx.textAlign="left";ctx.fillText(w.varName+" →",ox+4,16);
+
+  // Labels de leyenda
+  ctx.fillStyle="rgba(0,229,255,0.7)";ctx.font="11px JetBrains Mono";ctx.textAlign="left";
+  ctx.fillText(w.varName+(wave2?"₁":"")+" →",ox+4,16);
+  if(wave2){
+    ctx.fillStyle="rgba(184,127,255,0.7)";
+    ctx.fillText(wave2.varName+"₂ →",ox+4,30);
+  }
+
   ctx.fillStyle="rgba(255,255,255,0.2)";ctx.textAlign="right";
-  ctx.fillText("+"+w.A,ox-2,WCY-WH*0.38+4);ctx.fillText("0",ox-2,WCY+4);ctx.fillText("-"+w.A,ox-2,WCY+WH*0.38+4);
+  ctx.fillText("+"+fmtV(maxA,2),ox-2,WCY-WH*0.38+4);
+  ctx.fillText("0",ox-2,WCY+4);
+  ctx.fillText("-"+fmtV(maxA,2),ox-2,WCY+WH*0.38+4);
 
-  const E=(xM:number)=>{const ph=w.signK*w.k*xM+w.signW*w.omega*t+w.phi;return w.A*(w.func==="sin"?Math.sin(ph):Math.cos(ph));};
+  const E1=(xM:number)=>{const ph=w.signK*w.k*xM+w.signW*w.omega*t+w.phi;return w.A*(w.func==="sin"?Math.sin(ph):Math.cos(ph));};
 
+  // Relleno onda 1
   ctx.beginPath();
-  for(let px=ox;px<=WW;px++){const xM=(px-ox)/xs;const sy=WCY-E(xM)*ys;px===ox?ctx.moveTo(px,sy):ctx.lineTo(px,sy);}
+  for(let px=ox;px<=WW;px++){const xM=(px-ox)/xs;const sy=WCY-E1(xM)*ys;px===ox?ctx.moveTo(px,sy):ctx.lineTo(px,sy);}
   ctx.lineTo(WW,WCY);ctx.lineTo(ox,WCY);ctx.closePath();
   const fg=ctx.createLinearGradient(0,WCY-WH*0.38,0,WCY+WH*0.38);
-  fg.addColorStop(0,"rgba(0,229,255,0.12)");fg.addColorStop(0.5,"rgba(0,229,255,0.02)");fg.addColorStop(1,"rgba(0,229,255,0.12)");
+  fg.addColorStop(0,"rgba(0,229,255,0.10)");fg.addColorStop(0.5,"rgba(0,229,255,0.01)");fg.addColorStop(1,"rgba(0,229,255,0.10)");
   ctx.fillStyle=fg; ctx.fill();
 
+  // Línea onda 1 (cyan)
   ctx.beginPath();
-  for(let px=ox;px<=WW;px++){const xM=(px-ox)/xs;const sy=WCY-E(xM)*ys;px===ox?ctx.moveTo(px,sy):ctx.lineTo(px,sy);}
+  for(let px=ox;px<=WW;px++){const xM=(px-ox)/xs;const sy=WCY-E1(xM)*ys;px===ox?ctx.moveTo(px,sy):ctx.lineTo(px,sy);}
   ctx.strokeStyle="#00e5ff";ctx.lineWidth=2.5;ctx.shadowColor="#00e5ff";ctx.shadowBlur=12;ctx.stroke();ctx.shadowBlur=0;
 
+  // Línea onda 2 (purple) — NUEVO
+  if(wave2){
+    const E2=(xM:number)=>{const ph=wave2.signK*wave2.k*xM+wave2.signW*wave2.omega*t+wave2.phi;return wave2.A*(wave2.func==="sin"?Math.sin(ph):Math.cos(ph));};
+    ctx.beginPath();
+    for(let px=ox;px<=WW;px++){const xM=(px-ox)/xs;const sy=WCY-E2(xM)*ys;px===ox?ctx.moveTo(px,sy):ctx.lineTo(px,sy);}
+    ctx.strokeStyle="#b87fff";ctx.lineWidth=2;ctx.shadowColor="#b87fff";ctx.shadowBlur=8;ctx.stroke();ctx.shadowBlur=0;
+  }
+
+  // Marcadores onda 1
   const markers:[number,string,string][] = [[0,"#00ff88","x=0"],[L/4,"#ffd060","λ/4"],[L/2,"#b87fff","λ/2"]];
   markers.forEach(([xM,col,lbl])=>{
-    const sx=ox+xM*xs,Ev=E(xM),sy=WCY-Ev*ys;
+    const sx=ox+xM*xs,Ev=E1(xM),sy=WCY-Ev*ys;
     ctx.beginPath();ctx.moveTo(sx,WCY);ctx.lineTo(sx,sy);
     ctx.strokeStyle=col+"55";ctx.lineWidth=1;ctx.setLineDash([4,5]);ctx.stroke();ctx.setLineDash([]);
     ctx.beginPath();ctx.arc(sx,sy,4.5,0,2*PI);
@@ -577,10 +518,11 @@ function drawCanvas(
   ctx.fillStyle=ac;ctx.font="10px JetBrains Mono";ctx.textAlign="center";
   ctx.fillText("v="+fmtV(w.v,3)+" m/s",ax,ay-10);
 
-  setLiveData({nT:t/((2*PI)/w.omega),e0:E(0),e1:E(L/4),e2:E(L/2)});
+  setLiveData({nT:t/((2*PI)/w.omega),e0:E1(0),e1:E1(L/4),e2:E1(L/2)});
 }
 
-function CanvasViz({wave}:{wave:WaveProps|null}) {
+// CanvasViz acepta wave2 opcional
+function CanvasViz({wave, wave2}:{wave:WaveProps|null; wave2?:WaveProps|null}) {
   const canvasRef=useRef<HTMLCanvasElement>(null);
   const animRef=useRef<number>(0);
   const stateRef=useRef({tSim:0,lastTs:0,playing:true,speed:1});
@@ -602,18 +544,18 @@ function CanvasViz({wave}:{wave:WaveProps|null}) {
       if(!s.lastTs)s.lastTs=ts;
       const dt=Math.min((ts-s.lastTs)/1000,0.05);s.lastTs=ts;
       if(wave&&s.playing){const rP=(2*PI)/wave.omega;s.tSim+=(dt/T_VIS)*rP*s.speed;}
-      if(wave)drawCanvas(ctx,wave,s.tSim,canvas.width,canvas.height,setLiveData);
+      if(wave)drawCanvas(ctx,wave,s.tSim,canvas.width,canvas.height,setLiveData,wave2);
       animRef.current=requestAnimationFrame(loop);
     };
     animRef.current=requestAnimationFrame(loop);
     return()=>cancelAnimationFrame(animRef.current);
-  },[wave,setLiveData]);
+  },[wave,wave2,setLiveData]);
 
   if(!wave)return null;
   return(
     <div className="canvas-wrap">
       <div className="cbar">
-        <div className="ctitle">▸ VISUALIZACIÓN DE LA ONDA</div>
+        <div className="ctitle">▸ VISUALIZACIÓN DE LA ONDA{wave2?" (SUPERPOSICIÓN)":""}</div>
         <div className="cctrl">
           <button className={`btn-sm2${playing?" on":""}`} onClick={()=>{stateRef.current.lastTs=0;setPlaying(p=>!p);}}>
             {playing?"⏸":"▶"}
@@ -625,11 +567,23 @@ function CanvasViz({wave}:{wave:WaveProps|null}) {
         </div>
       </div>
       <div className="couter"><canvas ref={canvasRef} width={960} height={280}/></div>
+      {wave2&&(
+        <div className="canvas-legend">
+          <div style={{display:"flex",alignItems:"center",gap:".4rem"}}>
+            <div className="cl-dot" style={{background:"#00e5ff",boxShadow:"0 0 6px #00e5ff"}}/>
+            <span style={{color:"#00e5ff"}}>{wave.varName}₁ — Onda 1</span>
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:".4rem"}}>
+            <div className="cl-dot" style={{background:"#b87fff",boxShadow:"0 0 6px #b87fff"}}/>
+            <span style={{color:"#b87fff"}}>{wave2.varName}₂ — Onda 2</span>
+          </div>
+        </div>
+      )}
       <div className="live-row">
         <div className="lv"><span className="lvl">t (períodos)</span><span className="lvv" style={{color:"var(--cyan)"}}>{live.nT.toFixed(3)} T</span></div>
-        <div className="lv"><span className="lvl">{wave.varName} en x=0</span><span className="lvv" style={{color:"var(--green)"}}>{live.e0.toFixed(3)}</span></div>
-        <div className="lv"><span className="lvl">{wave.varName} en x=λ/4</span><span className="lvv" style={{color:"var(--gold)"}}>{live.e1.toFixed(3)}</span></div>
-        <div className="lv"><span className="lvl">{wave.varName} en x=λ/2</span><span className="lvv" style={{color:"var(--purple)"}}>{live.e2.toFixed(3)}</span></div>
+        <div className="lv"><span className="lvl">{wave.varName}{wave2?"₁":""} en x=0</span><span className="lvv" style={{color:"var(--green)"}}>{live.e0.toFixed(3)}</span></div>
+        <div className="lv"><span className="lvl">{wave.varName}{wave2?"₁":""} en x=λ/4</span><span className="lvv" style={{color:"var(--gold)"}}>{live.e1.toFixed(3)}</span></div>
+        <div className="lv"><span className="lvl">{wave.varName}{wave2?"₁":""} en x=λ/2</span><span className="lvv" style={{color:"var(--purple)"}}>{live.e2.toFixed(3)}</span></div>
         <div className="lv"><span className="lvl">v fase</span><span className="lvv" style={{color:"var(--orange)"}}>{fmtV(wave.v,3)} m/s</span></div>
       </div>
     </div>
@@ -639,11 +593,10 @@ function CanvasViz({wave}:{wave:WaveProps|null}) {
 // ═══════════════════════════════════════════
 // PESTAÑA CALCULADORA
 // ═══════════════════════════════════════════
-function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}) {
+function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps,wave2?:WaveProps)=>void}) {
   const [mode,setMode]=useState<"eq"|"params">("eq");
   const [eqVal,setEqVal]=useState("E = 500 sin(5e6*pi*x + 1.2e15*pi*t)");
   const [eqErr,setEqErr]=useState(false);
-
   const EMPTY:ParamsState={
     A:"",Aunit:"V/m",v:"",vunit:"m/s",f:"",funit:"Hz",
     T:"",Tunit:"s",omega:"",omegaunit:"rad/s",
@@ -658,8 +611,7 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
     const p=parseEq(eqVal);
     if(!p){setEqErr(true);return;}
     setEqErr(false);
-    const w=computeWave(p);
-    onResult(renderWaveResults(w),w);
+    onResult(renderWaveResults(computeWave(p)),computeWave(p));
   };
 
   const filledCount=[s.A,s.v,s.f,s.T,s.omega,s.lam,s.k,s.n].filter(x=>x.trim()!=="").length;
@@ -675,14 +627,11 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
     const lam_si= !isNaN(parse(s.lam)) ? toSI(parse(s.lam),"lamunit",s.lamunit) : NaN;
     const k_si  = !isNaN(parse(s.k)) ? parse(s.k) : NaN;
     const n_si  = !isNaN(parse(s.n)) ? parse(s.n) : NaN;
-
     const resolved=resolveParams({A:A_si,v:v_si,f:f_si,T:T_si,omega:w_si,lam:lam_si,k:k_si,n:n_si});
     if(typeof resolved==="string"){setErrMsg(resolved);return;}
-
     const phi=s.phi?evalExpr(s.phi):0;
     const signW=s.dir==="+"?-1:1;
-    const parsed:ParsedWave={A:resolved.A,func:s.func,k:resolved.k,omega:resolved.omega,
-      signK:1,signW,phi,varName:s.varName||"E"};
+    const parsed:ParsedWave={A:resolved.A,func:s.func,k:resolved.k,omega:resolved.omega,signK:1,signW,phi,varName:s.varName||"E"};
     const w=computeWave(parsed);
     onResult(renderWaveResults(w)+renderParamsResolved(resolved,s),w);
   };
@@ -696,7 +645,6 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
         <div className="mode-divider"/>
         <button className={`calc-toggle-btn${mode==="params"?" active":""}`} onClick={()=>{setMode("params");setErrMsg("");}}>🔢 Tengo los datos</button>
       </div>
-
       {mode==="eq"&&<>
         <div className="inp-row">
           <div className="inp-group inp-full inp-eq">
@@ -711,32 +659,25 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
         {eqErr&&<div className="err">⚠ No he podido leer la ecuación. Revisa el formato.</div>}
         <button className="btn-calc" onClick={calcEq}>CALCULAR TODO →</button>
       </>}
-
       {mode==="params"&&<>
-        {/* Progress */}
         <div style={{display:"flex",alignItems:"center",gap:".6rem",marginBottom:"1rem",flexWrap:"wrap"}}>
           <span style={{fontSize:".6rem",color:"var(--dim)",letterSpacing:".15em"}}>CAMPOS:</span>
           {[...Array(8)].map((_,i)=>(
-            <div key={i} style={{width:10,height:10,borderRadius:2,
-              background:i<filledCount?"var(--cyan)":"rgba(255,255,255,0.08)",
-              boxShadow:i<filledCount?"0 0 6px var(--cyan)":"none",transition:"all .2s"}}/>
+            <div key={i} style={{width:10,height:10,borderRadius:2,background:i<filledCount?"var(--cyan)":"rgba(255,255,255,0.08)",boxShadow:i<filledCount?"0 0 6px var(--cyan)":"none",transition:"all .2s"}}/>
           ))}
           <span style={{fontSize:".6rem",color:filledCount>=3?"var(--green)":"var(--dim)"}}>
             {filledCount<2?"Añade más datos":filledCount<3?"Casi…":"¡Listo!"}
           </span>
         </div>
-
         <div className="sec-group-label" style={{color:"var(--cyan)"}}>▸ Onda — amplitud y velocidad</div>
         <div className="inp-row">
           <div className="inp-group">
             <label>Amplitud A</label>
-            <InputUnit value={s.A} onChange={v=>up("A",v)} unit={s.Aunit} onUnitChange={v=>up("Aunit",v)}
-              units={["V/m","Pa","m","cm","mm","mPa","kPa"]} placeholder="ej: 500"/>
+            <InputUnit value={s.A} onChange={v=>up("A",v)} unit={s.Aunit} onUnitChange={v=>up("Aunit",v)} units={["V/m","Pa","m","cm","mm","mPa","kPa"]} placeholder="ej: 500"/>
           </div>
           <div className="inp-group">
             <label>Velocidad v</label>
-            <InputUnit value={s.v} onChange={v=>up("v",v)} unit={s.vunit} onUnitChange={v=>up("vunit",v)}
-              units={["m/s","km/s","km/h","cm/s","mph"]} placeholder="ej: 3e8 · 340 · 1500"/>
+            <InputUnit value={s.v} onChange={v=>up("v",v)} unit={s.vunit} onUnitChange={v=>up("vunit",v)} units={["m/s","km/s","km/h","cm/s","mph"]} placeholder="ej: 3e8 · 340 · 1500"/>
           </div>
           <div className="inp-group">
             <label>Índice de refracción n</label>
@@ -744,32 +685,26 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
             <div className="iunit">Calcula v = c/n automáticamente</div>
           </div>
         </div>
-
         <div className="sec-group-label" style={{color:"var(--gold)"}}>▸ Parámetros temporales — rellena UNO o varios</div>
         <div className="inp-row">
           <div className="inp-group">
             <label>Frecuencia f</label>
-            <InputUnit value={s.f} onChange={v=>up("f",v)} unit={s.funit} onUnitChange={v=>up("funit",v)}
-              units={["Hz","kHz","MHz","GHz","THz"]} placeholder="ej: 6e14"/>
+            <InputUnit value={s.f} onChange={v=>up("f",v)} unit={s.funit} onUnitChange={v=>up("funit",v)} units={["Hz","kHz","MHz","GHz","THz"]} placeholder="ej: 6e14"/>
           </div>
           <div className="inp-group">
             <label>Período T</label>
-            <InputUnit value={s.T} onChange={v=>up("T",v)} unit={s.Tunit} onUnitChange={v=>up("Tunit",v)}
-              units={["s","ms","μs","ns","min","h"]} placeholder="ej: 1e-15"/>
+            <InputUnit value={s.T} onChange={v=>up("T",v)} unit={s.Tunit} onUnitChange={v=>up("Tunit",v)} units={["s","ms","μs","ns","min","h"]} placeholder="ej: 1e-15"/>
           </div>
           <div className="inp-group">
             <label>Pulsación ω</label>
-            <InputUnit value={s.omega} onChange={v=>up("omega",v)} unit={s.omegaunit} onUnitChange={v=>up("omegaunit",v)}
-              units={["rad/s","rad/min","rad/h","rpm"]} placeholder="ej: 1.2e15*pi"/>
+            <InputUnit value={s.omega} onChange={v=>up("omega",v)} unit={s.omegaunit} onUnitChange={v=>up("omegaunit",v)} units={["rad/s","rad/min","rad/h","rpm"]} placeholder="ej: 1.2e15*pi"/>
           </div>
         </div>
-
         <div className="sec-group-label" style={{color:"var(--purple)"}}>▸ Parámetros espaciales — rellena UNO o varios</div>
         <div className="inp-row">
           <div className="inp-group">
             <label>Longitud de onda λ</label>
-            <InputUnit value={s.lam} onChange={v=>up("lam",v)} unit={s.lamunit} onUnitChange={v=>up("lamunit",v)}
-              units={["m","cm","mm","μm","nm","pm","km"]} placeholder="ej: 500"/>
+            <InputUnit value={s.lam} onChange={v=>up("lam",v)} unit={s.lamunit} onUnitChange={v=>up("lamunit",v)} units={["m","cm","mm","μm","nm","pm","km"]} placeholder="ej: 500"/>
           </div>
           <div className="inp-group">
             <label>Número de onda k</label>
@@ -777,7 +712,6 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
             <div className="iunit">rad/m &nbsp;(k = 2π/λ)</div>
           </div>
         </div>
-
         <div className="sec-group-label" style={{color:"var(--dim)"}}>▸ Forma de la ecuación</div>
         <div className="inp-row">
           <div className="inp-group">
@@ -799,14 +733,12 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
             <div className="iunit">rad (vacío = 0)</div>
           </div>
         </div>
-
         <div className="hint" style={{marginTop:".6rem"}}>
           <b style={{color:"var(--white)"}}>Combos válidos de ejemplo:</b><br/>
           <code>A=500 V/m, v=3e8 m/s, f=6e14 Hz</code> &nbsp;·&nbsp;
           <code>A=0.05 m, v=340 m/s, λ=1,6 m</code> &nbsp;·&nbsp;
           <code>A=2 Pa, n=1.5, f=5e14 Hz</code> &nbsp;·&nbsp;
-          <code>A=100 V/m, k=5e6*pi, ω=1.2e15*pi rad/s</code> &nbsp;·&nbsp;
-          <code>A=0.03 m, v=60 cm/s, T=2 s</code>
+          <code>A=100 V/m, k=5e6*pi, ω=1.2e15*pi rad/s</code>
         </div>
         {errMsg&&<div className="err">⚠ {errMsg}</div>}
         <div style={{display:"flex",gap:".6rem",alignItems:"center",marginTop:".6rem"}}>
@@ -819,15 +751,16 @@ function TabCalculadora({onResult}:{onResult:(html:string,wave:WaveProps)=>void}
 }
 
 // ═══════════════════════════════════════════
-// PESTAÑA INTERFERENCIAS
+// PESTAÑA INTERFERENCIAS — pasa ambas ondas
 // ═══════════════════════════════════════════
-function TabInterf({onResult}:{onResult:(html:string,wave:WaveProps)=>void}) {
+function TabInterf({onResult}:{onResult:(html:string,wave:WaveProps,wave2?:WaveProps)=>void}) {
   const [eq1,setEq1]=useState("");const [eq2,setEq2]=useState("");const [err,setErr]=useState(false);
   const calc=()=>{
     const r1=parseEq(eq1),r2=parseEq(eq2);
     if(!r1||!r2){setErr(true);return;}
     setErr(false);
     const w1=computeWave(r1);
+    const w2=computeWave(r2);
     const dPhi=r2.phi-r1.phi,adPhi=Math.abs(dPhi);
     let AR:number,phiR:number;
     if(Math.abs(r1.A-r2.A)/r1.A<0.001){AR=2*r1.A*Math.abs(Math.cos(dPhi/2));phiR=(r1.phi+r2.phi)/2;}
@@ -838,9 +771,9 @@ function TabInterf({onResult}:{onResult:(html:string,wave:WaveProps)=>void}) {
     const phiRstr=phiR!==0?` + ${fmtPi(phiR)} rad`:"";
     const html=`
       <div class="res-sep">▸ ONDA 1</div>
-      <div class="eq-box"><div class="eq-text">${r1.varName} = <span class="hi">${r1.A}</span> · ${r1.func}(<span class="hic">${fmtV(r1.k)}</span>x ${r1.signW>0?"+":"−"} <span class="hip">${fmtV(r1.omega)}</span>t${r1.phi?` + ${fmtPi(r1.phi)}`:""})<br><small style="color:var(--dim)">λ=${fmtV(w1.lam*1e9,3)} nm · f=${fmtV(w1.f)} Hz · v=${fmtV(w1.v)} m/s</small></div></div>
+      <div class="eq-box"><div class="eq-text">${r1.varName}₁ = <span class="hi">${r1.A}</span> · ${r1.func}(<span class="hic">${fmtV(r1.k)}</span>x ${r1.signW>0?"+":"−"} <span class="hip">${fmtV(r1.omega)}</span>t${r1.phi?` + ${fmtPi(r1.phi)}`:""})<br><small style="color:var(--dim)">λ=${fmtV(w1.lam*1e9,3)} nm · f=${fmtV(w1.f)} Hz · v=${fmtV(w1.v)} m/s</small></div></div>
       <div class="res-sep">▸ ONDA 2</div>
-      <div class="eq-box"><div class="eq-text">${r2.varName} = <span class="hi">${r2.A}</span> · ${r2.func}(<span class="hic">${fmtV(r2.k)}</span>x ${r2.signW>0?"+":"−"} <span class="hip">${fmtV(r2.omega)}</span>t${r2.phi?` + ${fmtPi(r2.phi)}`:""})<br><small style="color:var(--dim)">Desfase respecto a onda 1: <b style="color:var(--gold)">${fmtPi(dPhi)} rad = ${(dPhi*180/PI).toFixed(1)}°</b></small></div></div>
+      <div class="eq-box"><div class="eq-text">${r2.varName}₂ = <span class="hi">${r2.A}</span> · ${r2.func}(<span class="hic">${fmtV(r2.k)}</span>x ${r2.signW>0?"+":"−"} <span class="hip">${fmtV(r2.omega)}</span>t${r2.phi?` + ${fmtPi(r2.phi)}`:""})<br><small style="color:var(--dim)">Desfase respecto a onda 1: <b style="color:var(--gold)">${fmtPi(dPhi)} rad = ${(dPhi*180/PI).toFixed(1)}°</b></small></div></div>
       <div class="res-sep">▸ ONDA RESULTANTE (superposición)</div>
       <div class="eq-box"><div class="eq-text">${r1.varName}<sub>R</sub> = <span class="hi">${fmtV(AR,3)}</span> · sin(<span class="hic">${fmtV(r1.k)}</span>x ${r1.signW>0?"+":"−"} <span class="hip">${fmtV(r1.omega)}</span>t${phiRstr})<br><small style="color:var(--dim)">Usando: sin α + sin β = 2·cos((α−β)/2)·sin((α+β)/2)</small></div></div>
       <div class="res-sep">▸ ANÁLISIS</div>
@@ -859,8 +792,8 @@ function TabInterf({onResult}:{onResult:(html:string,wave:WaveProps)=>void}) {
         <div class="dc"><div class="dct">Δcamino → desfase</div><div class="dce">Δφ = k·Δr = (2π/λ)·Δr<br>k = <span class="hic">${fmtVH(r1.k)}</span> rad/m · λ = ${fmtVH(w1.lam)} m</div></div>
         <div class="dc"><div class="dct">Resultante (A iguales)</div><div class="dce">E<sub>R</sub> = <span class="hi">2A·cos(Δφ/2)</span>·sin(kx±ωt+φ_med)<br>= <span class="hi">${fmtV(2*r1.A,3)}·cos(${fmtPi(dPhi/2)})·sin(…)</span> = ${fmtV(AR,3)}·sin(…)</div></div>
       </div>`;
-    const rParsed:ParsedWave={A:AR,func:"sin",k:r1.k,omega:r1.omega,signK:r1.signK,signW:r1.signW,phi:phiR,varName:r1.varName};
-    onResult(html,computeWave(rParsed));
+    // Pasa w1 como onda principal (cyan) y w2 como segunda (purple)
+    onResult(html, w1, w2);
   };
   return(
     <div className="section">
@@ -928,14 +861,8 @@ function TabIntensity({onResult}:{onResult:(html:string,wave:null)=>void}) {
       <div className="sec-sub">Intensidad en cualquier punto, relaciones entre intensidades, potencia, distancias y nivel sonoro.</div>
       <div className="inp-row">
         <div className="inp-group"><label>Potencia P</label><input value={s.P} onChange={e=>up("P",e.target.value)} placeholder="ej: 154"/><div className="iunit">W</div></div>
-        <div className="inp-group">
-          <label>Distancia r₁</label>
-          <InputUnit value={s.r1} onChange={v=>up("r1",v)} unit={s.r1unit} onUnitChange={v=>up("r1unit",v)} units={["m","cm","km","mm"]} placeholder="ej: 50"/>
-        </div>
-        <div className="inp-group">
-          <label>Distancia r₂ (comparación)</label>
-          <InputUnit value={s.r2} onChange={v=>up("r2",v)} unit={s.r2unit} onUnitChange={v=>up("r2unit",v)} units={["m","cm","km","mm"]} placeholder="ej: 150"/>
-        </div>
+        <div className="inp-group"><label>Distancia r₁</label><InputUnit value={s.r1} onChange={v=>up("r1",v)} unit={s.r1unit} onUnitChange={v=>up("r1unit",v)} units={["m","cm","km","mm"]} placeholder="ej: 50"/></div>
+        <div className="inp-group"><label>Distancia r₂ (comparación)</label><InputUnit value={s.r2} onChange={v=>up("r2",v)} unit={s.r2unit} onUnitChange={v=>up("r2unit",v)} units={["m","cm","km","mm"]} placeholder="ej: 150"/></div>
         <div className="inp-group"><label>Amplitud E₀ (EM)</label><input value={s.E0} onChange={e=>up("E0",e.target.value)} placeholder="ej: 500"/><div className="iunit">V/m</div></div>
         <div className="inp-group"><label>I₁ conocida (sin P)</label><input value={s.I1} onChange={e=>up("I1",e.target.value)} placeholder="ej: 100"/><div className="iunit">W/m²</div></div>
         <div className="inp-group"><label>Tipo de onda</label><RadioGroup options={[{v:"spherical",l:"Esférica 3D"},{v:"cylindrical",l:"Cilíndrica"},{v:"plane",l:"Plana"}]} value={s.waveType} onChange={v=>up("waveType",v as WaveType)}/></div>
@@ -1012,15 +939,9 @@ function TabMas({onResult}:{onResult:(html:string,wave:null)=>void}) {
       <div className="sec-title">MAS — Oscilador Armónico / Muelle</div>
       <div className="sec-sub">Posición, velocidad, aceleración, energía cinética y potencial, período y todo lo del MAS.</div>
       <div className="inp-row">
-        <div className="inp-group">
-          <label>Amplitud A</label>
-          <InputUnit value={s.A} onChange={v=>up("A",v)} unit={s.Aunit} onUnitChange={v=>up("Aunit",v)} units={["m","cm","mm"]} placeholder="ej: 3"/>
-        </div>
+        <div className="inp-group"><label>Amplitud A</label><InputUnit value={s.A} onChange={v=>up("A",v)} unit={s.Aunit} onUnitChange={v=>up("Aunit",v)} units={["m","cm","mm"]} placeholder="ej: 3"/></div>
         <div className="inp-group"><label>Constante k (muelle)</label><input value={s.k} onChange={e=>up("k",e.target.value)} placeholder="ej: 20"/><div className="iunit">N/m</div></div>
-        <div className="inp-group">
-          <label>Masa m</label>
-          <InputUnit value={s.m} onChange={v=>up("m",v)} unit={s.munit} onUnitChange={v=>up("munit",v)} units={["kg","g","mg"]} placeholder="ej: 32 (g) o 0.032 (kg)"/>
-        </div>
+        <div className="inp-group"><label>Masa m</label><InputUnit value={s.m} onChange={v=>up("m",v)} unit={s.munit} onUnitChange={v=>up("munit",v)} units={["kg","g","mg"]} placeholder="ej: 32 (g)"/></div>
         <div className="inp-group"><label>Frecuencia f (alternativo)</label><input value={s.f} onChange={e=>up("f",e.target.value)} placeholder="ej: 25"/><div className="iunit">Hz</div></div>
         <div className="inp-group"><label>Fase φ₀</label><input value={s.phi} onChange={e=>up("phi",e.target.value)} placeholder="ej: pi/2 ó 0"/><div className="iunit">rad</div></div>
         <div className="inp-group"><label>Calcular en t =</label><input value={s.t} onChange={e=>up("t",e.target.value)} placeholder="ej: 0.01"/><div className="iunit">s (opcional)</div></div>
@@ -1076,29 +997,14 @@ function TabPhase({onResult}:{onResult:(html:string,wave:null)=>void}) {
   return(
     <div className="section">
       <div className="sec-title">Desfase y Diferencia de Fase</div>
-      <div className="sec-sub">Desfases espaciales/temporales, interferencia constructiva/destructiva, diferencia de camino. Puedes mezclar unidades.</div>
+      <div className="sec-sub">Desfases espaciales/temporales, interferencia constructiva/destructiva, diferencia de camino.</div>
       <div className="inp-row">
         <div className="inp-group"><label>Número de onda k</label><input value={s.k} onChange={e=>up("k",e.target.value)} placeholder="ej: 5e6*pi"/><div className="iunit">rad/m</div></div>
-        <div className="inp-group">
-          <label>Longitud de onda λ</label>
-          <InputUnit value={s.lam} onChange={v=>up("lam",v)} unit={s.lamunit} onUnitChange={v=>up("lamunit",v)} units={["m","cm","mm","μm","nm","pm"]} placeholder="ej: 600"/>
-        </div>
-        <div className="inp-group">
-          <label>Separación espacial Δx</label>
-          <InputUnit value={s.dx} onChange={v=>up("dx",v)} unit={s.dxunit} onUnitChange={v=>up("dxunit",v)} units={["m","cm","mm","μm","nm"]} placeholder="ej: 0.16"/>
-        </div>
-        <div className="inp-group">
-          <label>Pulsación ω</label>
-          <InputUnit value={s.omega} onChange={v=>up("omega",v)} unit={s.omegaunit} onUnitChange={v=>up("omegaunit",v)} units={["rad/s","rad/min","rad/h","rpm"]} placeholder="ej: 1.2e15*pi"/>
-        </div>
-        <div className="inp-group">
-          <label>Separación temporal Δt</label>
-          <InputUnit value={s.dt} onChange={v=>up("dt",v)} unit={s.dtunit} onUnitChange={v=>up("dtunit",v)} units={["s","ms","μs","ns","min","h"]} placeholder="ej: 0.5"/>
-        </div>
-        <div className="inp-group">
-          <label>Diferencia de camino Δr</label>
-          <InputUnit value={s.dr} onChange={v=>up("dr",v)} unit={s.drunit} onUnitChange={v=>up("drunit",v)} units={["m","cm","mm","μm","nm","km"]} placeholder="ej: 2"/>
-        </div>
+        <div className="inp-group"><label>Longitud de onda λ</label><InputUnit value={s.lam} onChange={v=>up("lam",v)} unit={s.lamunit} onUnitChange={v=>up("lamunit",v)} units={["m","cm","mm","μm","nm","pm"]} placeholder="ej: 600"/></div>
+        <div className="inp-group"><label>Separación espacial Δx</label><InputUnit value={s.dx} onChange={v=>up("dx",v)} unit={s.dxunit} onUnitChange={v=>up("dxunit",v)} units={["m","cm","mm","μm","nm"]} placeholder="ej: 0.16"/></div>
+        <div className="inp-group"><label>Pulsación ω</label><InputUnit value={s.omega} onChange={v=>up("omega",v)} unit={s.omegaunit} onUnitChange={v=>up("omegaunit",v)} units={["rad/s","rad/min","rad/h","rpm"]} placeholder="ej: 1.2e15*pi"/></div>
+        <div className="inp-group"><label>Separación temporal Δt</label><InputUnit value={s.dt} onChange={v=>up("dt",v)} unit={s.dtunit} onUnitChange={v=>up("dtunit",v)} units={["s","ms","μs","ns","min","h"]} placeholder="ej: 0.5"/></div>
+        <div className="inp-group"><label>Diferencia de camino Δr</label><InputUnit value={s.dr} onChange={v=>up("dr",v)} unit={s.drunit} onUnitChange={v=>up("drunit",v)} units={["m","cm","mm","μm","nm","km"]} placeholder="ej: 2"/></div>
         <div className="inp-group"><label>Desfase inicial δ (dado)</label><input value={s.delta} onChange={e=>up("delta",e.target.value)} placeholder="ej: pi/2 ó 2π/3"/><div className="iunit">rad</div></div>
       </div>
       {err&&<div className="err">⚠ Introduce al menos k (o λ) y Δx, o ω y Δt.</div>}
@@ -1122,9 +1028,10 @@ function WaveCalcComponent() {
   const [tab,setTab]=useState<TabId>("calc");
   const [resultHtml,setResultHtml]=useState("");
   const [wave,setWave]=useState<WaveProps|null>(null);
+  const [wave2,setWave2]=useState<WaveProps|null>(null);
 
-  const handleResult=(html:string,w:WaveProps|null)=>{
-    setResultHtml(html); setWave(w);
+  const handleResult=(html:string,w:WaveProps|null,w2?:WaveProps|null)=>{
+    setResultHtml(html); setWave(w); setWave2(w2??null);
     setTimeout(()=>document.getElementById("wc-results")?.scrollIntoView({behavior:"smooth",block:"start"}),50);
   };
 
@@ -1138,7 +1045,7 @@ function WaveCalcComponent() {
       <div className="mode-bar">
         {TABS.map(t=>(
           <button key={t.id} className={`mode-btn${tab===t.id?" active":""}`}
-            onClick={()=>{setTab(t.id);setResultHtml("");setWave(null);}}>
+            onClick={()=>{setTab(t.id);setResultHtml("");setWave(null);setWave2(null);}}>
             <span className="mbico">{t.ico}</span>{t.label}
           </button>
         ))}
@@ -1151,7 +1058,7 @@ function WaveCalcComponent() {
       {resultHtml&&(
         <div id="wc-results" className="results-wrap" dangerouslySetInnerHTML={{__html:resultHtml}}/>
       )}
-      <CanvasViz wave={wave}/>
+      <CanvasViz wave={wave} wave2={wave2}/>
     </>
   );
 }
