@@ -374,7 +374,7 @@ pautopia/
 │   │   ├── Creditos.tsx
 │   │   ├── Apps.tsx
 │   │   ├── VigaCalc.tsx
-│   │   ├──WaveCalc.tsx
+│   │   ├── WaveCalc.tsx
 │   │   ├── ConceptuandoHistoria.tsx
 │   │   ├── apuntes/
 │   │   │   ├── ApuntesIndex.tsx
