@@ -1,0 +1,333 @@
+.frases-page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+.frases-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.frases-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 30px;
+  margin: 0 auto 32px;
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frases-icon-wrapper:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 50px rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.frases-icon-wrapper svg {
+  color: #3b82f6;
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4));
+}
+
+.frases-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.frases-subtitulo {
+  font-size: 20px;
+  color: #94a3b8;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.frases-divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── FILTER ── */
+.frases-filter-section {
+  margin-bottom: 40px;
+}
+
+.frases-filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.frases-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.frases-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid rgba(59, 130, 246, 0.15);
+  background: rgba(30, 41, 59, 0.4);
+  color: #94a3b8;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  font-family: 'Inter', sans-serif;
+}
+
+.frases-pill:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #e2e8f0;
+  transform: translateY(-2px);
+  background: rgba(51, 65, 85, 0.5);
+}
+
+.frases-pill.pill-todas.pill-activa {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+.frases-pill.pill-activa {
+  transform: translateY(-2px);
+}
+
+.pill-count {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* ── RESULTS ── */
+.frases-results-info {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+/* ── GRID ── */
+.frases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ── CARD ── */
+.frase-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(59, 130, 246, 0.15);
+  border-radius: 20px;
+  padding: 32px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.frase-card-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.8;
+}
+
+.frase-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  background: rgba(51, 65, 85, 0.45);
+}
+
+.frase-card-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  line-height: 0.55;
+  color: rgba(59, 130, 246, 0.15);
+  font-style: italic;
+  user-select: none;
+  margin-bottom: 4px;
+}
+
+.frase-card-texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #e2e8f0;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.frase-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  flex-wrap: wrap;
+}
+
+.frase-card-autor {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+.frase-card-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1.5px solid;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  font-family: 'Inter', sans-serif;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* ── FOOTER ── */
+.frases-footer-box {
+  text-align: center;
+  padding: 48px 32px;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(59, 130, 246, 0.15);
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 60px auto 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.frases-footer-msg {
+  font-size: 18px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ── EMPTY ── */
+.frases-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 32px;
+  color: #475569;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .frases-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .frases-titulo {
+    font-size: 42px;
+  }
+
+  .frases-subtitulo {
+    font-size: 18px;
+  }
+
+  .frases-icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .frases-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .frases-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .frases-titulo {
+    font-size: 32px;
+  }
+
+  .frases-subtitulo {
+    font-size: 16px;
+  }
+
+  .frases-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .frases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frase-card {
+    padding: 24px 20px 18px;
+  }
+
+  .frases-footer-box {
+    padding: 32px 20px;
+  }
+
+  .frases-footer-msg {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frases-titulo {
+    font-size: 28px;
+  }
+}

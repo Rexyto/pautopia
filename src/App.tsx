@@ -23,6 +23,7 @@ import ExaminateIndex from './pages/examinate/ExaminateIndex';
 import HistoriaExaminate from './pages/examinate/Historia';
 import Conceptos from './pages/examinate/Conceptos';
 import NotFound from './pages/NotFound';
+import RLCCalc from './pages/rlccalc';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/apps/wavecalc" element={<WaveCalc />} />
           <Route path="/apps/conceptuando-historia" element={<ConceptuandoHistoria />} />
           <Route path="/ranking" element={<Ranking />} />
+          <Route path="/apps/rlccalc" element={<RLCCalc />} />
 
           {/* Ruta 404*/}
           <Route path="*" element={<NotFound />} />

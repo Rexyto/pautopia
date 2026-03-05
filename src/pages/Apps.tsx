@@ -26,7 +26,13 @@ const apps: App[] = [
     name: 'Conceptuando la historia',
     icon: '/Conceptuando_la_historia.png',
     route: '/apps/conceptuando-historia'
-  }
+  },
+  {
+    id: 'rlccalc',
+    name: 'RLCCalc',
+    icon: '/RLCCalc.png',
+    route: '/apps/rlccalc'
+  },
 ];
 
 export default function Apps() {

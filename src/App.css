@@ -4385,3 +4385,19 @@
   opacity: 1;
   transform: translateX(0);
 }
+/* ── GitHub banner en Créditos ── */
+.github-banner { margin: 1.5rem 0; }
+.github-link {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 1.4rem; background: #0d1117;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  color: #dde8f5; text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.github-link:hover {
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 16px rgba(255,255,255,0.06);
+}
+.github-link-text { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+.github-link-title { font-weight: 700; font-size: 0.95rem; }
+.github-link-sub { font-size: 0.72rem; color: rgba(221,232,245,0.5); }
