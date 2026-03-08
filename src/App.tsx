@@ -25,8 +25,8 @@ import Conceptos from './pages/examinate/Conceptos';
 import CulturaAudiovisual from './pages/apuntes/CulturaAudiovisual';
 import CulturaAudiovisualExaminate from './pages/examinate/CulturaAudiovisual';
 import ConceptosCulturaAudiovisual from './pages/examinate/ConceptosCulturaAudiovisual';
-import RepasarConceptosHistoria from './pages/examinate/Repasarconceptoshistoria';
-import RepasarConceptosCulturaAudiovisual from './pages/examinate/Repasarconceptosculturaaudiovisual';
+import RepasarConceptosHistoria from './pages/examinate/RepasarConceptosHistoria';
+import RepasarConceptosCulturaAudiovisual from './pages/examinate/RepasarConceptosCulturaAudiovisual';
 import NotFound from './pages/NotFound';
 import RLCCalc from './pages/rlccalc';
 
