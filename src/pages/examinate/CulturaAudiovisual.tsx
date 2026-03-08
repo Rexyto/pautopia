@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../components/Layout';
 
-export default function Historia() {
+export default function CulturaAudiovisual() {
   const navigate = useNavigate();
 
   return (
@@ -9,9 +9,9 @@ export default function Historia() {
       <main className="biblioteca-content container">
         <div className="biblioteca-header">
           <div className="biblioteca-icon-wrapper">
-            <span style={{ fontSize: '64px' }}>🏛️</span>
+            <span style={{ fontSize: '64px' }}>🎞️</span>
           </div>
-          <h2 className="biblioteca-title">Historia de España</h2>
+          <h2 className="biblioteca-title">Cultura Audiovisual</h2>
           <p className="biblioteca-subtitle">Examínate</p>
           <div className="biblioteca-divider"></div>
         </div>
@@ -19,7 +19,7 @@ export default function Historia() {
         <div className="apps-grid">
           <div
             className="app-card"
-            onClick={() => navigate('/examinate/historia/repasar')}
+            onClick={() => navigate('/examinate/cultura-audiovisual/repasar')}
           >
             <div className="app-card-icon">
               <span style={{ fontSize: '60px' }}>📋</span>
@@ -38,7 +38,7 @@ export default function Historia() {
 
           <div
             className="app-card"
-            onClick={() => navigate('/examinate/historia/conceptos')}
+            onClick={() => navigate('/examinate/cultura-audiovisual/conceptos')}
           >
             <div className="app-card-icon">
               <span style={{ fontSize: '60px' }}>📖</span>

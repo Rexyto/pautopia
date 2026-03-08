@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 export default function Creditos() {
   return (
     <Layout>
-
       <main className="creditos-content container">
         <div className="credits-section">
           <div className="credits-header">
@@ -12,6 +11,7 @@ export default function Creditos() {
           </div>
 
           <div className="credits-content">
+            {/* Creador */}
             <div className="creator-card">
               <div className="creator-image-wrapper">
                 <img src="/rexy.png" alt="Rexy" className="creator-image" />
@@ -26,6 +26,7 @@ export default function Creditos() {
               </div>
             </div>
 
+            {/* Colaboración */}
             <div className="collaboration-banner">
               <div className="collaboration-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -41,6 +42,24 @@ export default function Creditos() {
               </div>
             </div>
 
+            {/* Contribuidores — mismo estilo que creator-card */}
+            <div className="creator-card">
+              <div className="creator-image-wrapper">
+                <img src="/haiko.jpeg" alt="Haiko" className="creator-image" />
+                <div className="creator-badge" style={{ background: 'linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)', boxShadow: '0 4px 12px rgba(124,58,237,0.5)' }}>
+                  Contribuidora
+                </div>
+              </div>
+              <div className="creator-info">
+                <h3 className="creator-name">Haiko</h3>
+                <p className="creator-role" style={{ color: '#a78bfa' }}>Primera Contribuidora Externa</p>
+                <p className="creator-description">
+                  Aportó todos los materiales de <strong style={{ color: '#e2e8f0' }}>Cultura Audiovisual</strong>: apuntes de Historia de la Fotografía, Imagen Fija y sus Lenguajes, Teoría del Color, Leyes de la Gestalt y Publicidad.
+                </p>
+              </div>
+            </div>
+
+            {/* Frase */}
             <div className="philosophy-section">
               <div className="quote-icon">❝</div>
               <blockquote className="philosophy-quote">
@@ -50,6 +69,7 @@ export default function Creditos() {
               <div className="quote-author">— PAUtopía</div>
             </div>
 
+            {/* GitHub */}
             <div className="github-banner">
               <a
                 href="https://github.com/Rexyto/pautopia"

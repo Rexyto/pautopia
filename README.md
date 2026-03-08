@@ -18,11 +18,11 @@
 
 Plataforma web educativa diseñada para ayudar a estudiantes de 2º de Bachillerato en su preparación para la Prueba de Acceso a la Universidad (PAU) en España.
 
-##  Web
+## Web
 
 > **¿Eres estudiante o quieres visitar la página? Accede directamente aquí:**
 >
-> ###  [pautopia.duckdns.org](https://pautopia.duckdns.org)
+> ### [pautopia.duckdns.org](https://pautopia.duckdns.org)
 
 ---
 
@@ -37,9 +37,9 @@ Creado por **Rexy** en colaboración con **La Tiza de Rosa**.
 ## Características Principales
 
 - **Gestión de Lecturas**: Sistema completo para administrar obras literarias con preguntas de comprensión y materiales adicionales
-- **Apuntes por Asignatura**: Recursos organizados para Biología, Tecnología, Matemáticas, Filosofía, Lengua, Inglés, Historia, Física y Química
-- **Sistema de Exámenes**: Herramienta interactiva para evaluar conocimientos (actualmente disponible para conceptos de Historia de España)
-- **Apps Educativas**: Descarga de aplicaciones móviles auxiliares (VigaCalc, Conceptuando la Historia)
+- **Apuntes por Asignatura**: Recursos organizados para Biología, Tecnología, Matemáticas, Filosofía, Lengua, Inglés, Historia, Física, Química y **Cultura Audiovisual**
+- **Sistema de Exámenes**: Herramienta interactiva para evaluar conocimientos disponible para Historia de España y Cultura Audiovisual, con modo quiz tipo test y modo repaso con buscador y filtros
+- **Apps Educativas**: Calculadoras y herramientas auxiliares (VigaCalc, WaveCalc, RLCCalc, Conceptuando la Historia)
 - **Ranking de Estudiantes**: Sistema de clasificación basado en puntos
 - **Biblioteca de Frases**: Colección de citas memorables de profesores
 - **Sistema de Sugerencias**: Integrado con webhook de Discord para recibir feedback de usuarios
@@ -47,7 +47,7 @@ Creado por **Rexy** en colaboración con **La Tiza de Rosa**.
 
 ---
 
-##  Para estudiantes que se enfrentarán a la PAU en el futuro
+## Para estudiantes que se enfrentarán a la PAU en el futuro
 
 Este proyecto nació para ayudar a estudiantes de 2º de Bachillerato, y la idea es que **siga vivo y creciendo** más allá de su creador original.
 
@@ -57,20 +57,20 @@ El objetivo es simple: que cada generación deje el proyecto un poco mejor de co
 
 ---
 
-##  Licencia y Uso del Código
+## Licencia y Uso del Código
 
 Este proyecto es **de uso libre** bajo las siguientes condiciones:
 
--  Puedes **ver, clonar y modificar** el código libremente para uso personal o educativo.
--  Puedes **usar partes del proyecto** como referencia o aprendizaje sin restricciones.
--  Si quieres **publicar una versión modificada o derivada** de este proyecto, te pedimos que en lugar de hacerlo por separado, **abras un Pull Request en este repositorio**. Así el proyecto original se beneficia de tus mejoras, y tú recibes crédito oficial por tu contribución.
--  No está permitido **redistribuir este proyecto como propio** sin reconocer su origen.
+- Puedes **ver, clonar y modificar** el código libremente para uso personal o educativo.
+- Puedes **usar partes del proyecto** como referencia o aprendizaje sin restricciones.
+- Si quieres **publicar una versión modificada o derivada** de este proyecto, te pedimos que en lugar de hacerlo por separado, **abras un Pull Request en este repositorio**. Así el proyecto original se beneficia de tus mejoras, y tú recibes crédito oficial por tu contribución.
+- No está permitido **redistribuir este proyecto como propio** sin reconocer su origen.
 
 > En resumen: úsalo, apréndelo, mejóralo, pero si lo publicas, hazlo aquí y te damos los créditos que mereces.
 
 ---
 
-##  Contribuir
+## Contribuir
 
 ¿Quieres mejorar PAUtopia? Ya seas desarrollador, estudiante con apuntes útiles o simplemente alguien con buenas ideas, hay sitio para ti.
 
@@ -84,23 +84,24 @@ Este proyecto es **de uso libre** bajo las siguientes condiciones:
 
 ### ¿Qué tipo de contribuciones se aceptan?
 
--  Nuevos apuntes o recursos por asignatura
--  Lecturas obligatorias de otras comunidades autónomas
--  Preguntas de comprensión para las lecturas existentes
--  Corrección de errores o bugs
--  Mejoras de funcionalidad o diseño
--  Adaptaciones para otras comunidades autónomas
+- Nuevos apuntes o recursos por asignatura
+- Lecturas obligatorias de otras comunidades autónomas
+- Preguntas de comprensión para las lecturas existentes
+- Corrección de errores o bugs
+- Mejoras de funcionalidad o diseño
+- Adaptaciones para otras comunidades autónomas
 
 Todos los contribuidores serán reconocidos en la sección de créditos del proyecto.
 
 ---
 
-##  Créditos y Contribuidores
+## Créditos y Contribuidores
 
 | Rol | Persona |
 |-----|---------|
 | Creador y desarrollador principal | **Rexy** |
 | Colaboración en contenidos | **La Tiza de Rosa** |
+| Primera contribuidora externa — Cultura Audiovisual | **Haiko** |
 
 *¿Has contribuido al proyecto? Tu nombre estará aquí.*
 
@@ -151,6 +152,7 @@ Dentro de `data`, crear los siguientes archivos JSON (consultar la sección "Est
 - `ranking.json`
 - `visitas.json`
 - `conceptos.json`
+- `conceptos_cultura_audiovisual.json`
 - `apps-versions.json`
 
 **Archivo generado automáticamente:**
@@ -163,10 +165,43 @@ Asegurarse de que la carpeta `public` contenga:
 - `VigaCalc.png` y `VigaCalc.apk` - App VigaCalc
 - `Conceptuando_la_historia.png` y `Conceptuando_la_historia.apk` - App Conceptuando
 - Archivos PDF de las lecturas mencionados en `materiales_{id}.json`
+- PDFs de Cultura Audiovisual (ver tabla de nombres en la sección correspondiente)
 
 ## Estructura de Datos
 
-La aplicación utiliza archivos JSON para almacenar datos. Crear la carpeta `data` en la raíz del proyecto con los siguientes archivos:
+### conceptos.json
+Base de datos de conceptos históricos para el sistema de exámenes tipo test de Historia de España.
+
+```json
+{
+  "conceptos": [
+    {
+      "categoria": "Político",
+      "nombre": "Absolutismo",
+      "definicion": "Sistema de gobierno en el que el monarca concentra todos los poderes del Estado sin limitación legal."
+    }
+  ]
+}
+```
+
+---
+
+### conceptos_cultura_audiovisual.json
+Base de datos de conceptos de Cultura Audiovisual. Contiene 70 conceptos repartidos en 5 categorías: Historia de la Fotografía, Imagen Fija y Lenguajes, Teoría del Color, Leyes de la Gestalt y Publicidad.
+
+```json
+{
+  "conceptos": [
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Daguerrotipo",
+      "definicion": "Proceso fotográfico presentado por Louis Daguerre en 1839..."
+    }
+  ]
+}
+```
+
+---
 
 ### lecturas.json
 Almacena información sobre las obras literarias obligatorias de PAU.
@@ -208,19 +243,12 @@ Almacena información sobre las obras literarias obligatorias de PAU.
 ### preguntas_{lecturaId}.json
 Preguntas de comprensión para cada lectura. Crear un archivo por cada lectura usando su ID.
 
-**Campos:**
-- `id`: Identificador único de la pregunta (string)
-- `texto`: Texto de la pregunta (string)
-- `respuesta`: Respuesta detallada (string)
-- `lecturaId`: ID de la lectura asociada (string)
-
-**Ejemplo:**
 ```json
 [
   {
     "id": "1",
     "texto": "¿Qué simbolismo encontramos en Campos de Castilla?",
-    "respuesta": "El paisaje castellano funciona como símbolo del alma española y de la decadencia nacional...",
+    "respuesta": "El paisaje castellano funciona como símbolo del alma española...",
     "lecturaId": "1"
   }
 ]
@@ -231,16 +259,6 @@ Preguntas de comprensión para cada lectura. Crear un archivo por cada lectura u
 ### materiales_{lecturaId}.json
 Materiales adicionales (videos, documentos, enlaces) para cada lectura.
 
-**Campos:**
-- `id`: Identificador único del material (string)
-- `titulo`: Nombre del material (string)
-- `grupo`: Categoría del material (ej: "Contexto", "Documentos", "Vídeo") (string)
-- `enlace`: URL del recurso externo (string, opcional)
-- `descripcion`: Descripción del recurso (string, opcional)
-- `lecturaId`: ID de la lectura asociada (string)
-- `archivo`: Nombre del archivo PDF en /public (string, opcional)
-
-**Ejemplo:**
 ```json
 [
   {
@@ -250,14 +268,6 @@ Materiales adicionales (videos, documentos, enlaces) para cada lectura.
     "enlace": "https://www.biografiasyvidas.com/biografia/m/machado_antonio.htm",
     "descripcion": "Vida y obra del poeta",
     "lecturaId": "1"
-  },
-  {
-    "id": "2",
-    "titulo": "Campos de Castilla - Texto completo",
-    "grupo": "Documentos",
-    "descripcion": "Texto completo de la obra",
-    "lecturaId": "1",
-    "archivo": "Antonio Machado   Campos de Castilla.pdf"
   }
 ]
 ```
@@ -265,9 +275,6 @@ Materiales adicionales (videos, documentos, enlaces) para cada lectura.
 ---
 
 ### ranking.json
-Clasificación de estudiantes por puntos acumulados.
-
-**Ejemplo:**
 ```json
 [
   { "nombre": "Julia", "puntos": 31 },
@@ -275,39 +282,16 @@ Clasificación de estudiantes por puntos acumulados.
 ]
 ```
 
-El ranking se ordena automáticamente por puntos de mayor a menor en la interfaz.
-
 ---
 
 ### visitas.json
-Contador de visitas únicas a la plataforma mediante sistema de cookies.
-
 ```json
 { "total": 0 }
 ```
 
 ---
 
-### conceptos.json
-Base de datos de conceptos históricos para el sistema de exámenes tipo test.
-
-```json
-{
-  "conceptos": [
-    {
-      "categoria": "Historia",
-      "nombre": "Nombre del concepto",
-      "definicion": "Definición completa del concepto histórico"
-    }
-  ]
-}
-```
-
----
-
 ### apps-versions.json
-Información sobre las versiones de las aplicaciones móviles disponibles para descarga.
-
 ```json
 {
   "VigaCalc": { "app": "VigaCalc", "version": "1.0" },
@@ -317,20 +301,19 @@ Información sobre las versiones de las aplicaciones móviles disponibles para d
 
 ---
 
-### sugerencias.json
-Registro de sugerencias enviadas por los usuarios. **Se crea automáticamente** al recibir la primera sugerencia.
+## PDFs de Cultura Audiovisual
 
-```json
-[
-  {
-    "id": "1708352400000",
-    "nombre": "Nombre del usuario",
-    "sugerencia": "Texto de la sugerencia",
-    "ip": "192.168.1.1",
-    "fecha": "2024-02-19T10:30:00.000Z"
-  }
-]
-```
+Los archivos deben colocarse en `public/` con los siguientes nombres exactos:
+
+| Contenido | Nombre del archivo |
+|-----------|-------------------|
+| Historia de la Fotografía | `cultura-audiovisual-historia-fotografia.pdf` |
+| La Imagen Fija y sus Lenguajes | `cultura-audiovisual-imagen-fija-lenguajes.pdf` |
+| Leyes de la Gestalt | `cultura-audiovisual-leyes-gestalt.pdf` |
+| Teoría del Color | `cultura-audiovisual-teoria-color.pdf` |
+| La Publicidad | `cultura-audiovisual-publicidad.pdf` |
+
+---
 
 ## Ejecución
 
@@ -376,6 +359,7 @@ pautopia/
 │   │   ├── VigaCalc.tsx
 │   │   ├── WaveCalc.tsx
 │   │   ├── ConceptuandoHistoria.tsx
+│   │   ├── rlccalc.tsx
 │   │   ├── apuntes/
 │   │   │   ├── ApuntesIndex.tsx
 │   │   │   ├── Biologia.tsx
@@ -386,34 +370,41 @@ pautopia/
 │   │   │   ├── Ingles.tsx
 │   │   │   ├── Historia.tsx
 │   │   │   ├── Fisica.tsx
-│   │   │   └── Quimica.tsx
+│   │   │   ├── Quimica.tsx
+│   │   │   └── CulturaAudiovisual.tsx
 │   │   └── examinate/
 │   │       ├── ExaminateIndex.tsx
 │   │       ├── Historia.tsx
-│   │       └── Conceptos.tsx
+│   │       ├── Conceptos.tsx
+│   │       ├── CulturaAudiovisual.tsx
+│   │       ├── ConceptosCulturaAudiovisual.tsx
+│   │       ├── RepasarConceptosHistoria.tsx
+│   │       └── RepasarConceptosCulturaAudiovisual.tsx
 │   └── styles/
+│       ├── apuntes.css
+│       ├── repasar.css
 │       └── sugerencias.css
 ├── public/
 │   ├── logo.png
 │   ├── rexy.png
 │   ├── VigaCalc.png / VigaCalc.apk
 │   ├── Conceptuando_la_historia.png / .apk
-│   └── *.pdf
+│   ├── cultura-audiovisual-historia-fotografia.pdf
+│   ├── cultura-audiovisual-imagen-fija-lenguajes.pdf
+│   ├── cultura-audiovisual-leyes-gestalt.pdf
+│   ├── cultura-audiovisual-teoria-color.pdf
+│   ├── cultura-audiovisual-publicidad.pdf
+│   └── *.pdf (lecturas)
 ├── data/
 │   ├── lecturas.json
 │   ├── conceptos.json
+│   ├── conceptos_cultura_audiovisual.json
 │   ├── ranking.json
 │   ├── visitas.json
 │   ├── apps-versions.json
-│   ├── preguntas_1.json
-│   ├── preguntas_2.json
-│   ├── preguntas_3.json
-│   ├── preguntas_4.json
-│   ├── materiales_1.json
-│   ├── materiales_2.json
-│   ├── materiales_3.json
-│   ├── materiales_4.json
-│   └── sugerencias.json        # Se crea automáticamente                    
+│   ├── preguntas_1.json ... preguntas_4.json
+│   ├── materiales_1.json ... materiales_4.json
+│   └── sugerencias.json        # Se crea automáticamente
 ├── server.js
 ├── package.json
 ├── tsconfig.json

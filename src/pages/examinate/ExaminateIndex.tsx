@@ -14,6 +14,12 @@ const asignaturas: Asignatura[] = [
     nombre: 'Historia de España',
     icono: '🏛️',
     route: '/examinate/historia'
+  },
+  {
+    id: 'cultura-audiovisual',
+    nombre: 'Cultura Audiovisual',
+    icono: '🎞️',
+    route: '/examinate/cultura-audiovisual'
   }
 ];
 

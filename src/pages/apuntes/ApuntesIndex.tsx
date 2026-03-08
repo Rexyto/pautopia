@@ -62,6 +62,12 @@ const asignaturas: Asignatura[] = [
     nombre: 'Química',
     icono: '🧪',
     route: '/apuntes/quimica'
+  },
+  {
+    id: 'cultura-audiovisual',
+    nombre: 'Cultura Audiovisual',
+    icono: '🎞️',
+    route: '/apuntes/cultura-audiovisual'
   }
 ];
 

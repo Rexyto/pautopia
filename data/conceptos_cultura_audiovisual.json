@@ -1,0 +1,369 @@
+{
+  "conceptos": [
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Cámara oscura",
+      "definicion": "Fenómeno óptico por el que si se practica un pequeño orificio (estenope) sobre la pared de una habitación oscura, un haz luminoso dibuja sobre la pared opuesta la imagen invertida del exterior."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Heliografía",
+      "definicion": "Procedimiento fotográfico inventado por Nicéphore Niepce para captar imágenes de la realidad usando una cámara oscura y soportes fotosensibles. Las primeras imágenes obtenidas eran negativas y se deshacían por efecto de la luz."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Daguerrotipo",
+      "definicion": "Proceso fotográfico presentado por Louis Daguerre en 1839 con apoyo del Estado Francés, que permitía obtener fotografías sobre una superficie de plata pulida. Reducía los tiempos de exposición respecto a los métodos de Niepce."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Calotipo",
+      "definicion": "También llamado talbotipo. Procedimiento negativo-positivo inventado por William Fox Talbot que obtenía negativos sobre papel y a partir de ellos reproducía copias positivas también en papel."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Colodión húmedo",
+      "definicion": "Sistema fotográfico triunfante a partir de 1855 que utilizaba placas de cristal que debían permanecer húmedas en todo momento, permitiendo positivar muchas copias en papel a la albúmina con gran nitidez y amplia gama de tonos."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Placas secas al gelatino-bromuro",
+      "definicion": "Placas fotográficas desarrolladas después de 1880 que podían ser producidas industrialmente y comercializadas sin limitaciones. Los fotógrafos las compraban ya sensibilizadas y listas para usar en la cámara."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Kodak",
+      "definicion": "Empresa fundada por George Eastman que en 1888 lanzó una cámara revolucionaria de 18 cm con 100 exposiciones y el eslogan 'Usted apriete el botón, nosotros haremos el resto', democratizando la fotografía."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Cronofotografía",
+      "definicion": "Técnica fotográfica que consiste en tomar fotografías de un sujeto en una serie de posturas simulando fases de un movimiento y mostrarlas en rápida sucesión. Es el claro precedente del cine."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Stop-motion",
+      "definicion": "Técnica fotográfica de la década de 1860 consistente en hacer imágenes en movimiento tomando fotografías de un sujeto en posturas que simulan fases de movimiento y mostrándolas una detrás de otra en rápida sucesión."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Zootropo",
+      "definicion": "Dispositivo en cuya parte interna se colocaba una secuencia de fotografías; al girar, el observador podía ver a través de sus ranuras una imagen animada. Muybridge lo utilizó para mostrar su cronofotografía de caballos."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Pictorialismo",
+      "definicion": "Movimiento artístico fotográfico desde finales del siglo XIX hasta el final de la Primera Guerra Mundial. Surgió como reacción a la fotografía de aficionados y pretendía equiparar la fotografía con la pintura, escultura y arquitectura."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Efecto floue",
+      "definicion": "Técnica del pictorialismo que consistía en buscar deliberadamente el desenfoque en las fotografías para alejarse de la mera reproducción de la realidad, usando objetivos antiguos o imperfectos, incluso la cámara estenopeica."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Rayograma",
+      "definicion": "Técnica fotográfica inventada por Man Ray que consiste en colocar diferentes objetos sobre papel fotosensible y exponerlos a la luz, obteniendo fotografías realizadas enteramente en el laboratorio sin utilización de cámara."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Fotorreportaje",
+      "definicion": "Trabajo fotográfico que describe un suceso con fines periodísticos. Henri Cartier-Bresson es considerado su padre, y junto a Robert Capa fundó la agencia Magnum Photos París, la primera agencia de fotógrafos del mundo."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "El momento decisivo",
+      "definicion": "Concepto acuñado por Henri Cartier-Bresson que define ese instante en el que el fotógrafo es capaz de intuitivamente anticiparse a los acontecimientos y disparar la fotografía con maestría compositiva."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Autocromo",
+      "definicion": "Primer proceso de fotografía en color disponible masiva y comercialmente, desarrollado por los hermanos Lumière. Patentado en 1903 y comercializado desde 1907, usaba granos microscópicos de almidón de patata teñidos como filtros de color."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "Sustancia fotosensible",
+      "definicion": "Sustancia que es sensible a la luz y reacciona ante ella. Las sustancias clave para el nacimiento de la fotografía fueron los haluros de plata (bromuro de plata y sales de plata), que cambian al ser expuestos a la luz."
+    },
+    {
+      "categoria": "Historia de la Fotografía",
+      "nombre": "España Oculta",
+      "definicion": "Enorme serie fotográfica de Cristina García Rodero en la que captura fiestas y ritos de ciudades y pueblos de España, reflejando el alma popular y tradicional del país. Le valió todos los premios posibles en fotografía española."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Proporción áurea",
+      "definicion": "Relación matemática entre las partes y el todo para obtener un resultado bello conocida como 'divina proporción'. La relación entre los lados mayor y menor de un rectángulo de oro es el número de oro: φ = 1,618."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Número de oro",
+      "definicion": "Valor matemático φ = 1,618 que define la relación entre los lados mayor y menor de un rectángulo de oro. Obras clásicas como el Partenón de Atenas o La Gioconda están construidas siguiendo esta proporción."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Ley de tercios",
+      "definicion": "Convención práctica que divide el encuadre en tercios vertical y horizontalmente para determinar los centros de interés de una imagen. Es una simplificación intuitiva de los cuatro puntos de interés del rectángulo de oro."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Punto de fuga",
+      "definicion": "Punto de enorme atracción visual hacia el que se dirigen las líneas perspectivas y constructivas de la imagen. En perspectiva lineal, dos líneas paralelas parecen unirse en este punto situado en la línea de horizonte."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Líneas horizontales",
+      "definicion": "Tipo de línea en el lenguaje visual que transmite al espectador sensación de estabilidad y tranquilidad."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Líneas verticales",
+      "definicion": "Tipo de línea en el lenguaje visual que produce una sensación de fuerza, equilibrio y espiritualidad al llevar la mirada hacia las alturas."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Líneas oblicuas",
+      "definicion": "Tipo de línea en el lenguaje visual que denota siempre inestabilidad, desequilibrio, movimiento y dinamismo."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Líneas curvas",
+      "definicion": "Tipo de línea en el lenguaje visual que produce una sensación de movimiento y alegría. Las formas orgánicas producen mayor sensación de fluidez y sensualidad."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Composición triangular",
+      "definicion": "Estructura compositiva más estable en la imagen. Si el centro de interés se encuentra en el vértice de un triángulo con base en el lado inferior, se consigue una composición muy estable. Muy usada en el Renacimiento."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Peso visual",
+      "definicion": "Capacidad que tiene un elemento de una composición para atraer la atención de quien mira la imagen. Depende de factores como la posición, el tamaño, el color, la configuración y la textura del elemento."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Simetría axial",
+      "definicion": "Esquema compositivo en el que los elementos se distribuyen a ambos lados de un eje imaginario en la mitad del soporte. Es el más simple de los esquemas compositivos y suele dar un resultado estático pero equilibrado."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Simetría radial",
+      "definicion": "Esquema compositivo con varios ejes que parten de un punto central, estructurados como radios de una rueda. Frecuente en decoraciones arquitectónicas y vidrieras, pero poco común en obras pictóricas."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Ley de compensación de masas",
+      "definicion": "Esquema compositivo basado en el equilibrio de pesos visuales (no en la simetría). La figura principal se desplaza del centro y se compensan su color, tamaño y posición con otras formas para lograr el equilibrio visual."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Gran plano general",
+      "definicion": "Plano fotográfico o cinematográfico en el que predomina el medio ambiente sobre los personajes. Se emplea como plano de situación al principio de una secuencia para localizar espacialmente la acción."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Plano americano",
+      "definicion": "También llamado plano 3/4. Encuadra al personaje a la altura de los muslos. Fue muy utilizado en el cine del oeste para mostrar los revólveres de los vaqueros. Es uno de los planos más utilizados en televisión."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Primer plano",
+      "definicion": "Plano que abarca los detalles del rostro. Es un descubrimiento del cine y el tipo de plano dramáticamente más potente. Se cuenta que la primera vez que se proyectó en el cine provocó pánico entre los espectadores."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Plano picado",
+      "definicion": "Angulación en la que la cámara está por encima de la mirada del personaje, transmitiendo psicológicamente sensación de inferioridad. Desde el punto de vista del espectador puede sugerir compasión hacia el personaje."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Plano contrapicado",
+      "definicion": "Angulación en la que el punto de vista se encuentra por debajo de los ojos del sujeto, que queda agigantado y adquiere una dimensión psicológica de superioridad o poder."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Plano cenital",
+      "definicion": "Angulación en la que el punto de vista está completamente encima de la figura, en su vertical. Es un punto de vista muy poco natural que se emplea con fines descriptivos o para ocultar la identidad de algún personaje."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Plano aberrante",
+      "definicion": "También llamado plano holandés. Se produce al variar el eje vertical del punto de vista, torciendo el horizonte e inclinando la cámara de 25 a 45 grados. Muy utilizado por el cine expresionista alemán para mostrar situaciones caóticas."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Constancias perceptivas",
+      "definicion": "Mecanismos psíquicos gracias a los cuales el mundo exterior tridimensional permanece estable a pesar de que sus referencias cambian constantemente. El cerebro procesa la mínima información necesaria dando algunas situaciones por hechas."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Perspectiva aérea",
+      "definicion": "Sistema de representación en el que los objetos distantes tienden a volverse de un tono menos saturado y más azulado a causa de la interposición de la atmósfera. Desarrollada por grandes artistas como Da Vinci o Velázquez."
+    },
+    {
+      "categoria": "Imagen Fija y Lenguajes",
+      "nombre": "Gradiente de textura",
+      "definicion": "Factor que crea ilusión de profundidad en una imagen: los elementos más cercanos muestran con mayor claridad la textura de las formas, mientras que los más lejanos aparecen más desdibujados."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Síntesis aditiva",
+      "definicion": "Sistema de obtención de color por suma de luces de colores. Utiliza como primarios el rojo, el verde y el azul. La ausencia de los tres da el negro y la suma de los tres da el blanco. Se aplica en televisiones, monitores y pantallas de móvil."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Síntesis sustractiva",
+      "definicion": "Sistema de obtención de color por mezcla de pigmentos. Los colores primarios son el amarillo, el magenta y el cian. Al mezclar se restan longitudes de onda y los colores se oscurecen. Los tres primarios mezclados dan el negro. Se aplica en impresión y pintura."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Modelo RGB",
+      "definicion": "Modelo de color aditivo (Red, Green, Blue) usado en pantallas digitales. Genera colores por mezcla de los primarios rojo, azul y verde. Cada color tiene una posición única en un espacio tridimensional de coordenadas."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Modelo CMYK",
+      "definicion": "Modelo de color sustractivo (Cyan, Magenta, Yellow, Black) muy utilizado en impresión. El color se añade a una superficie blanca sustrayendo brillo. Cuando los tres componentes CMY son 100, el resultado es negro."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Conos",
+      "definicion": "Fotorreceptores de la retina del ojo humano que permiten la visión en color. Hay tres tipos: los que captan la luz roja (cono L), verde (cono M) y azul (cono S), los tres colores primarios aditivos, haciendo la visión humana tricromática."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Bastones",
+      "definicion": "Fotorreceptores de la retina del ojo humano que se activan en la oscuridad y solo permiten distinguir el negro, el blanco y los distintos grises. Transforman la luz en impulsos electroquímicos que se proyectan al cerebro."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Círculo cromático",
+      "definicion": "Representación circular de los colores del espectro visible propuesta por Newton, que une los dos extremos (rojo y violeta). Los colores que están juntos corresponden a longitudes de onda similares. Permite visualizar las relaciones entre colores."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Longitud de onda",
+      "definicion": "Propiedad física de la luz que determina el color percibido. El rojo tiene la longitud de onda más larga del espectro visible y el violeta la más corta. Fue estudiada por Thomas Young como base para explicar la percepción del color."
+    },
+    {
+      "categoria": "Teoría del Color",
+      "nombre": "Psicología del color",
+      "definicion": "Campo de estudio sobre la influencia psicológica y emocional que ejerce el color en el observador. Aunque las preferencias son subjetivas, las investigaciones demuestran que son coincidentes en la mayoría de individuos por reacciones inconscientes."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley figura-fondo",
+      "definicion": "Ley de la Gestalt según la cual el cerebro tiende a separar lo percibido en figura (elemento que destaca en un espacio) y fondo (todo lo que no es figura). La figura solo tiene significado junto al fondo y ambos pueden intercambiar sus roles."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley de la buena forma",
+      "definicion": "También llamada Prägnanz o Pregnancia. El cerebro intenta organizar los elementos percibidos de la mejor forma posible, prefiriendo formas simples, integradas, completas y estables. Lo difuso o ambiguo despierta ansiedad."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley del cierre",
+      "definicion": "Ley de la Gestalt por la que las formas cerradas y acabadas son más estables. Tendemos a cerrar y completar con la imaginación las partes faltantes de una forma incompleta. Es la base del prejuicio al completar imaginariamente información que falta."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley de la proximidad",
+      "definicion": "Ley de la Gestalt por la que los elementos tienden a agruparse con los que se encuentran a menor distancia. Tendemos a considerar como un todo a aquellos elementos que están más próximos entre sí."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley de la similaridad",
+      "definicion": "Ley de la Gestalt por la que los elementos que son similares tienden a ser agrupados perceptivamente. Los elementos similares se ven como parte del mismo conjunto. Es la base de los rótulos y del prejuicio al tomar la parte por el todo."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley de la continuidad",
+      "definicion": "Ley de la Gestalt por la que los elementos son conectados a través de líneas imaginarias tendiendo a percibir como un todo los objetos o líneas que mantienen una misma dirección, en lugar de ver puntos o grupos de puntos aislados."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Ley del contraste",
+      "definicion": "Ley de la Gestalt por la que la posición relativa de los diferentes elementos incide sobre la atribución de cualidades como el tamaño. Sin contraste no hay percepción. Compara situaciones para que cobren un valor diferente."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Destino común",
+      "definicion": "Ley de la Gestalt por la que los elementos que se desplazan en la misma dirección tienden a ser vistos como un grupo o conjunto. En el ámbito psíquico agrupa personas o eventos por rasgos comunes relacionados con el hacer."
+    },
+    {
+      "categoria": "Leyes de la Gestalt",
+      "nombre": "Isomorfismo",
+      "definicion": "Concepto de la psicología de la Gestalt que establece que la forma en que percibimos sienta las bases de la forma en que pensamos. Observa que las organizaciones que se dan en la biología, física o geología se reflejan también en el ámbito social."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Briefing",
+      "definicion": "Documento base en el que se incluye toda la información necesaria para que los encargados de diseñar la campaña publicitaria puedan llevarla a cabo. Lo crea la empresa cliente y es de uso exclusivamente interno de la agencia."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Planner",
+      "definicion": "Persona o equipo que, a partir de la investigación cualitativa y cuantitativa de las pautas y conductas del consumidor, elabora la estrategia de comunicación y dirige el esfuerzo creativo detectando oportunidades del mercado."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Copy strategy",
+      "definicion": "Estrategia creativa o marco en el que se desarrolla la creatividad del mensaje publicitario. Se basa en el producto y la necesidad del consumidor, indicando el beneficio básico que promete la marca."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "USP",
+      "definicion": "Unique Selling Proposition. Estilo creativo publicitario basado en que de un anuncio el consumidor tiende a recordar tan solo una cosa: una sola propuesta concreta, diferente a la competencia y con fuerza de convencer."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Publicidad subliminal",
+      "definicion": "Mensaje audiovisual que se emite por debajo del umbral de la percepción consciente incitando al consumo. El experimento de James Vicary en 1957 insertó fotogramas subliminales en una película, aunque su validez científica es muy cuestionada."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Publicidad asociativa",
+      "definicion": "Estilo publicitario que asocia un producto con objetos, personas o situaciones conscientemente percibidas. Por ejemplo, bebidas alcohólicas con grupos de jóvenes exitosos, o un automóvil con la belleza, el éxito o la libertad."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Función desproblematizadora",
+      "definicion": "Función de la publicidad por la que presenta un mundo sin problemas, divertido y fascinante donde la mayoría de los productos se consumen en momentos de ocio, mostrando el 'lado bello de la vida' y suavizando aspectos negativos."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Función estereotipadora",
+      "definicion": "Función de la publicidad por la que, debido a su difusión masiva, tiende a igualar gustos, criterios e ideales, influyendo en los hábitos de consumo, relaciones afectivas y modos de vida."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Star strategy",
+      "definicion": "Estilo creativo publicitario que se apoya en el espectáculo y en la utilización de imágenes e ideas espectaculares. Ampliamente utilizado en la publicidad actual, especialmente en productos de alta gama."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Transgresión publicitaria",
+      "definicion": "Estilo creativo que rompe con lo tradicional en publicidad, usando imágenes polémicas o impactantes. Lo inició Benetton en 1991 con imágenes de una monja y un sacerdote besándose, seguidas de escenas de guerra y enfermos de SIDA."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Product placement",
+      "definicion": "También llamada publicidad encubierta. Consiste en incluir en una obra teatral, cinematográfica o televisiva la colocación de un producto como parte integrante de la obra sin advertírselo al espectador."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "AIDA",
+      "definicion": "Modelo publicitario basado en la teoría de los instintos de McDougall: Atención, Interés, Deseo y Acción. Pretende primero llamar la atención, luego suscitar interés y provocar deseo para conseguir finalmente la acción de compra."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Jingle",
+      "definicion": "Canciones cuya letra y música han sido creadas especialmente para un anuncio o campaña publicitaria. La letra es el texto publicitario y puede incluir el nombre del producto. Es uno de los recursos musicales más usados en publicidad radiofónica."
+    },
+    {
+      "categoria": "Publicidad",
+      "nombre": "Logotipo",
+      "definicion": "Expresión gráfica de la marca. Junto al nombre y la imagen de marca (características percibidas por el consumidor), forma parte de los elementos que integran una marca comercial y la diferencian de la competencia."
+    }
+  ]
+}

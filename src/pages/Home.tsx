@@ -45,7 +45,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 2.4</span>
+        <span>Versión 2.5</span>
       </div>
 
       {showUpdateModal && (
@@ -60,9 +60,38 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 2.4</p>
+              <p className="update-modal-version">Versión 2.5</p>
             </div>
             <div className="update-modal-content">
+
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3> Nueva asignatura: Cultura Audiovisual</h3>
+                  <p>• Apuntes de Historia de la Fotografía, Imagen Fija, Teoría del Color, Gestalt y Publicidad</p>
+                  <p>• Quiz de conceptos tipo test en Examínate</p>
+                  <p>• Sección de repaso con buscador y filtros por categoría</p>
+                  <p>• Primera contribución externa: gracias a Haiko </p>
+                </div>
+              </div>
+
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3> Repasar conceptos en Historia</h3>
+                  <p>• Lista alfabética de todos los conceptos</p>
+                  <p>• Buscador por nombre y definición</p>
+                  <p>• Filtros por categoría</p>
+                </div>
+              </div>
 
               <div className="update-item">
                 <div className="update-item-icon">
@@ -78,31 +107,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Frases Nuevas frases y mejoras</h3>
-                  <p>• Nuevas frases añadidas</p>
-                  <p>• Mejoras en la sección de frases</p>
-                </div>
-              </div>
-
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Créditos Actualización</h3>
-                  <p>• Enlace al repositorio de GitHub</p>
-                </div>
-              </div>
-
             </div>
             <button className="update-modal-close" onClick={() => setShowUpdateModal(false)}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -114,12 +118,12 @@ export default function Home() {
         </div>
       )}
 
-      <SugerenciasModal 
-        isOpen={showSugerenciasModal} 
-        onClose={() => setShowSugerenciasModal(false)} 
+      <SugerenciasModal
+        isOpen={showSugerenciasModal}
+        onClose={() => setShowSugerenciasModal(false)}
       />
 
-      <button 
+      <button
         className="floating-sugerencias-button"
         onClick={() => setShowSugerenciasModal(true)}
         aria-label="Enviar sugerencia"
@@ -191,10 +195,8 @@ export default function Home() {
           </button>
           <button className="home-button secondary" onClick={() => navigate('/examinate')}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="3" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="14" width="7" height="7" rx="1" />
-              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <path d="M9 11l3 3L22 4" />
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
             </svg>
             Examínate
           </button>

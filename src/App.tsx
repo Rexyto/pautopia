@@ -22,6 +22,11 @@ import Quimica from './pages/apuntes/Quimica';
 import ExaminateIndex from './pages/examinate/ExaminateIndex';
 import HistoriaExaminate from './pages/examinate/Historia';
 import Conceptos from './pages/examinate/Conceptos';
+import CulturaAudiovisual from './pages/apuntes/CulturaAudiovisual';
+import CulturaAudiovisualExaminate from './pages/examinate/CulturaAudiovisual';
+import ConceptosCulturaAudiovisual from './pages/examinate/ConceptosCulturaAudiovisual';
+import RepasarConceptosHistoria from './pages/examinate/Repasarconceptoshistoria';
+import RepasarConceptosCulturaAudiovisual from './pages/examinate/Repasarconceptosculturaaudiovisual';
 import NotFound from './pages/NotFound';
 import RLCCalc from './pages/rlccalc';
 
@@ -42,9 +47,14 @@ function App() {
           <Route path="/apuntes/historia" element={<Historia />} />
           <Route path="/apuntes/fisica" element={<Fisica />} />
           <Route path="/apuntes/quimica" element={<Quimica />} />
+          <Route path="/apuntes/cultura-audiovisual" element={<CulturaAudiovisual />} />
           <Route path="/examinate" element={<ExaminateIndex />} />
           <Route path="/examinate/historia" element={<HistoriaExaminate />} />
           <Route path="/examinate/historia/conceptos" element={<Conceptos />} />
+          <Route path="/examinate/historia/repasar" element={<RepasarConceptosHistoria />} />
+          <Route path="/examinate/cultura-audiovisual" element={<CulturaAudiovisualExaminate />} />
+          <Route path="/examinate/cultura-audiovisual/conceptos" element={<ConceptosCulturaAudiovisual />} />
+          <Route path="/examinate/cultura-audiovisual/repasar" element={<RepasarConceptosCulturaAudiovisual />} />
           <Route path="/frases" element={<Frases />} />
           <Route path="/creditos" element={<Creditos />} />
           <Route path="/apps" element={<Apps />} />
