@@ -53,6 +53,8 @@ const frases: Frase[] = [
   { texto: "Vamos a buscar en WordReference",                        autor: "Profe de Inglés",            categoria: 'Inglés' },
   { texto: "No quiero batalla de indios",                            autor: "Profe de Dibujo Técnico",    categoria: 'Dibujo Técnico' },
   { texto: "Suesia",                                                 autor: "Profe de Filosofía",         categoria: 'Filosofía' },
+  { texto: "Callaos que sino no escucho las palabras",       autor: "Profe de Filosofía", categoria: 'Filosofía' },
+  { texto: "Mañana me traigo a Hume que lo tengo en casa",   autor: "Profe de Filosofía", categoria: 'Filosofía' },
   { texto: "¿Qué es eso del six seven?",                                 autor: "Profe de Mates",             categoria: 'Matemáticas' },
   { texto: "Esto no es un diálogo, es un monólogo",                  autor: "Profe de Historia del Arte", categoria: 'Historia del Arte' },
   { texto: "Pero no se lo digáis a mi prima Sara por favor ¿eh?",    autor: "Profe de Historia del Arte", categoria: 'Historia del Arte' },

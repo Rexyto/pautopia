@@ -264,6 +264,96 @@ export default function Historia() {
               </div>
             </div>
           </section>
+
+          <section className="lengua-section">
+            <h3 className="section-category-title">La Guerra Civil y el Franquismo</h3>
+            <div className="resource-cards-grid">
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">De la Sublevación Militar a la Guerra Civil (1936-1939)</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-tema14-sublevacion-guerra-civil.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Evolución Política en las Dos Zonas y sus Consecuencias</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-tema15-evolucion-politica-dos-zonas.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">La Dictadura Franquista (1939-1975)</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-tema16-dictadura-franquista.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Comentario: Carteles de la Guerra Civil</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-comentario-carteles-guerra-civil.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Comentario: Represión. Mujeres Rapadas</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-comentario-mujeres-rapadas.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
 
         <div className="back-button-wrapper">
