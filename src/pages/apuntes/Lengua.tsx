@@ -158,84 +158,6 @@ export default function Lengua() {
             </div>
           </section>
 
-          {/* COMENTARIO DE TEXTO */}
-          <section className="lengua-section">
-            <h3 className="section-category-title">Comentario de Texto</h3>
-            <div className="resource-cards-grid">
-
-              <div className="resource-card">
-                <div className="resource-card-header">
-                  <h4 className="resource-card-title">El comentario de texto lingüístico. Todo sobre su teoría</h4>
-                </div>
-                <button onClick={() => downloadFile('/lengua-comentario-linguistico-teoria.pdf')} className="resource-download-button">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Descargar PDF
-                </button>
-              </div>
-
-              <div className="resource-card">
-                <div className="resource-card-header">
-                  <h4 className="resource-card-title">Comentarios de texto aspectos generales</h4>
-                </div>
-                <button onClick={() => downloadFile('/lengua-comentarios-aspectos-generales.pdf')} className="resource-download-button">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Descargar PDF
-                </button>
-              </div>
-
-              <div className="resource-card">
-                <div className="resource-card-header">
-                  <h4 className="resource-card-title">Guion para las cuestiones</h4>
-                </div>
-                <button onClick={() => downloadFile('/lengua-guion-cuestiones.pdf')} className="resource-download-button">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Descargar PDF
-                </button>
-              </div>
-
-              <div className="resource-card">
-                <div className="resource-card-header">
-                  <h4 className="resource-card-title">Científico Resuelto</h4>
-                </div>
-                <button onClick={() => downloadFile('/lengua-cientifico-resuelto.pdf')} className="resource-download-button">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Descargar PDF
-                </button>
-              </div>
-
-              <div className="resource-card">
-                <div className="resource-card-header">
-                  <h4 className="resource-card-title">Humanístico Resuelto</h4>
-                </div>
-                <button onClick={() => downloadFile('/lengua-humanistico-resuelto.pdf')} className="resource-download-button">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Descargar PDF
-                </button>
-              </div>
-
-            </div>
-          </section>
-
           {/* LITERATURA */}
           <section className="lengua-section">
             <h3 className="section-category-title">Literatura</h3>
@@ -364,6 +286,51 @@ export default function Lengua() {
                   <h4 className="resource-card-title">Tema 9. La narrativa española posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T14DC)</h4>
                 </div>
                 <button onClick={() => downloadFile('/literatura-tema9-narrativa-posterior-1936.pdf')} className="resource-download-button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              {/* Tema 10 */}
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Tema 10. El teatro español posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T15DC)</h4>
+                </div>
+                <button onClick={() => downloadFile('/lengua-tema10-teatro-posterior-1936.pdf')} className="resource-download-button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              {/* Tema 11 */}
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Tema 11. La poesía española posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T16DC)</h4>
+                </div>
+                <button onClick={() => downloadFile('/lengua-tema11-poesia-posterior-1936.pdf')} className="resource-download-button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              {/* Tema 12 */}
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Tema 12. La literatura española desde 1975 hasta la época actual: narrativa, poesía y teatro (T16DC)</h4>
+                </div>
+                <button onClick={() => downloadFile('/lengua-tema12-literatura-desde-1975.pdf')} className="resource-download-button">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                     <polyline points="7 10 12 15 17 10" />

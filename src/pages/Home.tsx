@@ -45,7 +45,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 3.0</span>
+        <span>Versión 3.1</span>
       </div>
 
       {showUpdateModal && (
@@ -60,7 +60,7 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 3.0</p>
+              <p className="update-modal-version">Versión 3.1</p>
             </div>
             <div className="update-modal-content">
 
@@ -71,8 +71,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>¡Empieza la 3ª Evaluación!</h3>
-                  <p>• Se me olvidó actualizarlo antes perdón shavales</p>
+                  <h3>Nuevos apuntes de Literatura</h3>
+                  <p>• Temas 10, 11 y 12 ya disponibles en Lengua</p>
                 </div>
               </div>
 
@@ -83,8 +83,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>Nuevas frases agregadas</h3>
-                  <p>• Más sabiduría de la profe de Filosofía</p>
+                  <h3>Nuevos apuntes de Física</h3>
+                  <p>• Introducción a la Física Moderna y Naturaleza de la Luz y Óptica</p>
                 </div>
               </div>
 
@@ -95,8 +95,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>Nuevos conceptos de Historia añadidos</h3>
-                  <p>• Conceptos del primer examen de la 3ª evaluación</p>
+                  <h3>Nuevos apuntes de Filosofía</h3>
+                  <p>• Apuntes de Lógica ya disponibles</p>
+                </div>
+              </div>
+
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Nueva frase de Filosofía</h3>
+                  <p>• Nueva sabiduría de la profe añadida en Frases</p>
                 </div>
               </div>
 
