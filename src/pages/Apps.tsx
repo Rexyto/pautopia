@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
 
 interface App {
@@ -40,6 +41,11 @@ export default function Apps() {
 
   return (
     <Layout>
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/apps" />
+        <title>Aplicaciones - Pautopia</title>
+        <meta name="description" content="Descubre nuestras aplicaciones útiles para estudiantes en Pautopia." />
+      </Helmet>
 
       <main className="apps-content container">
         <div className="apps-header">

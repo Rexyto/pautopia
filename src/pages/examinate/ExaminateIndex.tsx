@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Layout from '../../components/Layout';
 
 interface Asignatura {
@@ -28,6 +29,11 @@ export default function ExaminateIndex() {
 
   return (
     <Layout>
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/examinate" />
+        <title>Examínate - Pautopia</title>
+        <meta name="description" content="Pon a prueba tus conocimientos con nuestros exámenes interactivos en Pautopia." />
+      </Helmet>
       <main className="biblioteca-content container">
         <div className="biblioteca-header">
           <div className="biblioteca-icon-wrapper">

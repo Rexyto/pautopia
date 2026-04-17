@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Home from './pages/Home';
 import Lecturas from './pages/Lecturas';
@@ -32,9 +33,10 @@ import RLCCalc from './pages/rlccalc';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app">
-        <Routes>
+    <HelmetProvider>
+      <BrowserRouter>
+        <div className="app">
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lecturas" element={<Lecturas />} />
           <Route path="/apuntes" element={<ApuntesIndex />} />
@@ -69,6 +71,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
