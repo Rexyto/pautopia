@@ -42,7 +42,7 @@ export default function Creditos() {
               </div>
             </div>
 
-            {/* Contribuidores — mismo estilo que creator-card */}
+            {/* Haiko — morado */}
             <div className="creator-card">
               <div className="creator-image-wrapper">
                 <img src="/haiko.jpeg" alt="Haiko" className="creator-image" />
@@ -58,6 +58,31 @@ export default function Creditos() {
                 </p>
               </div>
             </div>
+
+           {/* Aritz — verde */}
+<div className="creator-card">
+  <div className="creator-image-wrapper">
+    <img src="/user.png" alt="Aritz" className="creator-image" />
+    <div
+      className="creator-badge"
+      style={{
+        background: 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)',
+        boxShadow: '0 4px 12px rgba(22,163,74,0.5)'
+      }}
+    >
+      Contribuidor
+    </div>
+  </div>
+  <div className="creator-info">
+    <h3 className="creator-name">Aritz</h3>
+    <p className="creator-role" style={{ color: '#4ade80' }}>
+      Contribuidor de Filosofía
+    </p>
+    <p className="creator-description">
+      Aportó la colección de apuntes de <strong style={{ color: '#e2e8f0' }}>Filosofía</strong>: incluyendo Aristóteles, la Filosofía Helenística, Medieval, el Renacimiento, el Racionalismo y Empirismo, Kant, hasta los grandes pensadores contemporáneos como Nietzsche y Marx.
+    </p>
+  </div>
+</div>
 
             {/* Frase */}
             <div className="philosophy-section">

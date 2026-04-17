@@ -102,6 +102,7 @@ Todos los contribuidores serán reconocidos en la sección de créditos del proy
 | Creador y desarrollador principal | **Rexy** |
 | Colaboración en contenidos | **La Tiza de Rosa** |
 | Primera contribuidora externa — Cultura Audiovisual | **Haiko** |
+| Contribuidor de Filosofía | **Aritz** |
 
 *¿Has contribuido al proyecto? Tu nombre estará aquí.*
 
