@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { api } from '../api';
 import SugerenciasModal from '../components/SugerenciasModal';
 
@@ -33,6 +34,11 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/" />
+        <title>PAUtopía - Recursos para estudiantes de Bachillerato</title>
+        <meta name="description" content="Plataforma educativa con apuntes, calculadoras, exámenes y frases memorables para estudiantes de Bachillerato." />
+      </Helmet>
       <div className="hero-background"></div>
 
       <div className="update-banner">

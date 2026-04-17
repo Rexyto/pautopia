@@ -107,6 +107,7 @@ export default function SugerenciasModal({ isOpen, onClose }: SugerenciasModalPr
                 placeholder="¿Cómo te llamas?"
                 maxLength={50}
                 disabled={loading}
+                autoComplete="off"
               />
             </div>
 
@@ -120,6 +121,7 @@ export default function SugerenciasModal({ isOpen, onClose }: SugerenciasModalPr
                 rows={5}
                 maxLength={500}
                 disabled={loading}
+                autoComplete="off"
               />
               <div className="character-count">
                 {sugerencia.length}/500

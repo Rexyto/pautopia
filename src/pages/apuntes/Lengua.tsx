@@ -21,7 +21,7 @@ export default function Lengua() {
             Apuntes hechos a mano por <strong>La Tiza de Rosa</strong>, nuestra profe favorita.
             <br />
             Puedes encontrar más información y recursos en su página web:
-            <a href="https://sites.google.com/iesmariapacheco.com/elblogderosaysuscosasii/inicio?authuser=0" target="_blank">
+            <a href="https://sites.google.com/iesmariapacheco.com/elblogderosaysuscosasii/inicio" target="_blank" rel="noopener noreferrer">
               El Blog de Rosa y sus Cosas II
             </a>
           </p>
