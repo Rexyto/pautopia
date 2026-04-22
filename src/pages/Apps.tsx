@@ -43,8 +43,8 @@ export default function Apps() {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://pautopia.duckdns.org/apps" />
-        <title>Aplicaciones - Pautopia</title>
-        <meta name="description" content="Descubre nuestras aplicaciones útiles para estudiantes en Pautopia." />
+        <title>Apps Útiles - PAUtopía</title>
+        <meta name="description" content="Calculadoras y herramientas interactivas para la PAU: VigaCalc, WaveCalc, RLCCalc y más apps diseñadas para estudiantes de Bachillerato." />
       </Helmet>
 
       <main className="apps-content container">

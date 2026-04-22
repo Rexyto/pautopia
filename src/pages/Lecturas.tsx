@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Lectura, Pregunta, Material } from '../types';
 import { api } from '../api';
 import Accordion from '../components/Accordion';
@@ -70,6 +71,12 @@ export default function Lecturas() {
 
   return (
     <div className="lecturas-page">
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/lecturas" />
+        <title>Lecturas Obligatorias - PAUtopía</title>
+        <meta name="description" content="Lecturas obligatorias de 2º de Bachillerato con preguntas de comprensión, materiales extra y PDFs descargables para preparar la PAU." />
+      </Helmet>
+
       {/* Header Móvil */}
       <header className="mobile-header">
         <div className="mobile-header-top">

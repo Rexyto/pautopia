@@ -37,7 +37,7 @@ export default function Home() {
       <Helmet>
         <link rel="canonical" href="https://pautopia.duckdns.org/" />
         <title>PAUtopía - Recursos para estudiantes de Bachillerato</title>
-        <meta name="description" content="Plataforma educativa con apuntes, calculadoras, exámenes y frases memorables para estudiantes de Bachillerato." />
+        <meta name="description" content="Plataforma educativa para 2º de Bachillerato. Apuntes, lecturas obligatorias, calculadoras, exámenes interactivos y ranking para preparar la PAU." />
       </Helmet>
       <div className="hero-background"></div>
 

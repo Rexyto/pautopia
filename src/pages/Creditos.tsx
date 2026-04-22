@@ -1,8 +1,15 @@
 import Layout from '../components/Layout';
+import { Helmet } from 'react-helmet-async';
 
 export default function Creditos() {
   return (
     <Layout>
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/creditos" />
+        <title>Créditos - PAUtopía</title>
+        <meta name="description" content="Conoce al equipo detrás de PAUtopía: Rexy, Haiko y Aritz, los creadores de esta plataforma educativa para estudiantes de Bachillerato." />
+      </Helmet>
+
       <main className="creditos-content container">
         <div className="credits-section">
           <div className="credits-header">

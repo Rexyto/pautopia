@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import { Helmet } from 'react-helmet-async';
 
 interface RankingItem {
   nombre: string;
@@ -21,6 +22,11 @@ export default function Ranking() {
 
   return (
     <Layout>
+      <Helmet>
+        <link rel="canonical" href="https://pautopia.duckdns.org/ranking" />
+        <title>Ranking - PAUtopía</title>
+        <meta name="description" content="Clasificación de estudiantes de PAUtopía. Compite, acumula puntos y sube en el ranking mientras preparas la PAU." />
+      </Helmet>
 
       <main className="biblioteca-content container">
         <div className="biblioteca-header">

@@ -76,8 +76,8 @@ export default function Frases() {
     <Layout>
       <Helmet>
         <link rel="canonical" href="https://pautopia.duckdns.org/frases" />
-        <title>Frases Memorables - Pautopia</title>
-        <meta name="description" content="Biblioteca de frases sabias y divertidas de nuestros profesores en Pautopia." />
+        <title>Frases Memorables - PAUtopía</title>
+        <meta name="description" content="Las frases más memorables de los profes de Bachillerato, organizadas por asignatura. Filosofía, Física, Historia del Arte y mucho más." />
       </Helmet>
       <main className="frases-page container">
 
