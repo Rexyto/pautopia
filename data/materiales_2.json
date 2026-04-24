@@ -31,5 +31,21 @@
     "enlace": "https://example.com/mujer-lorca.pdf",
     "descripcion": "Análisis de los personajes femeninos",
     "lecturaId": "2"
+  },
+  {
+    "id": "5",
+    "titulo": "Bodas de sangre - Materiales de análisis",
+    "grupo": "Documentos",
+    "descripcion": "Guía completa con análisis de los temas principales, la figura de la mujer y el uso de símbolos en la obra. Incluye contexto, desarrollo temático, personajes y ejemplos del texto.",
+    "lecturaId": "2",
+    "archivo": "Bodas_de_sangre_-_materiales.pdf"
+  },
+  {
+    "id": "6",
+    "titulo": "Fragmentos relevantes de Bodas de sangre",
+    "grupo": "Documentos",
+    "descripcion": "Selección de fragmentos clave comentados: el Acto II (huida de la Novia y Leonardo), el Acto III cuadro primero (la Luna y la Mendiga, el diálogo entre la Novia y Leonardo) con notas de análisis.",
+    "lecturaId": "2",
+    "archivo": "Textos_de_Bodas_de_sangre.pdf"
   }
 ]

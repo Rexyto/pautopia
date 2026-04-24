@@ -39,6 +39,7 @@ export default function Home() {
         <title>PAUtopía - Recursos para estudiantes de Bachillerato</title>
         <meta name="description" content="Plataforma educativa para 2º de Bachillerato. Apuntes, lecturas obligatorias, calculadoras, exámenes interactivos y ranking para preparar la PAU." />
       </Helmet>
+
       <div className="hero-background"></div>
 
       <div className="update-banner">
@@ -51,7 +52,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 3.3</span>
+        <span>Versión 3.4</span>
       </div>
 
       {showUpdateModal && (
@@ -66,23 +67,67 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 3.3</p>
+              <p className="update-modal-version">Versión 3.4</p>
             </div>
+
             <div className="update-modal-content">
 
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Nuevos apuntes de Filosofía Contemporánea</h3>
-                  <p>• Se han añadido los apuntes de Filosofía Contemporánea: Hegel, Comte, Mill y comentario de texto de Marx</p>
-                </div>
-              </div>
+  <div className="update-item">
+    <div className="update-item-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+    <div className="update-item-text">
+      <h3>Actualización de Historia</h3>
+      <p>• Añadidos temas 17, Constitución de 1978 y tema 19</p>
+      <p>• Nueva sección sobre la Transición y Democracia</p>
+      <p>• Añadido comentario gráfico de ETA</p>
+    </div>
+  </div>
 
-            </div>
+  <div className="update-item">
+    <div className="update-item-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+    <div className="update-item-text">
+      <h3>Lecturas mejoradas</h3>
+      <p>• Respuestas ampliadas para Campos de Castilla y Bodas de sangre</p>
+      <p>• Añadidos nuevos materiales y PDFs</p>
+    </div>
+  </div>
+
+  <div className="update-item">
+    <div className="update-item-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+    <div className="update-item-text">
+      <h3>Novedades</h3>
+      <p>• Añadida una nueva frase en la sección de Frases</p>
+    </div>
+  </div>
+
+  <div className="update-item">
+    <div className="update-item-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+    <div className="update-item-text">
+      <h3>Mejoras generales</h3>
+      <p>• Optimización de contenido y estructura</p>
+      <p>• Mejor organización de materiales</p>
+    </div>
+  </div>
+
+</div>
+
+
+
             <button className="update-modal-close" onClick={() => setShowUpdateModal(false)}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 6L6 18M6 6l12 12" />
@@ -138,60 +183,13 @@ export default function Home() {
         </div>
 
         <div className="home-buttons">
-          <button className="home-button primary" onClick={() => navigate('/lecturas')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-            </svg>
-            Lecturas
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/apuntes')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
-            Apuntes
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/frases')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
-            Frases
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/apps')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="3" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="14" width="7" height="7" rx="1" />
-              <rect x="3" y="14" width="7" height="7" rx="1" />
-            </svg>
-            Apps
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/examinate')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 11l3 3L22 4" />
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-            </svg>
-            Examínate
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/ranking')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M16 6l2 14h-12l2-14" />
-              <path d="M12 11v5" />
-              <circle cx="12" cy="6" r="3" />
-            </svg>
-            Ranking
-          </button>
-          <button className="home-button secondary" onClick={() => navigate('/creditos')}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-            Créditos
-          </button>
+          <button className="home-button primary" onClick={() => navigate('/lecturas')}>Lecturas</button>
+          <button className="home-button secondary" onClick={() => navigate('/apuntes')}>Apuntes</button>
+          <button className="home-button secondary" onClick={() => navigate('/frases')}>Frases</button>
+          <button className="home-button secondary" onClick={() => navigate('/apps')}>Apps</button>
+          <button className="home-button secondary" onClick={() => navigate('/examinate')}>Examínate</button>
+          <button className="home-button secondary" onClick={() => navigate('/ranking')}>Ranking</button>
+          <button className="home-button secondary" onClick={() => navigate('/creditos')}>Créditos</button>
         </div>
       </div>
     </div>

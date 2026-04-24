@@ -321,6 +321,23 @@ export default function Historia() {
 
               <div className="resource-card">
                 <div className="resource-card-header">
+                  <h4 className="resource-card-title">Economía y Sociedad en el Franquismo: Autarquía, Desarrollismo y Desequilibrios</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-tema17-economia-sociedad-franquismo.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
                   <h4 className="resource-card-title">Comentario: Carteles de la Guerra Civil</h4>
                 </div>
                 <button
@@ -354,6 +371,63 @@ export default function Historia() {
               </div>
             </div>
           </section>
+
+          <section className="lengua-section">
+            <h3 className="section-category-title">La Transición y la Democracia</h3>
+            <div className="resource-cards-grid">
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Texto: La Constitución de 1978</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-constitucion-1978.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Del Bipartidismo al 15-M: Los Gobiernos Democráticos</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-tema19-bipartidismo-15m.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Comentario Gráfico: Víctimas del Terrorismo de ETA</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/historia-comentario-grafico-eta.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+            </div>
+          </section>
+
         </div>
 
         <div className="back-button-wrapper">

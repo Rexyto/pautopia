@@ -62,6 +62,7 @@ const frases: Frase[] = [
   { texto: "Pero no se lo digáis a mi prima Sara por favor ¿eh?",    autor: "Profe de Historia del Arte", categoria: 'Historia del Arte' },
   { texto: "Ahora tenemos que dar mujeres porque está de moda",      autor: "Profe de Historia del Arte", categoria: 'Historia del Arte' },
   { texto: "Con el bocadillo de carne no se puede hacer, saldrá mejor con el bocadillo de pescado", autor: "Profe de Filosofía", categoria: 'Filosofía' },
+  { texto: "El de Anaya?, Lo castigo !!!", autor: "Profe de Filosofía", categoria: 'Filosofía' },
 ];
 
 const TODAS = 'Todas';

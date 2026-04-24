@@ -31,5 +31,21 @@
     "enlace": "https://example.com/generacion-98.pdf",
     "descripcion": "Contexto histórico y literario de la obra",
     "lecturaId": "1"
+  },
+  {
+    "id": "5",
+    "titulo": "Campos de Castilla - Materiales de análisis",
+    "grupo": "Documentos",
+    "descripcion": "Guía completa con análisis del simbolismo, los temas principales y Castilla como visión crítica de España. Incluye contexto, desarrollo temático y ejemplos de los poemas.",
+    "lecturaId": "1",
+    "archivo": "Campos_de_castilla_-_materiales.pdf"
+  },
+  {
+    "id": "6",
+    "titulo": "Poemas significativos comentados",
+    "grupo": "Documentos",
+    "descripcion": "Selección de poemas clave comentados: 'A orillas del Duero', 'Retrato', 'Del pasado efímero', 'Proverbios y cantares', 'La saeta' y otros, con análisis de rasgos del 98 y de la producción machadiana.",
+    "lecturaId": "1",
+    "archivo": "Poemas_significativos_comentados.pdf"
   }
 ]
