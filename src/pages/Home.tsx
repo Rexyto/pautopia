@@ -43,7 +43,7 @@ export default function Home() {
       <div className="hero-background"></div>
 
       <div className="update-banner">
-        3ª Evaluación - ¡A por todas shavalesss!
+        🍀 ¡Mucha suerte en la PAU! A por todas 🍀
       </div>
 
       <div className="version-badge" onClick={() => setShowUpdateModal(true)}>
@@ -52,7 +52,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 3.4</span>
+        <span>Versión 3.5</span>
       </div>
 
       {showUpdateModal && (
@@ -67,66 +67,62 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 3.4</p>
+              <p className="update-modal-version">Versión 3.5</p>
             </div>
 
             <div className="update-modal-content">
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Nuevo PDF de Inglés</h3>
+                  <p>• Teoría completa para la PAU (Use of English, Phonetics, Writing, Rephrasing)</p>
+                </div>
+              </div>
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Actualización de Historia</h3>
-      <p>• Añadidos temas 17, Constitución de 1978 y tema 19</p>
-      <p>• Nueva sección sobre la Transición y Democracia</p>
-      <p>• Añadido comentario gráfico de ETA</p>
-    </div>
-  </div>
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Nuevo PDF de Biología</h3>
+                  <p>• Teoría completa para la PAU (Bioquímica, Genética, Inmunología, Biotecnología...)</p>
+                </div>
+              </div>
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Lecturas mejoradas</h3>
-      <p>• Respuestas ampliadas para Campos de Castilla y Bodas de sangre</p>
-      <p>• Añadidos nuevos materiales y PDFs</p>
-    </div>
-  </div>
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Nuevos apuntes de Matemáticas II</h3>
+                  <p>• Tabla de derivadas</p>
+                  <p>• Tabla de integrales inmediatas</p>
+                  <p>• Probabilidad (actualizada)</p>
+                </div>
+              </div>
 
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Novedades</h3>
-      <p>• Añadida una nueva frase en la sección de Frases</p>
-    </div>
-  </div>
-
-  <div className="update-item">
-    <div className="update-item-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </div>
-    <div className="update-item-text">
-      <h3>Mejoras generales</h3>
-      <p>• Optimización de contenido y estructura</p>
-      <p>• Mejor organización de materiales</p>
-    </div>
-  </div>
-
-</div>
-
-
+              <div className="update-item">
+                <div className="update-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="update-item-text">
+                  <h3>Nuevos recursos de Física II</h3>
+                  <p>• Fórmulas Ondas y MAS</p>
+                  <p>• Fórmulas Óptica y Sonido</p>
+                  <p>• Fórmulas Física Moderna</p>
+                </div>
+              </div>
+            </div>
 
             <button className="update-modal-close" onClick={() => setShowUpdateModal(false)}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

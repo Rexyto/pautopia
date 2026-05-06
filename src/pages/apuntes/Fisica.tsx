@@ -22,6 +22,7 @@ export default function Fisica() {
         </div>
 
         <div className="lengua-sections">
+          {/* CAMPOS FÍSICOS (sin cambios) */}
           <section className="lengua-section">
             <h3 className="section-category-title">Campos Físicos</h3>
             <div className="resource-cards-grid">
@@ -78,6 +79,7 @@ export default function Fisica() {
             </div>
           </section>
 
+          {/* VIBRACIONES Y ONDAS (se añade la tarjeta de fórmulas) */}
           <section className="lengua-section">
             <h3 className="section-category-title">Vibraciones y Ondas</h3>
             <div className="resource-cards-grid">
@@ -97,9 +99,51 @@ export default function Fisica() {
                   Descargar PDF
                 </button>
               </div>
+
+              {/* NUEVO: Fórmulas Ondas y MAS */}
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Fórmulas Ondas y MAS</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/fisica-formulas-ondas-mas.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
             </div>
           </section>
 
+          {/* NUEVA SECCIÓN: Óptica y Sonido */}
+          <section className="lengua-section">
+            <h3 className="section-category-title">Óptica y Sonido</h3>
+            <div className="resource-cards-grid">
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Fórmulas Óptica y Sonido</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/fisica-formulas-optica-sonido.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* FÍSICA MODERNA (se añade la tarjeta de fórmulas) */}
           <section className="lengua-section">
             <h3 className="section-category-title">Física Moderna</h3>
             <div className="resource-cards-grid">
@@ -132,6 +176,24 @@ export default function Fisica() {
                 </div>
                 <button
                   onClick={() => downloadFile('/fisica-naturaleza-luz-optica.pdf')}
+                  className="resource-download-button"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+              {/* NUEVO: Fórmulas Física Moderna */}
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Fórmulas Física Moderna</h4>
+                </div>
+                <button
+                  onClick={() => downloadFile('/fisica-formulas-fisica-moderna.pdf')}
                   className="resource-download-button"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
