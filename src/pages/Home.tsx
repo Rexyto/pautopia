@@ -52,7 +52,7 @@ export default function Home() {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Versión 3.5</span>
+        <span>Versión 3.6</span>
       </div>
 
       {showUpdateModal && (
@@ -67,7 +67,7 @@ export default function Home() {
                 </svg>
               </div>
               <h2 className="update-modal-title">Actualizaciones Recientes</h2>
-              <p className="update-modal-version">Versión 3.5</p>
+              <p className="update-modal-version">Versión 3.6</p>
             </div>
 
             <div className="update-modal-content">
@@ -78,48 +78,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="update-item-text">
-                  <h3>Nuevo PDF de Inglés</h3>
-                  <p>• Teoría completa para la PAU (Use of English, Phonetics, Writing, Rephrasing)</p>
-                </div>
-              </div>
-
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Nuevo PDF de Biología</h3>
-                  <p>• Teoría completa para la PAU (Bioquímica, Genética, Inmunología, Biotecnología...)</p>
-                </div>
-              </div>
-
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Nuevos apuntes de Matemáticas II</h3>
-                  <p>• Tabla de derivadas</p>
-                  <p>• Tabla de integrales inmediatas</p>
-                  <p>• Probabilidad (actualizada)</p>
-                </div>
-              </div>
-
-              <div className="update-item">
-                <div className="update-item-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="update-item-text">
-                  <h3>Nuevos recursos de Física II</h3>
-                  <p>• Fórmulas Ondas y MAS</p>
-                  <p>• Fórmulas Óptica y Sonido</p>
-                  <p>• Fórmulas Física Moderna</p>
+                  <h3>Nuevos apuntes de Lengua Castellana y Literatura II</h3>
+                  <p>• Recopilatorio completo de todos los materiales del curso 2025/2026</p>
                 </div>
               </div>
             </div>

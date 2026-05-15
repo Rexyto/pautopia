@@ -30,6 +30,28 @@ export default function Lengua() {
 
         <div className="lengua-sections">
 
+          {/* RECOPILATORIO COMPLETO */}
+          <section className="lengua-section">
+            <h3 className="section-category-title">Recopilatorio Completo</h3>
+            <div className="resource-cards-grid">
+
+              <div className="resource-card">
+                <div className="resource-card-header">
+                  <h4 className="resource-card-title">Lengua Castellana y Literatura II — Todos los materiales (2025/2026)</h4>
+                </div>
+                <button onClick={() => downloadFile('/lengua-recopilatorio-completo-2025-2026.pdf')} className="resource-download-button">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+
+            </div>
+          </section>
+
           {/* SINTAXIS */}
           <section className="lengua-section">
             <h3 className="section-category-title">Sintaxis</h3>
@@ -205,7 +227,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 4 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 4. Novecentismo o Generación del 14. Características de la novela y del ensayo (T7DC)</h4>
@@ -220,7 +241,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 5 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 5. Antonio Machado y Juan Ramón Jiménez (T8DC)</h4>
@@ -235,7 +255,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 6 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 6. Las Vanguardias: Tendencias y Características (T11DC)</h4>
@@ -250,7 +269,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 7 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 7. Generación del 27: Características, Autores y Obras Principales</h4>
@@ -265,7 +283,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 8 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 8. El teatro español anterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T13DC)</h4>
@@ -280,7 +297,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 9 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 9. La narrativa española posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T14DC)</h4>
@@ -295,7 +311,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 10 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 10. El teatro español posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T15DC)</h4>
@@ -310,7 +325,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 11 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 11. La poesía española posterior a 1936: tendencias, rasgos principales, autores y obras más significativas (T16DC)</h4>
@@ -325,7 +339,6 @@ export default function Lengua() {
                 </button>
               </div>
 
-              {/* Tema 12 */}
               <div className="resource-card">
                 <div className="resource-card-header">
                   <h4 className="resource-card-title">Tema 12. La literatura española desde 1975 hasta la época actual: narrativa, poesía y teatro (T16DC)</h4>
